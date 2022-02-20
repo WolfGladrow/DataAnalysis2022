@@ -9,7 +9,8 @@ plot(x1,type='p',lwd=4,cex=0.6,col='blue',xaxt='n',yaxt='n',xlab='',ylab='')
 axis(1,cex.axis=1.5)
 axis(2,cex.axis=1.5,las=1)
 mtext('Data #',side=1,line=2.4,cex=2)
-mtext(expression(x[1]),side=2,line=2.2,cex=2)
+library(latex2exp)
+mtext(TeX('$x_1$'),side=2,line=2.2,cex=2)
 # dev.off()
 # ------------------------------------------------------------------------------------
 # REMARKS: 
