@@ -9,6 +9,7 @@ plot(x1,type='p',lwd=4,cex=0.6,col='blue',xaxt='n',yaxt='n',xlab='',ylab='')
 axis(1,cex.axis=1.5)
 axis(2,cex.axis=1.5,las=1)
 mtext('Data #',side=1,line=2.4,cex=2)
+# install.package('latex2exp')
 library(latex2exp)
 mtext(TeX('$x_1$'),side=2,line=2.2,cex=2)
 # dev.off()
@@ -19,4 +20,5 @@ mtext(TeX('$x_1$'),side=2,line=2.2,cex=2)
 # axis(1,cex.axis=1.5) ADD NUMBERS TO THE 1. AXIS (X-AXIS), CHARACTER SIZE 1.5 TIMES DEFAULT
 # axis(2,cex.axis=1.5,las=1) ADD NUMBERS TO THE 2. AXIS (Y-AXIS); 'las=1' FOR HORIZONTAL NUMBERS
 # mtext('Data #',side=1,line=2.4,cex=2)   ADD LABEL 'Data #' TO 1. AXIS, CHARACTER SIZE 2 TIMES DEFAULT
-# mtext(expression(x[1]),side=2,line=2.2,cex=2)   ADD LABEL x with supscript 1 TO 2. AXIS (Y-AXIS)
+# install.package('latex2exp')   package has to be installed only once on your computer
+# library(latex2exp)   load the library 'latex2exp' 
