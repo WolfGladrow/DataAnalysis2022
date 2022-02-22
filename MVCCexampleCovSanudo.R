@@ -1,4 +1,4 @@
-print('file: MVCCexampleCovSanudo')
+print('file: MVCCexampleCovSanudo.R')
 # Sanudo-Wilhelmy et al. (2006)
 x = c(0.28,0.37,0.45,0.84,0.76,0.46,0.58,1,0.66,1.08,0.95)  # [PO4] (mumol/L)
 y = c(66.8,75.3,70.6,15.2,27.6,27.3,37,45.1,32.2,57.8,24.5) # B12   (pmol/L)
