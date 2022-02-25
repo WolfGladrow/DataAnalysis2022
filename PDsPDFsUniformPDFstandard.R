@@ -1,0 +1,6 @@
+print('file: PDsPDFsUniformPDFstandard.R')
+# standard uniform PDF (continuous)
+x = seq(-0.2,1.2,0.01); y = dunif(x)
+# png('uniformPDFBook160723.png',width=16,height=12,units='cm',res=300)
+plot(x,y,type='l',col='blue',lwd=3,ylab='Uniform distribution',main='',las=1)
+# dev.off()
