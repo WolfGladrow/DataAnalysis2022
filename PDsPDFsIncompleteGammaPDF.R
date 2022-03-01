@@ -1,0 +1,20 @@
+print('file: PDsPDFsIncompleteGammaPDF.R')
+# incomplete gamma PDF
+print('Note: The second parameter can have different meanings!')
+xarr = seq(0.01,10,0.01)
+print(' ---------------------------------------------------')
+print('Shape-rate definition: Robert (2007): alpha, beta')
+print('Shape-scale definition: Casella & Berger (2002), alpha, theta')
+alpha = 1.5; beta = 0.5; theta = 1/beta 
+IgPDFrate = dgamma(x=xarr,shape=alpha,rate=beta)
+IgPedrate = beta^alpha*xarr^(alpha-1)*exp(-beta*xarr)/gamma(alpha)
+IgPDFscale = dgamma(x=xarr,shape=alpha,scale=theta)
+IgPedscale = xarr^(alpha-1)*exp(-xarr/theta)/(theta^alpha*gamma(alpha))
+# png('IgPDFscale191026.png',width=16,height=12,units='cm',res=300)
+plot(xarr,IgPDFscale,type='l',lwd=3,col='blue',xlab='x',ylab=NA,las=1,cex.lab=1.5)
+text(6,0.2,TeX('$\\alpha = 1.5$'),col='blue',pos=4,cex=1.5)
+text(6,0.15,TeX('$\\beta = 0.5$'),col='blue',pos=4,cex=1.5)
+text(6,0.1,TeX('$\\theta = 1/\\beta = 2.0$'),col='blue',pos=4,cex=1.5)
+title(ylab=TeX('$\\Gamma\\, (x;\\,  \\alpha,\\,  \\beta),\\, \\Gamma\\, (x;\\,  \\alpha,\\,  \\theta)$'),
+      line=2.5,cex.lab=1.5)
+# dev.off()
