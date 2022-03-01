@@ -1,4 +1,4 @@
-print('file: RandomBeta2x5')
+print('file: RandomBeta2x5.R')
 # random numbers from beta(2,5)
 alpha = 2; beta = 5
 dx = 0.01
