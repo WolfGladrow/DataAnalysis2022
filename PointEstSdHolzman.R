@@ -1,0 +1,15 @@
+print('file: PointEstSdHolzman.R')
+# Holzman (1950) correction factor for unbiased estimator of standard deviation
+n = seq(2,50)
+Cn = sqrt((n-1)/2)*gamma((n-1)/2)/gamma(n/2)
+print(c(round(Cn[1],3),'C2'))
+print(c(round(Cn[2],3),'C3'))
+library(latex2exp)
+# png('Holzman50Cn161216.png',width=16,height=12,units='cm',res=300)
+plot(n,Cn,type='p',lwd=3,col='blue',xlab='n',ylab=NA,cex.lab=1.5,
+     las=1,cex=0.5,ylim=c(1,1.09),xlim=c(0,max(n)))
+title(ylab=TeX('$Holzman\\, correction\\, C_n$'),cex.lab=1.5,line=2.5)
+abline(1,0,col='green',lty=2)
+text(max(n)/2,1.08,TeX('$C_2 = 1.253$'),col='blue',cex=1.5)
+text(max(n)/2,1.06,TeX('$C_3 = 1.128$'),col='blue',cex=1.5)
+# dev.off()
