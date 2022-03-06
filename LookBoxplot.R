@@ -12,6 +12,7 @@ boxplot(x1,col='blue',las=1,xlab=TeX('$x_1$'))
 # dev.off()
 # ----------------------------------------------------------------
 # Remarks:
+# Boxplots were introduced by John Tukey in 1977.
 # boxplot()   box-and-whisker-plot
 # The thick and long horizontal line inside the box indicates the median (a robust
 #   estimate of the central tendency)
@@ -26,3 +27,4 @@ boxplot(x1,col='blue',las=1,xlab=TeX('$x_1$'))
 #   be outliers and thus should be inspected in detail.
 # Remark: box plots are non-parametric, i.e. no assumption is made about the statistical 
 #   distribution from which the data come from.
+# ----------------------------------------------------------------

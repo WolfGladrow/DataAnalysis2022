@@ -11,6 +11,17 @@ x1[1] = 5 # create an 'outlier'
 boxplot(x1,col='yellow',las=1,xlab=TeX('$x_1$')) 
 L = length(x1)
 set.seed(1953) # set seed for random number generators
-jitter = rnorm(L,1,0.05)
+jitter = runif(L,1-0.05,1+0.05)
 points(jitter,x1,col='blue',lwd=3,cex=0.4)
 # dev.off()
+# ----------------------------------------------------------------
+# Remarks:
+# In boxplot(), choose a light color (here: yellow) making the box 'transparent'.
+# Add some noise ('jitter', random numbers from a uniform distribution) in the horizontal
+#   in order to avoid overlap between equal or similar data points.
+# set.seed()   set seed for random number generators -> reproducible (idential) sequence
+#                 of pseudo-random numbers; useful when teaching and students obtain identical
+#                 results on their own computers
+# runif(L,1-0.05,1+0.05)   generate L random numbers from the uniform distribution with
+#                             limits 1-0.05 and 1+0.05
+# ----------------------------------------------------------------
