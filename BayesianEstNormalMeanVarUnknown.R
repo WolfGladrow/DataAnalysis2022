@@ -40,7 +40,7 @@ plot(xp,yp,type='l',lwd=3,col='blue',xlab=NA,ylab=NA,las=1,
 abline(v=mu,col='black')
 abline(v=ymean,col='blue',lty=2)
 lines(x95,y95,col='magenta',lwd=3)
-xt = 3.6
+xt = 3.57
 text(3.35,0.3,'95% interval',col='magenta',pos=4,cex=1.5)
 text(3.1,3.5,TeX('$\\mu = 3.3$'),col='black',pos=4,cex=1.5)
 text(3.1,3,TeX('$\\sigma = 0.5$'),col='black',pos=4,cex=1.5)
