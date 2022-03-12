@@ -1,4 +1,4 @@
-print('file: WilcoxonPairedCritValMC1.R')
+print('file: WilcoxonPairedCritValMC2.R')
 # Wilcoxon paired-sample critical values: Monte Carlo
 set.seed(1953) # set seed for random number generators
 M = 1e5 # Tplusa = numeric(M); Tminusa = numeric(M)
