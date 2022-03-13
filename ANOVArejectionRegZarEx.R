@@ -1,4 +1,4 @@
-print('file: ANOVArejectionRegZarEx.r')
+print('file: ANOVArejectionRegZarEx.R')
 # plot rejection region for F distribution: red
 nu1 = 3; nu2 = 15   # degrees of freedom (for 19 data points in 4 groups)
 alpha = 0.05 
