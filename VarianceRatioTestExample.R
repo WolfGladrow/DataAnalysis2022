@@ -1,4 +1,4 @@
-print('file: R_VarianceRatioTestExample220313.R')
+print('file: VarianceRatioTestExample.R')
 # illustration of variance ratio test; artificial data
 # (1) generate random samples from normal distributions with equal variances:
 set.seed(1953) # set seed for random number generators
