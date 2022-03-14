@@ -1,4 +1,4 @@
-print('file: R_Gerrodette3Densities220315.R')
+print('file: Gerrodette3Densities.R')
 # Gerrodette11: plot neg. binomial, normal, lognormal
 LNparams = function(mu,sigma){
   # Calculate parameters alpha, beta for lognormal PDF from
