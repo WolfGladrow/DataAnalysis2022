@@ -1,4 +1,4 @@
-print('file: R_ReadTable220314.R')
+print('file: R_ReadTable220315.R')
 print(date())
 # --------------------------------------------------------------
   out = read.table('t130322r.txt',header=FALSE)
