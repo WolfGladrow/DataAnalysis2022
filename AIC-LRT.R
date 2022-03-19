@@ -1,4 +1,4 @@
-print('file: R_AIC-LRT-230319.R')
+print('file: AIC-LRT.R')
 # AIC as likelihood ratio test
 # ''For many kinds of models, the asymptotic null-hypothesis distribution of 
 # -2 (l0-l1) is asymptotically \chi^2 with degrees of freedom (df) equal to p1-p0.
