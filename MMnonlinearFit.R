@@ -1,4 +1,4 @@
-print('file: MMnonlinFit.R')
+print('file: MMnonlinearFit.R')
 # Michaelis-Menten: non-linear regression 
 # ---------------------------------------------------
 # data:
