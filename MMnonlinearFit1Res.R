@@ -1,4 +1,4 @@
-print('file: R_MMnonlinearFitRes220320.R')
+print('file: MMnonlinearFit1Res.R')
 # Michaelis-Menten: residuals of non-linear regression 
 #  ---------------------------------------------------
 # data: 
