@@ -1,4 +1,4 @@
-print('file: R_MM-LB1compare220321.R')
+print('file: MM-LB1compare.R')
 # Michaelis-Menten: compare non-linear fit with Lineweaver-Burk estimate
 # data: I
 x = c(0.40, 1.05, 1.62, 2.07, 2.32, 2.46, 2.55, 3.21, 3.87, 4.17, 4.64, 4.64, 
