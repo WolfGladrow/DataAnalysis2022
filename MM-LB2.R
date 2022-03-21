@@ -1,4 +1,4 @@
-print('file: MM-LB2.R.R')
+print('file: MM-LB2.R')
 # Michaelis-Menten: esimate parameters using Lineweaver-Burk transformation
 # data: II
 x = c(0.31, 0.32, 0.32, 0.35, 0.36, 0.41, 0.45, 0.48, 0.50, 0.50, 0.52, 0.52,
