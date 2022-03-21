@@ -31,13 +31,8 @@ aEst = 1/cEst; print(c(round(aEst,2),'estimate of alpha via LB'))
 bEst = dEst/cEst; print(c(round(bEst,2),'estimate of beta via LB'))
 # ---------------------------------------------------
 # (3e) propagation of uncertainties
-# gamma = 1/alpha <-> alpha = 1/gamma = a = 1/c
-# ua^2 = (-1/c^2)^2*uc^2 -> ua = uc/c^2
 uaEst = ucEst/cEst^2
 print(c('Estimate of alpha = ',round(aEst,3),'+-',round(uaEst,3)))
-# delta = beta/alpha <-> beta = delta*alpha = b = d*a = d/c
-# ub^2 = (-d/c^2)^2 * uc^2 + (1/c)^2 * ud^2
-# ub = sqrt(uc^2*d^2/c^4 + ud^2/c^2)
 ubEst = sqrt(ucEst^2*dEst^2/cEst^4+udEst^2/cEst^2)
 print(c('Estimate of beta = ',round(bEst,3),'+-',round(ubEst,3)))
 # ------------------------------------------------------------------
