@@ -1,4 +1,5 @@
 print('file: PoissonRegrRIKZ.R')
+# Poisson regression: calculate species richness from RIKZ data (Zuur et al., 2007)
 RIKZ = read.table('RIKZ.txt',header = T)
 RIKZ$Richness = rowSums(RIKZ[,2:76] > 0)
 # png('Richness160919.png',width=16,height=12,units='cm',res=300)
