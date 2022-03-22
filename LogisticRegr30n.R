@@ -1,4 +1,4 @@
-print('file: R_LogisticRegr30n220322.R')
+print('file: LogisticRegr30n.R')
 # Logistic regression: small sample size, n=30
 # generate artificial data set
 # logit(p) = ln(p/(1-p)) = beta0 + beta*x = eta
