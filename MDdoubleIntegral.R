@@ -29,7 +29,7 @@ f = f*24/(4*alpha+3*beta)
 max(f)
 # install.packages('plot3D')
 library(plot3D)
-# png('jointPDF3D170220.png',width=16,height=12,units='cm',res=300)
+# png('jointPDF3D170220.png',width=16,height=16,units='cm',res=300)
 persp3D(z=f,main='',clab='PDF',zlab='PDF',breaks = seq(0,7.5,0.5),
         ticktype='detailed',nticks=2,cex.lab=1.5) 
 # dev.off()
