@@ -1,4 +1,4 @@
-print('file: R_MDintegrateSingularity220323.R')
+print('file: MDintegrateSingularity.R')
 # integral with singularity at x=0
 integrand3 = function(x) 1/sqrt(x)
 I3 = integrate(integrand3,0,1)$value; print(c(I3,'I3, numerical'))
