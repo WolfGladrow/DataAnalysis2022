@@ -2,7 +2,7 @@ print('file: PDsPDFs-F-PDFs.R')
 # F distributions
 x = seq(0.01,2,0.01)
 F11 = df(x,1,1); F15 = df(x,1,5); F51 = df(x,5,1); F8075 = df(x,80,75)
-# png('FpdfBook160103R.png',width=16,height=12,units='cm',res=300)
+# png('FpdfBook160103R.png',width=16,height=16,units='cm',res=300)
 plot(x,F15,type='l',xlab='x',ylab=NA,col='black',lwd=3,las=1,cex.lab=1.5) 
 title(ylab=TeX('$F(x; \\nu_1, \\nu_2)$'),cex.lab=1.5,line=2.3)
 lines(x,F11,col='blue',lwd=3,lty=2)
