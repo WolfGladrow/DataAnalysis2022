@@ -1,7 +1,7 @@
 print('file: PDsPDFsNormalCDF.R')
 # CDF of normal distribution
 x = seq(-4,4,0.01); NCDF =  pnorm(x)
-# png('NormalCDFstandardBook160103R.png',width=16,height=12,units='cm',res=300)
+# png('NormalCDFstandardBook160103R.png',width=16,height=16,units='cm',res=300)
 plot(x,NCDF,type='l',col='blue',lwd=3,xlab='x',
-     ylab='CDF of standard normal distribution',las=1,xlim=c(-3,3))
+     ylab='CDF of standard normal distribution',las=1,xlim=c(-3,3),cex.lab=1.5)
 # dev.off()
