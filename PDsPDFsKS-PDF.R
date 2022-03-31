@@ -17,9 +17,9 @@ for (k in 2:(LPDF-1)) {
     yPDF15[k] = (pkolm(xPDF[k+1],15)-pkolm(xPDF[k-1],15))*dx2i;
     yPDF30[k] = (pkolm(xPDF[k+1],30)-pkolm(xPDF[k-1],30))*dx2i;
     yPDF100[k] = (pkolm(xPDF[k+1],100)-pkolm(xPDF[k-1],100))*dx2i}
-# png('KSPDF161223.png',width=16,height=12,units='cm',res=300)
+# png('KSPDF161223.png',width=16,height=16,units='cm',res=300)
 plot(xPDF,yPDF15,type='l',col='blue',lwd=3,xlab='D',
-       ylab='Kolmogorov-Smirnov PDF',las=1,ylim=c(0,17),cex.lab=1.5)
+       ylab='Density',las=1,ylim=c(0,17),cex.lab=1.5)
 lines(xPDF,yPDF30,col='black',lwd=3,lty=2)
 lines(xPDF,yPDF100,col='red',lwd=3,lty=3)
 text(0.5,15,'n = 100',col='red',cex=1.5)
