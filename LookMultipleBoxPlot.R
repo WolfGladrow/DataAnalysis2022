@@ -1,4 +1,4 @@
-print('file: LookMultipleBoxplot.R')
+print('file: LookMultipleBoxPlot.R')
 set.seed(1953) # set seed for random number generators
 n1 = 30; r1 = rnorm(n1) # random number from standard normal distributions
 n2 = 35; r2 = rnorm(n2)
