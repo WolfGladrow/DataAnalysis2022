@@ -9,16 +9,16 @@ NO3g = c(0.20,0.20,0.22,0.21,0.52,0.15,0.15,0.41,0.82,0.75,1.60,0.50,0.52,1.23,
 # convert from mg/L to mumol/L: HNO3 = 1 + 14 + 3*16 = 63 g/mol
 NO3 = NO3g*1000/63 # (micro-mol/L) = (mmol/m^3)
 library(latex2exp)
-# png('BubblePlotRadiusAndArea220220.png',width=16,height=12,units='cm',res=300)
-  par(mfrow=c(1,2))
-  plot(x,y,main='',pch=21,col='white',bg='brown',
-       cex=5*NO3/max(NO3),xlab='x (km)',ylab='y (km)',las=1,
-       xlim=c(0,300),ylim=c(0,300))
-  lines(x,y,col='blue')
-  text(50,280,TeX('$r = NO_3\\, (\\mu mol/L)$'),col='brown',pos=4)
-  plot(x,y,main='',pch=21,col='white',bg='brown',
-       cex=5*sqrt(NO3/max(NO3)),xlab='x (km)',ylab='y (km)',las=1,
-       xlim=c(0,300),ylim=c(0,300))
-  lines(x,y,col='blue')
-  text(50,280,TeX('$r = \\sqrt{NO_3\\, (\\mu mol/L)}$'),col='brown',pos=4)
+# png('BubblePlotRadiusAndArea220220.png',width=16,height=16,units='cm',res=300)
+par(mfrow=c(1,2))
+plot(x,y,main='',pch=21,col='white',bg='brown',
+     cex=5*NO3/max(NO3),xlab='x (km)',ylab='y (km)',las=1,
+     xlim=c(0,300),ylim=c(0,300),cex.lab=1.5)
+lines(x,y,col='blue')
+text(0,280,TeX('$r = NO_3\\, (\\mu mol/L)$'),col='brown',pos=4,cex=1.3)
+plot(x,y,main='',pch=21,col='white',bg='brown',
+     cex=5*sqrt(NO3/max(NO3)),xlab='x (km)',ylab='y (km)',las=1,
+     xlim=c(0,300),ylim=c(0,300),cex.lab=1.5)
+lines(x,y,col='blue')
+text(0,280,TeX('$r = \\sqrt{NO_3\\, (\\mu mol/L)}$'),col='brown',pos=4,cex=1.3)
 # dev.off()
