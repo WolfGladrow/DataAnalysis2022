@@ -7,8 +7,8 @@ x1 = c(-0.68644, -0.82379, -0.98416, -2.02230, -0.43507, -0.76655,
        1.15160, 0.35533, 0.32936, 1.68584, 0.18260, 1.93600)
 # install.package('latex2exp')
 library(latex2exp)
-# png('x1PlotBox220220.png',width=16,height=12,units='cm',res=300)
-boxplot(x1,col='blue',las=1,xlab=TeX('$x_1$'))
+# png('x1PlotBox220220.png',width=16,height=16,units='cm',res=300)
+boxplot(x1,col='blue',las=1,xlab=TeX('$x_1$'),cex.lab=1.5)
 # dev.off()
 # ----------------------------------------------------------------
 # Remarks:
