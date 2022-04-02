@@ -7,8 +7,8 @@ x1 = c(-0.68644, -0.82379, -0.98416, -2.02230, -0.43507, -0.76655,
        1.15160, 0.35533, 0.32936, 1.68584, 0.18260, 1.93600)
 # install.package('latex2exp')
 library(latex2exp)
-# png('x1PlotHist220220.png',width=16,height=12,units='cm',res=300)
-par(mfrow=c(2,1)) # mf = multi frames
+# png('x1PlotHist220220.png',width=16,height=16,units='cm',res=300)
+par(mar=c(4.1,4.5,1,1),mfrow=c(2,1)) # position of subplots; mf = multi frames
 par(mai=c(1,1,0.25,1))
 hist(x1,breaks=5,col='blue',xaxt='n',yaxt='n',xlab='',ylab='',main='',las=1)
 axis(1,cex.axis=1.5)
