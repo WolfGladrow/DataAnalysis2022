@@ -12,10 +12,10 @@ B = matrix(phosphate.con[1:360,1:180,1],nrow=360,ncol=180) # surface values
 Bmax = max(B,na.rm=TRUE)  # 2.2288
 brk = seq(0,2.3,0.05); L = length(brk)-1
 library(latex2exp)
-# png('PO4surface220221.png',width=16,height=12,units='cm',res=300)
+# png('PO4surface220221.png',width=16,height=16,units='cm',res=300)
 image.plot(phosphate.lon,phosphate.lat,B,breaks=brk,col=rainbow(L),
            xlab='Eastern longitude',ylab='Latitude',las=1,
-           main=TeX('$\\[ PO_4 \\]\\, (\\mu mol\\, L^{-1})$'))
+           main=TeX('$\\[ PO_4 \\]\\, (\\mu mol\\, L^{-1})$'),cex.lab=1.5)
 # dev.off()
 # ---------------------------------------------------
 # Results: 
