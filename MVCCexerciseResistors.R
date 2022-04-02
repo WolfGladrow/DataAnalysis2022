@@ -9,7 +9,7 @@ xr = c(3,3,5,5,3,3,5,5)
 yr = c(1,1.3,1.3,0.7,0.7,1.3,1.3,1)
 x2 = c(5,7,7,8)
 y2 = c(1,1,0,0)
-# png('HarmonicMeanResistors220222.png',width=16,height=12,units='cm',res=300)
+# png('HarmonicMeanResistors220222.png',width=16,height=16,units='cm',res=300)
 plot(x1,y1,type='l',lwd=3,col='blue',xlab='',ylab='',las=1,cex=0.4,
      bty='n',xaxt='n',yaxt='n',xlim=c(0,10),ylim=c(-4,1)*1.35)
 lines(x1,-y1,lwd=3,col='blue')
