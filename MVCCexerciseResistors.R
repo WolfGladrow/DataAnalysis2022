@@ -1,4 +1,4 @@
-print('file: MVCCexerciseResistor.R')
+print('file: MVCCexerciseResistors.R')
 print('EXERCISE: replace parallel resistors by 2 resistors with equal resistence')
 print(' ---------------------------------------------------')
 xp = c(0,1,1,3,3,5,5,3,3,5,5,7,7,8)
