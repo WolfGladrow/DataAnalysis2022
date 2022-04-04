@@ -16,10 +16,10 @@ text(xt+0.3,0.75,pos=4,'Principle of',col='blue')
 text(xt-0.1,0.6,pos=4,'Maximum Relative Entropy',col='blue')
 text(xt+0.1,0.45,pos=4,'(MaxRelEnt)',col='blue')
 xt = -0.51
-text(xt,0.18,pos=4,'Principle of',col='red');
-text(xt,0.03,pos=4,'Maximum Entropy',col='red');
-text(xt,-0.12,pos=4,'(MaxEnt)',col='red');
+text(xt,0.18,pos=4,'Principle of',col='red')
+text(xt,0.03,pos=4,'Maximum Entropy',col='red')
+text(xt,-0.12,pos=4,'(MaxEnt)',col='red')
 xt = -0.365;
-text(xt,-0.42,pos=4,'Principle of',col='black');
-text(xt,-0.55,pos=4,'Indifference',col='black');
+text(xt,-0.42,pos=4,'Principle of',col='black')
+text(xt,-0.55,pos=4,'Indifference',col='black')
 # dev.off()
