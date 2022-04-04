@@ -1,5 +1,5 @@
 print('file: MVCCexampleCovAnscombe.R')
-# plot Anscombe quartet & sample means
+# EXERCISE & SOLUTION: plot Anscombe quartet & sample means
 # Anscombe's quartet (1973):
 data1 = c(10.0,8.04,10.0,9.14,10.0,7.46,8.0,6.58,
           8.0,  6.95,  8.0, 	8.14,  8.0,  6.77, 	8.0, 	5.76,
@@ -18,12 +18,12 @@ x3=M1[5,]; y3=M1[6,]; x4=M1[7,]; y4=M1[8,]
 # -----------------------------------------
 xp0 = c(1,21) 
 library(latex2exp)
-#png('AnscombeQuartet220222c.png',width=16,height=12,units='cm',res=300)
-par(mfrow=c(2,2))  # mf = multiple frames
+# png('AnscombeQuartet220222c.png',width=16,height=16,units='cm',res=300)
+par(mar=c(4.1,4.5,1,1),mfrow=c(2,2))  # mf = multiple frames
 # -----------------------------------------
 plot(x1,y1,type='p',lwd=3,col='blue',
      xlab=TeX('$x_1$'),ylab=TeX('$y_1$'),
-     las=1,cex=0.4,xlim=c(2,20),ylim=c(2,14))
+     las=1,cex=0.4,xlim=c(2,20),ylim=c(2,14),cex.lab=1.5)
 out1 = lm(y1~x1)
 yp0 = out1$coefficients[1]+out1$coefficients[2]*xp0
 lines(xp0,yp0,col='black')
@@ -38,7 +38,7 @@ text(7,3,'+',col='red',cex=1)
 # -----------------------------------------
 plot(x2,y2,type='p',lwd=3,col='blue',
      xlab=TeX('$x_2$'),ylab=TeX('$y_2$'),
-     las=1,cex=0.4,xlim=c(2,20),ylim=c(2,14))
+     las=1,cex=0.4,xlim=c(2,20),ylim=c(2,14),cex.lab=1.5)
 out2 = lm(y2~x2)
 yp0 = out2$coefficients[1]+out2$coefficients[2]*xp0
 lines(xp0,yp0,col='black')
@@ -53,7 +53,7 @@ text(7,3,'+',col='red',cex=1)
 # -----------------------------------------
 plot(x3,y3,type='p',lwd=3,col='blue',
      xlab=TeX('$x_3$'),ylab=TeX('$y_3$'),
-     las=1,cex=0.4,xlim=c(2,20),ylim=c(2,14))
+     las=1,cex=0.4,xlim=c(2,20),ylim=c(2,14),cex.lab=1.5)
 out3 = lm(y3~x3)
 yp0 = out3$coefficients[1]+out3$coefficients[2]*xp0
 lines(xp0,yp0,col='black')
@@ -68,7 +68,7 @@ text(7,3,'+',col='red',cex=1)
 # -----------------------------------------
 plot(x4,y4,type='p',lwd=3,col='blue',
      xlab=TeX('$x_4$'),ylab=TeX('$y_4$'),
-     las=1,cex=0.4,xlim=c(2,20),ylim=c(2,14))
+     las=1,cex=0.4,xlim=c(2,20),ylim=c(2,14),cex.lab=1.5)
 out4 = lm(y4~x4)
 yp0 = out4$coefficients[1]+out4$coefficients[2]*xp0
 lines(xp0,yp0,col='black')
