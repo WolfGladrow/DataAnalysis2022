@@ -48,7 +48,7 @@ print('file: Overview22.R')
   arrows(14,79,10,69,length=0.1,angle=10,col='blue',lwd=3)
   arrows(16,79,80,69,length=0.1,angle=10,col='blue',lwd=3) # id -> ht
   arrows(16,59,25,49,length=0.1,angle=10,col='blue',lwd=3) # pe -> be
-  arrows(15,59,5,49,length=0.1,angle=10,col='orange',lwd=3) # pe -> fe
+  arrows(15,59,5,49,length=0.1,angle=10,col='blue',lwd=3) # pe -> fe
   arrows(29,54,26,49,length=0.1,angle=10,col='green',lwd=3) # bt -> be
   arrows(80,59,75,49,length=0.1,angle=10,col='blue',lwd=3) # ht -> bt
   arrows(71,54,74,49,length=0.1,angle=10,col='green',lwd=3) # bt -> bht
