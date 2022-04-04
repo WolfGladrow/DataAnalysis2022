@@ -17,8 +17,8 @@ sflag = 2
 library(latex2exp)
 # text(0,0.2,TeX('$\\mu = 0$'),col='black')
 if (sflag == 1) {
-  # png('LoadedDieZeq171211.png',width=16,height=12,units='cm',res=300)
-  plot(za,myFct1(za),type='l',lwd=3,col='blue',xlab='z',ylab='f(z)',las=1,cex=0.4)
+  # png('LoadedDieZeq171211.png',width=16,height=16,units='cm',res=300)
+  plot(za,myFct1(za),type='l',lwd=4,col='blue',xlab='z',ylab='f(z)',las=1,cex=0.4,cex.lab=1.5)
   abline(0,0,col='green')
   # dev.off()
 }
