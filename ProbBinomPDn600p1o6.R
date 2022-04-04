@@ -1,4 +1,4 @@
-print('file: ProbBionomPDn600p1o6.R')
+print('file: ProbBinomPDn600p1o6.R')
 # dbinom(k;n=600,p=1/6
 p=1/6; n=600; karr=seq(0,n); parr=numeric(n+1) 
 parr = dbinom(karr,n,p)
