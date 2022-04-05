@@ -18,9 +18,9 @@ out = sampleUcorFct(r,nLarge)
 xL = out[1:nLarge]; yL = out[(nLarge+1):(2*nLarge)]
 print(c(round(cor(xL,yL),4),'correlation'))
 print(c(round(cov(xL,yL),4),'covariance'))
-# png('CorrelationEst200707.png',width=16,height=12,units='cm',res=300)
-  plot(narr,corEst1,log='x',type='p',lwd=3,col='blue',xlab='log(n)',
-       ylab='Correlation, estimated',las=1,cex=0.4,cex.lab=1.5)
-  points(narr,corEst2,col='red',pch=24,lwd=3,cex=0.4)
-  abline(h=r,col='black',lty=2)
+# png('CorrelationEst200707.png',width=16,height=16,units='cm',res=300)
+plot(narr,corEst1,log='x',type='p',lwd=4,col='blue',xlab='log(n)',
+     ylab='Correlation',las=1,cex=0.6,cex.lab=1.5)
+points(narr,corEst2,col='red',pch=24,lwd=4,cex=0.6)
+abline(h=r,col='black',lty=2)
 # dev.off()
