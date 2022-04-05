@@ -7,14 +7,14 @@ set.seed(1953) # set seed for random number generators
 for(k in 1:M) S[k] = sum(runif(N))
 Smean = mean(S); Ssd = sd(S)
 SmeanTheory = N/2; SsdTheory = sqrt(N/12)
-#  png('SumRandomM1000DensityBook160104.png',width=16,height=12,units='cm',res=300)
-plot(density(S,from=4900,to=5100),col='blue',lwd=3,main='',
-       xlab='Sum of 10000 random numbers',xlim=c(4925,5075),las=0,cex.lab=1.5)
-text(4950,0.01,'M = 1000',col='blue',cex=1.5)
+# png('SumRandomM1000DensityBook160104.png',width=16,height=16,units='cm',res=300)
+plot(density(S,from=4900,to=5100),col='black',lwd=3,main='',
+     xlab='Sum of 10000 random numbers',xlim=c(4925,5075),las=0,cex.lab=1.5)
+text(4950,0.01,'M = 1000',col='black',cex=1.5)
 x = seq(4900,5100,1); y = dnorm(x,SmeanTheory,SsdTheory)
-lines(x,y,col='red',lwd=2,lty=2)
-legend('bottom',legend=c('MC density estimate','normal'),col=c('blue','red'),
-   lty=c(1,2),lwd=c(3,2))
+lines(x,y,col='magenta',lwd=2,lty=2)
+legend('bottom',legend=c('MC density estimate','normal'),col=c('black','magenta'),
+       lty=c(1,2),lwd=c(3,2),cex=1.3)
 # dev.off()
 # --------------------------------------------------------------
 # Results:
