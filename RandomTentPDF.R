@@ -1,4 +1,4 @@
-# print('file: RandomTentPDF')
+# print('file: RandomTentPDF.R')
 # print('plot tent PDF')
 dy = 0.01; y1 = seq(0,0.5,dy); y2 = seq(0.5,1,dy)
 q1 = 4*y1; q2 = 4*(1-y2)
