@@ -7,8 +7,9 @@ set.seed(1953) # set seed for random number generators
 for(k in 1:M) S[k] = sum(runif(N))
 Smean = mean(S); Ssd = sd(S)
 SmeanTheory = N/2; SsdTheory = sqrt(N/12)
-# png('SumRandomBook160104.png',width=16,height=12,units='cm',res=300)
+# png('SumRandomBook160104.png',width=16,height=16,units='cm',res=300)
 hist(S,30,col='blue',xlab='Sum of 10000 random numbers',main='',las=1,cex.lab=1.5)
+abline(v=5000,col='black',lty=4)
 # dev.off()
 # --------------------------------------------------------------
 # Results:
