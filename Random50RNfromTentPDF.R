@@ -8,7 +8,7 @@ for (k in 1:L) {            # transformation y(x)
   if (x < 0.5) {y[k] = sqrt(x/2)}
   else {y[k] = 1-sqrt((1-x)/2)}}
 xp = seq(1,L)         # sequence 1,2,...,L
-# png('tentRN160722.png',width=16,height=12,units='cm',res=300)
-plot(xp,y,type='p',lwd=3,col='blue',xlab='#',ylab='Random numbers from tent PDF',
-     las=1,cex=0.4,cex.lab=1.5)
+# png('tentRN160722.png',width=16,height=16,units='cm',res=300)
+plot(xp,y,type='p',lwd=4,col='blue',xlab='#',ylab='Random numbers from tent PDF',
+     las=1,cex=0.6,cex.lab=1.5)
 # dev.off()
