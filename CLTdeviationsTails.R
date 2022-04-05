@@ -13,7 +13,7 @@ stdsN = sqrt(varsN); print(c(round(stdsN,4),'stdsN')) # expected standard deviat
 ynorm = dnorm(xest,mean=N/2,sd=stdsN)  # theoretical distribution
 r = yest/ynorm
 library(latex2exp)
-# png('CLTtails160722.png',width=16,height=12,units='cm',res=300)
+# png('CLTtails160722.png',width=16,height=16,units='cm',res=300)
 plot(xest,r,type='l',lwd=3,col='blue',xlab='Sum over 10000 random numbers',cex.lab=1.5,
      ylab='Estimated density/normal PDF',main='',las=1,xlim=c(4900,5100),ylim=c(0.9,1.6))
 abline(1,0,col='black')
