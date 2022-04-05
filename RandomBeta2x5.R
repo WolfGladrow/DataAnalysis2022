@@ -23,15 +23,13 @@ M = 1e4 # number of Monte Carlo runs
 r = runif(M) 
 rb = numeric(M)
 for(i in 1:M) {j=which.min((CDFapp-r[i])^2); rb[i] = x[j]}
-par(mfrow=c(1,1))
-# png('RandomDiscrete210427all.png',width=16,height=12,units='cm',res=300)
-  par(mfrow=c(2,2))
-  plot(x,y,type='l',lwd=3,col='blue',xlab='x',ylab='Beta(x;2,5)',las=1,cex=0.4)
-  plot(x,CDFapp,type='p',lwd=3,col='blue',xlab='x',ylab='CDF(x)',las=1,cex=0.4)
-  lines(x,CDFana,col='green')
-  plot(CDFapp,x,type='p',lwd=3,col='blue',xlab='CDF(x)',ylab='Inverse CDF',las=1,cex=0.4)
-  lines(CDFapp,CDFinvA,col='green')
-  plot(density(rb,from=0,to=1),type='l',lwd=3,col='blue',xlab='x',
-       ylab='Density',las=1,cex=0.4,main='')
-  lines(x,y,col='green')
+# png('RandomDiscrete210427all.png',width=16,height=16,units='cm',res=300)
+par(mar=c(4.1,4.5,1,1),mfrow=c(2,2))  # mf = multiple frames
+plot(x,y,type='l',lwd=4,col='blue',xlab='x',ylab='Beta(x;2,5)',las=1,cex.lab=1.5)
+plot(x,CDFapp,type='p',lwd=3,col='blue',xlab='x',ylab='CDF(x)',las=1,cex=0.4,cex.lab=1.5)
+lines(x,CDFana,col='green')
+plot(CDFapp,x,type='p',lwd=3,col='blue',xlab='CDF(x)',ylab='Inverse CDF',las=1,cex=0.4,cex.lab=1.5)
+plot(density(rb,from=0,to=1),type='l',lwd=3,col='blue',xlab='x',
+     ylab='Density',las=1,cex=0.4,main='',cex.lab=1.5)
+lines(x,y,col='green')
 # dev.off()
