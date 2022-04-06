@@ -12,12 +12,12 @@ for(k in 1:Ln) {n = narr[k];     # sample size
 for(m in 1:M) meanest[m]=mean(rnorm(n,mean=mu));
 estmean[k] = mean(meanest);
 estsd[k] = sd(meanest)}
-# png('MeanPlusMinusUncert160819.png',width=16,height=12,units='cm',res=300)
-plot(xpmu,ypmu,type='l',lwd=2,col='blue',xlab='n',las=1,
+# png('MeanPlusMinusUncert160819.png',width=16,height=16,units='cm',res=300)
+plot(xpmu,ypmu,type='l',lwd=2,col='black',xlab='n',las=1,
      ylab='Mean \u00B1 uncertainty',ylim=c(0,mu+sigma/2),cex.lab=1.5)
-lines(narr,ypplus,col='blue',lwd=2,lty=2)
-lines(narr,ypminus,col='blue',lwd=2,lty=2)
-points(narr,estmean,col='red',cex=0.6,lwd=2,pch=19)
-points(narr,estmean+estsd,col='red',cex=0.6,lwd=2,pch=25)
-points(narr,estmean-estsd,col='red',cex=0.6,lwd=2,pch=25)
+lines(narr,ypplus,col='black',lwd=2,lty=2)
+lines(narr,ypminus,col='black',lwd=2,lty=2)
+points(narr,estmean,col='red',cex=0.6,lwd=4,pch=19)
+points(narr,estmean+estsd,col='red',cex=0.6,lwd=4,pch=25)
+points(narr,estmean-estsd,col='red',cex=0.6,lwd=4,pch=25)
 # dev.off()
