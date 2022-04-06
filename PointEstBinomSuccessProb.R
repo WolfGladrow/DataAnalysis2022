@@ -18,12 +18,14 @@ meanEst = mean(bMean); print(c(round(meanEst,4),'meanEst'))  #  (expected: close
 varpEsts = var(pEsts); print(c(round(varpEsts,4),'varpEsts'))
 varpExp = n*p*(1-p)/n/n/j; print(c(round(varpExp,3),'varpExp'))
 sdpEsts = sd(pEsts); print(c(round(sdpEsts,4),'sdpEsts'))
-# png('MCpBinom160227.png',width=16,height=12,units='cm',res=300)
+# png('MCpBinom160227.png',width=16,height=16,units='cm',res=300)
 hist(pEsts,30,col='blue',xlab=TeX('$\\hat{p}\\, (success\\,  in\\,  single\\,  trial)$'),
      main='',las=1,cex.lab=1.5)
-text(0.46,100,'mean of',col='blue',cex=1.5)
-text(0.46,90,'estimate',col='blue',cex=1.5)
-text(0.46,80,paste('= ',as.character(round(pEst,4))),col='blue',cex=1.5)
-text(0.8,90,'var of estimate',col='blue',cex=1.5)
-text(0.8,80,paste('= ',as.character(round(varpEsts,4))),col='blue',cex=1.5)
+pEstr = round(pEst,4); varpEstsr = round(varpEsts,4); sdpEstsr = round(sdpEsts,4); 
+xt = 0.8
+text(xt,100,bquote(~mean(hat(p)) == .(pEstr)),col='blue',cex=1.5)
+text(xt,80,bquote(~var(hat(p)) == .(varpEstsr)),col='blue',cex=1.5)
+text(xt,60,bquote(~sd(hat(p)) == .(sdpEstsr)),col='blue',cex=1.5)
+abline(v=p,col='black',lty=1)
+abline(v=pEst,col='blue',lty=4)
 # dev.off()
