@@ -47,7 +47,7 @@ print('Plot:')
 library(latex2exp)
 xp = x; yp = dnorm(xp,mu,sigma0) # distribution from which we sample
 xI95 = c(I95L,I95U); yI95 = c(0,0) # 95% interval
-# png('PosteriorNormalVarKnown210617.png',width=16,height=12,units='cm',res=300)
+# png('PosteriorNormalVarKnown210617.png',width=16,height=16,units='cm',res=300)
 plot(x,Post,type='l',lwd=3,col='blue',xlab=TeX('$\\mu,\\, \\hat{\\mu}$'),
      ylab=NA,las=1,cex=0.4,cex.lab=1.5)
 title(ylab='PDFs',line=2.5,cex.lab=1.5)
@@ -57,5 +57,5 @@ abline(v=mode1,col='blue',lty=3)
 lines(xI95,yI95,col='magenta',lwd=3,lty=1)
 text(muEst-0.1,0.05,'95 % interval',col='magenta',cex=1.5)
 legend('topright',legend=c('posterior','population'),col=c('blue','black'),
-       lty=c(1,1),lwd=c(3,1))
+       lty=c(1,1),lwd=c(3,1),cex=1.2)
 # dev.off()
