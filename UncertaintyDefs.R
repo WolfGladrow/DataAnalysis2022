@@ -1,6 +1,6 @@
 print('file: UncertaintyDefs.R')
 # plot measurand, measurements, error, ... 
-# png('UncertaintyError161030.png',width=16,height=12,units='cm',res=300)
+# png('UncertaintyError161030.png',width=16,height=16,units='cm',res=300)
 plot(1.5,1,type='p',col='blue',lwd=5,cex=0.6,xlim=c(-0.5,2.5),ylim=c(0,2),
      bty='n',col.axis='white',xaxt='n',yaxt='n',xlab='',ylab='')
 text(1.5,1.55,'measurand',col='blue',cex=1.5)
