@@ -1,7 +1,7 @@
 print('file: PointEstMedianVersusMean.R')
 # median not equal mean (3/2022)')
 library(latex2exp)
-# png('Median220304.png',width=16,height=12,units='cm',res=300)
+# png('Median220304.png',width=16,height=16,units='cm',res=300)
 par(mfrow=c(1,2))
 # standard normal PDF: median equal mean
 dx=0.001; xN = seq(-4,4,dx); yN = dnorm(xN)
