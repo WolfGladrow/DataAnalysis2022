@@ -11,6 +11,8 @@ for(m in 1:M) {x=rnorm(n); sdest[m]=median(abs(x-median(x)))}
 hist(sdest,30,col='blue',xlab='MAD',main='',las=1,cex.lab=1.5)
 meansdest = mean(sdest)  #   (expected: close to sigma = 1)
 sdsdest = sd(sdest)
+abline(v=1,col='black',lty=1)
+abline(v=meansdest,col='blue',lty=4)
 xt = 0.7
 text(xt,65,pos=4,paste('mean of estimate = ',as.character(round(meansdest,3))),col='blue',cex=1.5)
 text(xt,55,pos=4,paste('sd of estimate = ',as.character(round(sdsdest,3))),col='blue',cex=1.5)
