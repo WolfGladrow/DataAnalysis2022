@@ -34,7 +34,7 @@ print(c(round(I95L,4),'I95L'))
 print(c(round(I95U,4),'I95U'))
 x95 = c(I95L,I95U); y95 = c(0,0)
 library(latex2exp)
-# png('MargPostNorm5nExample210622.png',width=16,height=12,units='cm',res=300)
+# png('MargPostNorm5nExample210622.png',width=16,height=16,units='cm',res=300)
 plot(xp,yp,type='l',lwd=3,col='blue',xlab=NA,ylab=NA,las=1,
      cex=0.4,xlim=c(3.1,4.1)) # xlim=c(2,5)) before 3/2022
 abline(v=mu,col='black')
