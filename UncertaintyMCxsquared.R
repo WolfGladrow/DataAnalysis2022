@@ -20,23 +20,23 @@ medianMC = median(rf); print(c(round(medianMC,1),'medianMC'))  # 4.407125
 sfMCrobust= median(abs(rf-median(rf)))/0.6745  # 2.071515 MADN
 print(c(round(sfMCrobust,1),'sfMCrobust'))
 library(latex2exp)
-sflag = 1
+sflag = 2
 if (sflag == 1) {
-  # png('MCxsqHist161203.png',width=16,height=12,units='cm',res=300)
+  # png('MCxsqHist161203.png',width=16,height=16,units='cm',res=300)
   hist(rf,100,col='blue',main='',xlab='rf',las=1,cex.lab=1.5) #,xlim=c(10,40))
-  text(8,350,TeX('$q = 4.4 \\pm 2.1'),col='blue',pos=4,cex=1.5)
+  text(8,350,bquote(~hat(q) == .(medianMCr) %+-% .(sfMCrobustr)),col='blue',pos=4,cex=1.5)
   text(11,150,paste('M = ',as.character(M)),col='blue',cex=1.5)
   # dev.off()
 }
 if (sflag == 2) {
-  # png('MCxsqDensity161203.png',width=16,height=12,units='cm',res=300)
+  # png('MCxsqDensity161203.png',width=16,height=16,units='cm',res=300)
   plot(density(rf,from=0,to=10.5),type='l',col='blue',main='',xlab='rf',
        las=1,lwd=3,xlim=c(0,10),cex.lab=1.5)
   xp = seq(0,20,0.01); yp = dnorm(xp,mean=medianMC,sd=sfMCrobust)
   lines(xp,yp,col='black',lwd=1,lty=2)
-  text(5,0.05,TeX('$q = 4.4 \\pm 2.1'),col='blue',cex=1.5)
+  text(5,0.05,bquote(~hat(q) == .(medianMCr) %+-% .(sfMCrobustr)),col='blue',pos=1,cex=1.5)
   text(5,0.005,paste('M = ',as.character(M)),col='blue',cex=1.5)
   legend('topright',legend=c('MC estimate','normal'),col=c('blue','black'),
-         lty=c(1,2),lwd=c(3,1))
-  # dev.off()
+         lty=c(1,2),lwd=c(3,1),cex=1.3)
+   # dev.off()
 }
