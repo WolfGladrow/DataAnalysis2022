@@ -20,7 +20,7 @@ medianMC = median(rf); print(c(round(medianMC,1),'medianMC'))  # 4.407125
 sfMCrobust= median(abs(rf-median(rf)))/0.6745  # 2.071515 MADN
 print(c(round(sfMCrobust,1),'sfMCrobust'))
 library(latex2exp)
-sflag = 2
+sflag = 1
 if (sflag == 1) {
   # png('MCxsqHist161203.png',width=16,height=16,units='cm',res=300)
   hist(rf,100,col='blue',main='',xlab='rf',las=1,cex.lab=1.5) #,xlim=c(10,40))
