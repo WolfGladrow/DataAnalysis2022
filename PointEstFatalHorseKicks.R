@@ -7,22 +7,22 @@ pPredict=dpois(ja,lambdaEst) # probabilities based on estimated lambda
 relfre=frequencies/sum(frequencies) # relative frequencies
 fPredict=pPredict*sum(frequencies)  # predicted frequencies
 # ---------- plots:
-sflag = 2
+sflag = 1
 if (sflag == 1) {
-  # png('FatalHorseKicksF170720.png',width=16,height=12,units='cm',res=300)
-  plot(ja,frequencies,type='p',col='red',xlab='Number of events j',ylab='',
-       main='',lwd=3,cex=0.5,las=1,cex.lab=1.5)
+  # png('FatalHorseKicksF170720.png',width=16,height=16,units='cm',res=300)
+  plot(ja,frequencies,type='p',col='black',xlab='Number of events j',ylab='',
+       main='',lwd=4,cex=0.6,las=1,cex.lab=1.5)
   title(ylab=expression(paste('Frequencies ',f[j])),line=2.3,cex.lab=1.5)
-  points(ja,fPredict,col='blue',lwd=2,cex=0.5)
-  text(0.61,40,pos=4,expression(paste(hat(lambda),' = 0.61')),col='red',cex=1.5)
+  points(ja,fPredict,col='magenta',lwd=4,cex=0.6,pch=24)
+  text(lambdaEst,40,pos=4,bquote(~hat(lambda) == .(lambdaEst)),col='magenta',cex=1.5)
   # dev.off()
 }
 if (sflag == 2) {
-  png('FatalHorseKicksP170720.png',width=16,height=12,units='cm',res=300)
-  plot(ja,relfre,type='p',col='red',las=1,cex=0.5,main='',xlab='Number of events j',
-       ylab='',lwd=3,cex.lab=1.5)
-  title(ylab='Probabilities,relative frequencies',line=2.5,cex.lab=1.5)
-  points(ja,pPredict,col='blue',lwd=2,cex=0.5)
-  text(0.61,0.2,pos=4,expression(paste(hat(lambda),' = 0.61')),col='red',cex=1.5)
-  dev.off()
+  # png('FatalHorseKicksP170720.png',width=16,height=16,units='cm',res=300)
+  plot(ja,relfre,type='p',col='black',las=1,cex=0.6,main='',xlab='Number of events j',
+       ylab='',lwd=4,cex.lab=1.5)
+  title(ylab='Probability, relative frequency',line=2.5,cex.lab=1.5)
+  points(ja,pPredict,col='magenta',lwd=4,cex=0.6,pch=24)
+  text(lambdaEst,0.2,pos=4,bquote(~hat(lambda) == .(lambdaEst)),col='magenta',cex=1.5)
+  # dev.off()
 }
