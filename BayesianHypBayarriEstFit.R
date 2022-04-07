@@ -26,7 +26,7 @@ print(c(Lopt,'optimal lambda'))
 print(c(Mmin,'minimal sum of squares'))
 sflag = 2
 if (sflag == 2) {
-  # png('PoissonZIPleastSquaresRF191116.png',width=16,height=12,units='cm',res=300)
+  # png('PoissonZIPleastSquaresRF191116.png',width=16,height=16,units='cm',res=300)
   plot(x,y,type='p',lwd=4,col='blue',xlab='x',
        ylab='Probabilities, relative frequencies',las=1,cex=0.6,cex.lab=1.5)
   points(x,pPredicted,col='magenta',lwd=4,cex=0.6,pch=24)
