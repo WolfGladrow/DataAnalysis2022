@@ -1,4 +1,4 @@
-print('file: BayesianNHST-t-testA.R')
+print('file: BayesianNHST-t-testAll.R')
 # hist: compare t- and Bayesian-t-test: different effect size & n
 # effect sizes = 0, 0.2, 1.2; sample size n = 10, 100 
 # -> 6 different Monte Carlo simulations
