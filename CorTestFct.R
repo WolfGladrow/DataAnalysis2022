@@ -21,7 +21,7 @@ r = 0.6
 Narray = seq(6,17); L = length(Narray); pa = numeric(L)
 for(k in 1:L) {n=Narray[k]; pa[k]=testcorsig0(r,n)}
 library(latex2exp)
-# png('TestCorSigExer160728.png',width=16,height=12,units='cm',res=300)
+# png('TestCorSigExer160728.png',width=16,height=16,units='cm',res=300)
 plot(Narray,pa,type='p',lwd=4,col='red',xlab='Sample size n',ylab='p-value',
      las=1,cex=0.6,cex.lab=1.5)
 points(Narray[1:6],pa[1:6],lwd=4,col='black',cex=0.6)
