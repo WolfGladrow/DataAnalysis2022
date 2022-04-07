@@ -31,18 +31,18 @@ pLeft = pf(Fobs,df1=m-1,df2=n-1); print(c(round(pLeft,4),'pleft'))
 p = round(2*pLeft,2); print(c(p,'p'))
 sflag = 2
 if (sflag == 2) {
-# png('VarTestuni50PDab171225MC.png',width=16,height=12,units='cm',res=300) # x2min=50
-plot(xd,yd,type='l',xlim=c(0,3),ylim=c(-0.4,1),lwd=3,main='',xlab='F',
-     ylab='Density',col='black',cex.lab=1.5)
-lines(xd,yF,col='magenta',lwd=3,lty=4)
-lines(xd,d,col='blue',lwd=1,lty=1)
-abline(v=Fobs,col='green',lty=3)
-legend('topright',c('Monte Carlo','F(x;10,9)','difference'),lwd=c(3,3,1),
-       col=c('black','magenta','blue'),lty=c(1,4,1))
-xt=2
-text(xt,-0.1,bquote(~p[MC] == .(pMC2)),col='black',pos=4,cex=1.5)
-text(xt,-0.3,bquote(~p == .(p)),col='magenta',pos=4,cex=1.5)
-# dev.off()
+  # png('VarTestuni50PDab171225MC.png',width=16,height=16,units='cm',res=300) # x2min=50
+  plot(xd,yd,type='l',xlim=c(0,3),ylim=c(-0.4,1),lwd=4,main='',xlab='F',
+       ylab='Density',col='black',cex.lab=1.5)
+  lines(xd,yF,col='magenta',lwd=4,lty=4)
+  lines(xd,d,col='blue',lwd=2,lty=1)
+  abline(v=Fobs,col='green',lty=3)
+  legend('topright',c('Monte Carlo','F(x;10,9)','difference'),lwd=c(3,3,1),
+         col=c('black','magenta','blue'),lty=c(1,4,1),cex=1.5)
+  xt=2
+  text(xt,-0.1,bquote(~p[MC] == .(pMC2)),col='black',pos=4,cex=1.5)
+  text(xt,-0.3,bquote(~p == .(p)),col='magenta',pos=4,cex=1.5)
+  # dev.off()
 }
 # ----------------------------------------------------------------
 # Remarks:
