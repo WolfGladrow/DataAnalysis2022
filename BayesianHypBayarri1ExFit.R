@@ -8,7 +8,7 @@ lambdaEst = sum(x*y)/sum(y) # estimate mean rate
 yPredict = dpois(x,lambdaEst)*sum(y)
 sflag = 2
 if (sflag == 2) {
-# png('Bayarri08PoissonFit191114.png',width=16,height=12,units='cm',res=300)
+# png('Bayarri08PoissonFit191114.png',width=16,height=16,units='cm',res=300)
 plot(x,y,type='p',lwd=4,col='blue',xlab='Number of events',ylab='Frequency',las=1,cex=0.6,axes=F,cex.lab=1.5)
 axis(side=1,labels=x,at=x)
 yL = c(0,20,40,60,80)
