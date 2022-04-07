@@ -26,7 +26,7 @@ print(c(Lopt,'optimal lambda'))
 print(c(Mmin,'minimal sum of squares'))
 sflag = 1
 if (sflag == 1) {
-  # png('PoissonZIPleastSquares191116.png',width=16,height=12,units='cm',res=300)
+  # png('PoissonZIPleastSquares191116.png',width=16,height=16,units='cm',res=300)
   contour(pa,Lambdaa,M,xlab='p',ylab=NA,las=1,cex.lab=1.5)
   points(popt,Lopt,col='magenta',lwd=6,cex=0.8)
   title(ylab=TeX('$\\lambda$'),line=2.7,cex.lab=1.5)
