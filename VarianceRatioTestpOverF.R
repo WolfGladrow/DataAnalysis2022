@@ -5,8 +5,8 @@ nu1 = 6; nu2 = 4  # fictive degrees of freedom; must be different from each othe
 pa = numeric(L)
 for(k in 1:L) {p = pf(Fa[k],df1=nu1,df2=nu2); pa[k] = 2*min(p,1-p)}
 xp = c(1,1); yp = c(0,1)
-# png('varratiopmax170708.png',width=16,height=12,units='cm',res=300)
-plot(Fa,pa,type='l',lwd=3,col='blue',xlab='Observed variance ratio F',
+# png('varratiopmax170708.png',width=16,height=16,units='cm',res=300)
+plot(Fa,pa,type='l',lwd=4,col='blue',xlab='Observed variance ratio F',
      ylab='p-value',las=1,cex.lab=1.5)
 lines(xp,yp,col='black',lty=3)
 # dev.off()
