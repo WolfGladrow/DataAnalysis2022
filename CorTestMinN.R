@@ -9,8 +9,8 @@ for(k in 1:L) {r = ra[k]; firstflag = 0;
     p = 2*pt(-abs(tcor),df=n-2);
     if (p < alpha) {if (firstflag == 0) {nmin[k] = n; firstflag = 1}}}}
 library(latex2exp)
-# png('CorrelationTestnmin170710.png',width=16,height=12,units='cm',res=300)
-plot(ra,nmin,type='l',lwd=3,col='blue',xlab='Magnitude of observed correlation, |r|',
+# png('CorrelationTestnmin170710.png',width=16,height=16,units='cm',res=300)
+plot(ra,nmin,type='l',lwd=4,col='blue',xlab='Magnitude of observed correlation, |r|',
      ylab=NA,las=1,cex=0.4,ylim=c(0,45),cex.lab=1.5)
 title(ylab=TeX('$n_{min} \\, (|r|)$'),cex.lab=1.5,line=2.3)
 # dev.off()
