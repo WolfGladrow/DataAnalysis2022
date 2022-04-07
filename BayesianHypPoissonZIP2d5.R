@@ -7,7 +7,7 @@ if (sflag == 2) {
   yp = dpois(x,lambda)
   y = (1-p)*yp
   y[1] = y[1] + p
-  # png('PoissonZIP2d5r19114.png',width=16,height=12,units='cm',res=300)
+  # png('PoissonZIP2d5r19114.png',width=16,height=16,units='cm',res=300)
   plot(x,y,type='p',lwd=4,col='blue',xlab='x',
        ylab='ZIP, Poisson',las=1,cex=0.6,cex.lab=1.5)
   points(x,yp,col='magenta',lwd=4,cex=0.6,pch=24)
