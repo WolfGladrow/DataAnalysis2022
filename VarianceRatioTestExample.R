@@ -29,7 +29,7 @@ a1 = seq(0,F01,0.001); b1 = df(a1,df1=nu2,df2=nu1); c1 = c(a1,F01,0,0); d1 = c(b
 a2 = seq(F02,3,0.001); b2 = df(a2,df1=nu1,df2=nu2); c2 = c(a2,3,F02,F02); d2 = c(b2,0,0,b2[1])
 sflag = 1
 if (sflag == 1) {
-# png('VarRatioTest170707.png',width=16,height=12,units='cm',res=300)
+# png('VarRatioTest170707.png',width=16,height=16,units='cm',res=300)
 par(mfrow=c(1,2))
 plot(xp,y1,type='l',lwd=3,col='blue',xlab='x',ylab='F-distributions',las=1,
      cex=0.4,ylim=c(0,0.7),cex.lab=1.5)
