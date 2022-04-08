@@ -21,7 +21,7 @@ for(iperm in 2:M) {
 pPermut = sum(abs(permcor)>=abs(permcor[1]))/M # relative frequency
 sflag = 2
 if (sflag == 2) {
-  # png('CorTestPermHist200524.png',width=16,height=12,units='cm',res=300)
+  # png('CorTestPermHist200524.png',width=16,height=16,units='cm',res=300)
   hist(permcor,breaks=seq(-0.7,0.7,0.05),main='',
        xlab='Correlation',ylab='Frequency',col='blue',las=1,cex.lab=1.5)
   xp = c(r,r); yp = c(0,500)
