@@ -38,9 +38,9 @@ pMC = fr/M      # relative frequencies
 UMC = seq(0,9)
 sflag = 3
 if (sflag == 3) {
-  # png('Mann47Whitneyp33GFMC180528.png',width=16,height=12,units='cm',res=300)
-  plot(UMC,pMC,type='p',lwd=4,col='blue',xlab='U',ylab='p(U)',las=1,cex=0.6,
+  # png('Mann47Whitneyp33GFMC180528.png',width=16,height=16,units='cm',res=300)
+  plot(UMC,pMC,type='p',lwd=4,col='black',xlab='U',ylab='p(U)',las=1,cex=0.6,
        ylim=c(0,0.2),pch=24,cex.lab=1.5)
-  points(Ua,p,col='red',lwd=4,cex=0.6)
+  points(Ua,p,col='magenta',lwd=4,cex=0.6)
   # dev.off()
 }
