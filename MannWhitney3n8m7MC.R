@@ -30,12 +30,16 @@ Lh = (L-1)/2; p1 = pMC[1:Lh]; p2 = numeric(Lh)
 for(k in 1:Lh) p2[k] = pMC[L+1-k]
 sflag = 3
 if (sflag == 3) {
-  # png('Wilcoxon8n7mpcumMC180624.png',width=16,height=12,units='cm',res=300)
+  # png('Wilcoxon8n7mpcumMC180624.png',width=16,height=16,units='cm',res=300)
   plot(pcumMC,type='p',lwd=4,col='blue',xlab='U',
        ylab='CDF (Monte Carlo est.)',las=1,cex=0.6,cex.lab=1.5)
-  abline(h=0.05,col='green',lwd=1)
-  abline(h=0.95,col='green',lwd=1)
-  text(L*2/3,0.1,'0.05',col='green',pos=4,cex=1.5)
-  text(L*1/3,0.85,'0.95',col='green',pos=4,cex=1.5)
+  abline(h=0.05,col='magenta',lwd=1)
+  abline(h=0.95,col='magenta',lwd=1)
+  text(L*2/3,0.1,'0.05',col='magenta',pos=4,cex=1.5)
+  text(L*1/3,0.85,'0.95',col='magenta',pos=4,cex=1.5)
   # dev.off()
 }
+# ----------------------------------------------------------------
+# Remarks:
+# Calculation takes less than 1 minute.
+# ----------------------------------------------------------------

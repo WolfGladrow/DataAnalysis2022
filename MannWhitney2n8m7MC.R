@@ -1,4 +1,4 @@
-print('file: MannWhitney2n8m7MC.R')
+print('file: MannWhitney2n8m7MC.R') 
 # PD & CDF Mann & Whitney (1947) 
 n = 8; m = 7; Ua = seq(0,n*m)
 L = n*m+1; pcum = numeric(L)
@@ -30,7 +30,7 @@ Lh = (L-1)/2; p1 = pMC[1:Lh]; p2 = numeric(Lh)
 for(k in 1:Lh) p2[k] = pMC[L+1-k]
 sflag = 2
 if (sflag == 2) {
-  # png('Wilcoxon8n7mpMC180624.png',width=16,height=12,units='cm',res=300)
+  # png('Wilcoxon8n7mpMC180624.png',width=16,height=16,units='cm',res=300)
   plot(pMC,type='p',lwd=4,col='blue',xlab='U',
        ylab='Monte Carlo estimate of p',las=1,cex=0.6,cex.lab=1.5)
   # dev.off()
