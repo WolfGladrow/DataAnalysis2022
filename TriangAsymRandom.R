@@ -16,7 +16,7 @@ thetaMode = 0.1 # true mode
 sflag = 1
 if (sflag == 1) {
 M = 1e3; x = rtriangle(M,0,1,thetaMode)
-# png('TriPDFnonsymM1e3R210614.png',width=16,height=12,units='cm',res=300) # 1e3
+# png('TriPDFnonsymM1e3R210614.png',width=16,height=16,units='cm',res=300) # 1e3
 plot(density(x,from=0,to=1),type='l',lwd=3,col='blue',xlab='x',
      ylab='Density',las=1,cex.lab=1.5,main='',ylim=c(0,2))
 text(0.6,1.5,paste('M = ',as.character(M)),col='blue',pos=4,cex=1.5)
@@ -26,7 +26,7 @@ lines(xp,yp,col='black')
 }
 if (sflag == 2) {
 M = 1e5; x = rtriangle(M,0,1,thetaMode)
-# png('TriPDFnonsymM1e5R210614.png',width=16,height=12,units='cm',res=300)
+# png('TriPDFnonsymM1e5R210614.png',width=16,height=16,units='cm',res=300)
 plot(density(x,from=0,to=1),type='l',lwd=3,col='blue',xlab='x',
        ylab='Density',las=1,cex.lab=1.5,main='',ylim=c(0,2))
 text(0.6,1.5,paste('M = ',as.character(M)),col='blue',pos=4,cex=1.5)
