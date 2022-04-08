@@ -33,7 +33,7 @@ for(i in 1:6) {cr1a[i] = NA; cr2a[i] = NA}
 # write.table(cr2a,file='WilcoxonCR2a180612.txt')
 sflag = 2
 if (sflag == 2) {
-  # png('WilcoxonCV2sided180606.png',width=16,height=12,units='cm',res=300)
+  # png('WilcoxonCV2sided180606.png',width=16,height=16,units='cm',res=300)
   plot(cr2a,type='p',lwd=4,col='blue',xlab='n',ylab='Critical values (2-sided)',
        las=1,cex=0.6,cex.lab=1.5)
   # dev.off()

@@ -1,4 +1,4 @@
-print('file: R_WilcoxonPairedCritValMC1.R')
+print('file: WilcoxonPairedCritValMC1.R')
 # Wilcoxon paired-sample critical values: Monte Carlo
 set.seed(1953) # set seed for random number generators
 M = 1e5 # Tplusa = numeric(M); Tminusa = numeric(M)
@@ -33,7 +33,7 @@ for(i in 1:6) {cr1a[i] = NA; cr2a[i] = NA}
 # write.table(cr2a,file='WilcoxonCR2a180612.txt')
 sflag = 1
 if (sflag == 1) {
-  # png('WilcoxonCV1sided180606.png',width=16,height=12,units='cm',res=300)
+  # png('WilcoxonCV1sided180606.png',width=16,height=16,units='cm',res=300)
   plot(cr1a,type='p',lwd=4,col='blue',xlab='n',ylab='Critical values (1-sided)',
        las=1,cex=0.6,cex.lab=1.5)
   # dev.off()
