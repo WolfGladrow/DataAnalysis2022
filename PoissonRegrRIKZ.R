@@ -2,7 +2,7 @@ print('file: PoissonRegrRIKZ.R')
 # Poisson regression: calculate species richness from RIKZ data (Zuur et al., 2007)
 RIKZ = read.table('RIKZ.txt',header = T)
 RIKZ$Richness = rowSums(RIKZ[,2:76] > 0)
-# png('Richness160919.png',width=16,height=12,units='cm',res=300)
+# png('Richness160919.png',width=16,height=16,units='cm',res=300)
 plot(RIKZ$NAP,RIKZ$Richness,type='p',lwd=4,col='blue',
      xlab='NAP (m)',ylab='Species richness',las=1,cex=0.6,cex.lab=1.5)
 # dev.off()
