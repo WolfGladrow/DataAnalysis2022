@@ -28,9 +28,9 @@ resLB = LBs$residuals
 # ------------------------------------------------------------------
 sflag = 24
 if (sflag == 24) { # residuals of Lineweaver-Burk followed by simple linear regression
-  # png('MichaelisResIILB210228.png',width=16,height=12,units='cm',res=300)
+  # png('MichaelisResIILB210228.png',width=16,height=16,units='cm',res=300)
   plot(xLB,resLB,type='p',lwd=4,col='blue',xlab='xLB',ylab='Residuals LB',las=1,
        cex=0.6,cex.lab=1.5)
-  abline(h=0,col='green',lty=4)
+  abline(h=0,col='magenta',lty=4)
   # dev.off()
 }
