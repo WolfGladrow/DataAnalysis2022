@@ -7,7 +7,7 @@ xp1 = c(2,3); yp1 = c(1,1)*2*K/Vmax+1/Vmax
 xp2 = c(3,3); yp2 = c(2*K/Vmax+1/Vmax,3*K/Vmax+1/Vmax)
 sflag = 1
 if (sflag == 1) {
-# png('LineweaverIllustration210228.png',width=16,height=12,units='cm',res=300)
+# png('LineweaverIllustration210228.png',width=16,height=16,units='cm',res=300)
 plot(Si,Vi,type='l',lwd=3,col='black',xlab='1/S',ylab='1/V',las=1,cex.lab=1.5,
      xlim=c(0,4),ylim=c(0,2.5),xaxs='i',yaxs='i')
 points(0,1/Vmax,col='blue',lwd=5,cex=1.2)

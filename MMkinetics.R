@@ -3,7 +3,7 @@ print('file: MMkinetics.R')
 Vmax = 4; K = 2; S = seq(0,10,0.01); V = Vmax*S/(S+K)
 xK = c(K,K); yK = c(0,Vmax/2)
 xSK = c(0,K); ySK = c(Vmax/2,Vmax/2)
-# png('MichaelisMenten210228a.png',width=16,height=12,units='cm',res=300)
+# png('MichaelisMenten210228a.png',width=16,height=16,units='cm',res=300)
 plot(S,V,type='l',lwd=3,col='blue',xlab='Substrate S',ylab='Rate V(S)',
      las=1,cex=0.4,ylim=c(0,5),cex.lab=1.5)
 lines(xK,yK,col='black',lty=2)
