@@ -9,7 +9,7 @@ alpha = 1.2; beta = 0.03; sigma = 0.5
 y = alpha*exp(beta*x)+rnorm(n,0,sigma)
 sflag = 1
 if (sflag == 1) {
-  # png('expFitData171202.png',width=16,height=12,units='cm',res=300)
+  # png('expFitData171202.png',width=16,height=16,units='cm',res=300)
   plot(x,y,type='p',lwd=4,col='blue',xlab='x',ylab='y',las=1,cex=0.6,cex.lab=1.5)
   # dev.off()
 }
@@ -30,9 +30,8 @@ aEstm = exp(logaEstm)
 ubEst = model2$coefficients[4]  # estimate of uncertainty (1-sigma) of beta
 # (3) plot fit & data:
 yf = aEst*exp(bEst*x)
-sflag = 0
 if (sflag == 2) {
-  # png('expFitMod171202.png',width=16,height=12,units='cm',res=300)
+  # png('expFitMod171202.png',width=16,height=16,units='cm',res=300)
   plot(x,yf,type='l',lwd=3,col='magenta',xlab='x',ylab='y',las=1,cex.lab=1.5)
   points(x,y,col='blue',lwd=4,cex=0.6)
   # dev.off()
@@ -40,10 +39,9 @@ if (sflag == 2) {
 # (4) plot residuals
 yr = model1$residuals
 sigmaEst = sd(yr)
-sflag = 0
 if (sflag == 3) {
-  # png('expFitRes171202.png',width=16,height=12,units='cm',res=300)
+  # png('expFitRes171202.png',width=16,height=16,units='cm',res=300)
   plot(x,yr,type='p',lwd=4,col='black',xlab='x',ylab='Residuals',las=1,cex=0.6,cex.lab=1.5)
-  abline(0,0,col='green',lty=4)
+  abline(0,0,col='magenta',lty=4)
   # dev.off()
 }
