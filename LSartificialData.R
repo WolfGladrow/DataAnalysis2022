@@ -11,10 +11,7 @@ y = matrix(data=NA,nrow=Lx,ncol=Lr)  # Lx x Lr = 17 x 10 matrix
 for(k in 1:Lx) y[k,] = beta0+beta*x[k]+sigma*rnorm(Lr) # additive normal noise
 # ----------- generate data (end)
 # png('SLFartificialData220308.png',width=16,height=16,units='cm',res=300)
-plot(x,y[,1],type='p',lwd=4,col='black',cex=0.3,ylim=c(0,10),     # plot 1. sample
+plot(x,y[,1],type='p',lwd=4,col='black',cex=0.6,ylim=c(0,10),     # plot 1. sample
        xlim=c(0,max(x)),xlab='x',ylab='y',las=1,cex.lab=1.5)
-for(k in 2:Lr) points(x,y[,k],lwd=4,col='black',cex=0.3)          # plot replicates
+for(k in 2:Lr) points(x,y[,k],lwd=4,col='black',cex=0.6)          # plot replicates
 # dev.off()
-# [1] "file: R_LSartificalData.R"
-# [1] "0.3162"         "standard error"
-# png('SLFdata160923.png',width=16,height=12,units='cm',res=300)
