@@ -1,4 +1,4 @@
-print('file: D1-LSartificialSpline.R')
+print('file: LSartificialSpline.R')
 # generate & plot artificial data
 beta0 = 8; beta = -1.2 # true intercept & slope
 sigma = 1              # true standard deviation of normal noise
