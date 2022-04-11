@@ -47,21 +47,18 @@ title(ylab=expression(paste('[',NO[3],'] (',mu,'mol ',L^{-1},')')),line=2.3,cex.
 lines(xp,yp,col='red',lwd=3)
 lines(xp,yp2,col='black',lwd=3,lty=2)
 lines(xp,yp3,col='magenta',lwd=3,lty=2)
-library(latex2exp)
-text(0.1,50,TeX(paste('$\\hat{\\beta}_{0,SLR1} =$',
-                      as.character(round(b0est,3)),'$\\pm$',
-                      as.character(round(ub0est,3)))),col='red',pos=4,cex=1.5)
-text(0.1,45,TeX(paste('$\\hat{\\beta}_{SLR1} =$',
-                      as.character(round(b1est,3)),'$\\pm$',
-                      as.character(round(ub1est,3)))),col='red',pos=4,cex=1.5)
-text(0.1,40,TeX(paste('$\\hat{\\beta}_{0,SLR2} =$',
-                      as.character(round(ic2,2)))),col='black',pos=4,cex=1.5)
-text(0.1,35,TeX(paste('$\\hat{\\beta}_{SLR2} =$',
-                      as.character(round(slope2,3)))),col='black',pos=4,cex=1.5)
-text(2.3,10,TeX(paste('$\\hat{\\beta}_{0,Deming} =$',
-                      as.character(round(DemingIntercept,3)))),col='magenta',pos=4,cex=1.5)
-text(2.3,5,TeX(paste('$\\hat{\\beta}_{Deming} =$',
-                     as.character(round(DemingSlope,3)))),col='magenta',pos=4,cex=1.5)
-text(2.6,15,TeX(paste('$\\hat{\\lambda} =$',
-                      as.character(round(lambda,4)))),col='magenta',pos=4,cex=1.5)
+b0r = round(b0est,3); ub0r = round(ub0est,3)
+text(0.1,50,bquote(~hat(beta)[0,SLR1] == .(b0r) %+-% .(ub0r)),col='red',pos=4,cex=1.5)
+b1r = round(b1est,3); ub1r = round(ub1est,3)
+text(0.1,45,bquote(~hat(beta)[SLR1] == .(b1r) %+-% .(ub1r)),col='red',pos=4,cex=1.5)
+ic2r = round(ic2,3); # uic2r = round(slope2,3)
+text(0.1,40,bquote(~hat(beta)[0,SLR2] == .(ic2r)),col='black',pos=4,cex=1.5)
+slope2r = round(slope2,3); # ub1r = round(ub1est,3)
+text(0.1,35,bquote(~hat(beta)[SLR2] == .(slope2r)),col='black',pos=4,cex=1.5)
+b0r = round(DemingIntercept,3); # ub0r = round(ub0est,3)
+text(2.3,10,bquote(~hat(beta)[0,Deming] == .(b0r)),col='red',pos=4,cex=1.5)
+b1r = round(DemingSlope,3); # ub1r = round(ub1est,3)
+text(2.3,5,bquote(~hat(beta)[Deming] == .(b1r)),col='red',pos=4,cex=1.5)
+lambdar = round(lambda,4)
+text(2.3,15,bquote(~hat(lambda) == .(lambdar)),col='red',pos=4,cex=1.5)
 # dev.off()
