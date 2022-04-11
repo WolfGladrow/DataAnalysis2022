@@ -217,3 +217,16 @@ if (sflag == 2) { # data \& Scheffe \& Gafarian \& single point CI
   lines(x,CBBow66L,col='black',lty=1)
   # dev.off()
 }
+if (sflag == 1) { # plus approximations
+  # png('ConfidenceBands200628b.png',width=16,height=16,units='cm',res=300)
+  plot(x,y,type='p',lwd=4,col='blue',xlab='x',ylab='y',las=1,cex=0.6,cex.lab=1.5)
+  abline(outSLR,col='blue')
+  lines(x,CB1U,col='red',lty=2)  # single point CI approximation
+  lines(x,CB1L,col='red',lty=2)
+  lines(xpCI,CI1x1,col='red',lty=1) # single point CI
+  lines(x,CB2U,col='red',lty=1) # Scheffe
+  lines(x,CB2L,col='red',lty=1)
+  lines(x,CBBow66U,col='black',lty=1) # Gafarian (Bowden \& Greybill, 1966)
+  lines(x,CBBow66L,col='black',lty=1)
+  # dev.off()
+}
