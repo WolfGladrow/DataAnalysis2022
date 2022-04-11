@@ -1,5 +1,10 @@
 print('file: SLR-NO3overPO4.R')
 # Simple Linear rRegressio: NO3 over PO4; whole ocean: 
+# install.packages('ncdf4')
+library(ncdf4)
+# install.packages('fields') # install package (apply only once)
+library(fields)
+# -------------------------------------------------------------------
 infoNO3.nc = nc_open('nitrate_annual_1deg.nc')     # open netCDF file
 infoPO4.nc = nc_open('phosphate_annual_1deg.nc')   # open netCDF file
 NO3 = ncvar_get( infoNO3.nc, 'n_an')
@@ -23,18 +28,16 @@ ubetaEst  = out1$coefficients[4]  # estimate of slope uncertainty
 xp = c(0,4); yp=c(beta0Est,beta0Est+betaEst*4)
 sflag = 1
 if (sflag == 1) {
-  # png('NO3vsPO4all170701.png',width=16,height=12,units='cm',res=300)
+  # png('NO3vsPO4all170701.png',width=16,height=16,units='cm',res=300)
   plot(PO4c,NO3c,las=1,
        xlab=expression(paste(PO[4],' (',mu,'mol ',L^-1,')')),ylab='',
        type='p',col='blue',pch='.',xlim=c(0,4),xaxs='i',yaxs='i',cex.lab=1.5)
   title(ylab=expression(paste(NO[3],' (',mu,'mol ',L^-1,')')),line=2,cex.lab=1.5)
   lines(xp,yp,col='magenta',lwd=3)
-  text(0.05,40,pos=4,expression(hat(beta)[0]),col='magenta',cex=1.5)
-  text(0.25,40,pos=4,paste('= ',as.character(round(beta0Est,3)),'\u00B1',
-                           as.character(round(ubeta0Est,3))),col='magenta',cex=1.5)
-  text(0.05,47,pos=4,expression(hat(beta)),col='magenta',cex=1.5)
-  text(0.25,47,pos=4,paste(' = ',as.character(round(betaEst,3)),'\u00B1',
-                           as.character(round(ubetaEst,3))),col='magenta',cex=1.5)
+  br = round(betaEst,3); ubr = round(ubetaEst,3)
+  text(0.05,40,bquote(~hat(beta)  == .(br) %+-% .(ubr)),col='magenta',pos=4,cex=1.5)
+  b0r = round(beta0Est,3); ub0r = round(ubeta0Est,3)
+  text(0.05,47,bquote(~hat(beta)[0]  == .(b0r) %+-% .(ub0r)),col='magenta',pos=4,cex=1.5)
   # dev.off()
 }
 # ----------------------------------------------------------------
