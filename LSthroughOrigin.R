@@ -32,20 +32,3 @@ text(4.4,0,bquote(~hat(beta)[0]  == .(b0r) %+-% .(ub0r)),col='black',pos=4,cex=1
 legend('topleft',legend=c('linear regression through origin','linear regression, unconstrained'),
        col=c('red','black'),lty=c(1,4),lwd=c(3,1),cex=1.2)
 # dev.off()
-# text(0,10,expression(paste(hat(beta))),col='red',pos=4,cex=1.5)
-# text(0.4,10,paste(' = ',as.character(round(c1,2)),'\u00B1',
-#                   as.character(round(uc1,2))),col='red',pos=4,cex=1.5)
-# text(4,3,expression(paste(hat(beta))),col='black',pos=4,cex=1.5)
-# text(4.4,3,paste(' = ',as.character(round(b,2)),'\u00B1',
-#                  as.character(round(ub,2))),col='black',pos=4,cex=1.5)
-# text(4,0,expression(paste(hat(beta)[0])),col='black',pos=4,cex=1.5)
-# text(4.4,0,paste(' = ',as.character(round(b0,2)),'\u00B1',
-#                  as.character(round(ub0,2))),col='black',pos=4,cex=1.5)
-# -------------------------------------
-# [1] "file: D1-LSthroughOrigin.R"
-# [1] "-2.02" "b0"   
-# [1] "2.78" "b"   
-# [1] "1.14" "ub0" 
-# [1] "0.23" "ub"  
-# [1] "2.42" "c1"  
-# [1] "0.12" "uc1" 
