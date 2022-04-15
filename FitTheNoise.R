@@ -15,7 +15,7 @@ outSLR = summary(lm(y ~ x))
 ic = outSLR$coefficients[1]
 slope = outSLR$coefficients[2]
 ySLR = ic+slope*xfit
-# png('PolyfitPerfect181121.png',width=16,height=12,units='cm',res=300)
+# png('PolyfitPerfect181121.png',width=16,height=16,units='cm',res=300)
 plot(x,y,type='p',lwd=4,col='blue',xlab='x',ylab='y',las=1,cex=0.6,
      ylim=c(min(yfit),max(yfit)),cex.lab=1.5)
 abline(0,0,col='green',lty=4)
