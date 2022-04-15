@@ -26,9 +26,9 @@ ymax = max(c(max(yexact),max(yobserved),max(yfit)))
 cor12 = cor(x1,x2); print(c(round(cor12,4),'cor12'))
 sflag = 2
 if (sflag == 1) {  # show correlation between x1 & x2
-  # png('MLR3x1x2cor170102.png',width=16,height=12,units='cm',res=300)
-  plot(x1,x2,type='p',lwd=3,col='blue',
-       xlab=expression(x[1]),ylab=expression(x[2]),las=1,cex=0.5,cex.lab=1.5)
+  # png('MLR3x1x2cor170102.png',width=16,height=16,units='cm',res=300)
+  plot(x1,x2,type='p',lwd=4,col='blue',
+       xlab=expression(x[1]),ylab=expression(x[2]),las=1,cex=0.6,cex.lab=1.5)
   text(4.3,0.2,paste('r = ',as.character(round(cor12,2))),col='blue',cex=1.5)
   # dev.off()
 }
