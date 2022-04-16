@@ -11,7 +11,7 @@ sflag = 1
 if (sflag == 1) {
   print('-------------------------------------------')
   print('Plot: X3o versus X1o: anti-correlated')
-  # png('AcelyleneX3overX1a170625.png',width=16,height=12,units='cm',res=300)
+  # png('AcelyleneX3overX1a170625.png',width=16,height=16,units='cm',res=300)
   plot(X1o,X3o,type='p',lwd=4,col='blue',las=1,cex=0.6,
        xlab=TeX('$X_1(^o C)$'),ylab=NA,cex.lab=1.5)
   title(ylab=TeX('$X_3(s)$'),line=2.5,cex.lab=1.5)
