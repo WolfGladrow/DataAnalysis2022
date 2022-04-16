@@ -18,6 +18,6 @@ X = matrix(data=NA,nrow=L,ncol=9)
 for(k in 1:9) {q = Q9[,k]; z = (q-mean(q))/sqrt(sum((q-mean(q))^2)); X[,k] = z}
 XX = t(X)%*%X
 source('plotCorMatrix.R')
-# png('AcetyleneXXheat201010.png',width=16,height=12,units='cm',res=300)
+# png('AcetyleneXXheat201010.png',width=16,height=16,units='cm',res=300)
 plotCorMatrix(XX)
 # dev.off()
