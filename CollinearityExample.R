@@ -30,8 +30,8 @@ ypred2 = betaEst1[1]*x1+betaEst1[2]*x2  # based on estimated beta
 xp = c(min(y),max(y))*1.2
 sflag = 1
 if (sflag == 1) {
-  # png('Collinearity2Data170612.png',width=16,height=12,units='cm',res=300)
-  par(mfrow=c(2,2))
+  # png('Collinearity2Data170612.png',width=16,height=16,units='cm',res=300)
+  par(mar=c(4.1,4.5,1,1),mfrow=c(2,2))
   plot(x1,x2,type='p',lwd=4,col='blue',xlab=expression(x[1]),
        ylab=expression(x[2]),las=1,cex=0.6,cex.lab=1.5)
   plot(x1,y,type='p',lwd=4,col='blue',xlab=expression(x[1]),ylab='y',las=1,
