@@ -59,4 +59,3 @@ LbetaEst = sqrt(sum(betaEst^2))
 # (7) Return results:
 return(list(n,betaEsto,Intercepto,betaEst,LbetaEst))
 }
-
