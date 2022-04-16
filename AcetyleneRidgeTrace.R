@@ -124,4 +124,10 @@ if (sflag == 4) {
     text(0.05,-0.08,expression(hat(beta)[9]),col='black',cex=1.5)
     # dev.off()
   }   # end of sflag1 == 1
+  if (sflag1 == 2) {
+    # png('AcetyleneRidgeTraceDWGrsq150625.png',width=16,height=16,units='cm',res=300)
+    plot(ka,rsqa,type='l',lwd=5,col='blue',xlab='Biasing parameter k',
+         ylab='Coefficient of determination',las=1,cex.lab=1.5)
+    # dev.off()
+  }  
 }
