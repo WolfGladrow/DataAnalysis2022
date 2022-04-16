@@ -21,7 +21,7 @@ betaEstoRR = out[[2]]   # slopes for original data
 InterceptoRR = out[[3]] # intercept for original data
 YPred = Xo%*%betaEstoRR+InterceptoRR  # prediction
 xp = c(min(c(Yo,YPred)),max(c(Yo,YPred)))
-# png('AcetyleneYPred001k170625.png',width=16,height=12,units='cm',res=300)
+# png('AcetyleneYPred001k170625.png',width=16,height=16,units='cm',res=300)
 plot(xp,xp,type='l',lwd=2,col='green',xlab='Y observed',ylab='Y predicted',las=1,
      cex.lab=1.5)
 points(Yo,YPred,lwd=4,col='blue',cex=0.6)
