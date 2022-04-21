@@ -1,0 +1,18 @@
+print('file: TransparentBoxplotAnimalWeights.R')
+# transparent boxplot of several samples: animal weights
+# png('ZarEx10d1TransparentBoxplot220306.png',width=16,height=16,units='cm',res=300)
+X1 = c(60.8, 67.0, 65.0, 68.6, 61.7)
+X2 = c(68.7, 67.7, 75.0, 73.3, 71.8)
+X3 = c(69.6, 77.1, 75.2, 71.5)
+X4 = c(61.9, 64.2, 63.1, 66.7, 60.3)
+boxplot(X1,X2,X3,X4,col='yellow',las=1,xlab='Sample #',ylab='Number of worms',cex.lab=1.5)
+set.seed(1953) # set seed for random number generators
+L1 = length(X1); jitter1 = runif(L1,1-0.05,1+0.05)
+points(jitter1,X1,col='blue',lwd=4,cex=0.6)
+L2 = length(X2); jitter2 = runif(L2,2-0.05,2+0.05)
+points(jitter2,X2,col='blue',lwd=4,cex=0.6)
+L3 = length(X3); jitter3 = runif(L3,3-0.05,3+0.05)
+points(jitter3,X3,col='blue',lwd=4,cex=0.6)
+L4 = length(X4); jitter4 = runif(L4,4-0.05,4+0.05)
+points(jitter4,X4,col='blue',lwd=4,cex=0.6)
+# dev.off()
