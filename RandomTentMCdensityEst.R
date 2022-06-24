@@ -17,4 +17,3 @@ lines(y2,q2,lwd=2,col='magenta',lty=4)
 legend('bottom',legend=c('MC estimate','tent PDF'),col=c('black','magenta'),
        lty=c(1,4),lwd=c(4,2),cex=1.5)
 # dev.off()
-}
