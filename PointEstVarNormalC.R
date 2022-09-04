@@ -10,16 +10,16 @@ for(m in 1:M) {r = rnorm(n);    # random sample
 library(latex2exp)
 # png('Varest3Normal160820.png',width=16,height=16,units='cm',res=300)
 hist(varest3,30,col='blue',main='',
-     xlab=TeX('$\\, \\, \\hat{\\sigma^2} \\, (\\mu \\, known,\\, 1/(n-1))$'),cex.lab=1.5)
-# xlab=expression(paste(hat(sigma)^2,' (',mu,' known, 1/(n-1))')),main='',las=1)
+     xlab=TeX('$\\, \\, \\hat{\\sigma_3^2} \\, (\\mu \\, known,\\, 1/(n-1))$'),cex.lab=1.5)
 meanvarest3 = mean(varest3); print(c(round(meanvarest3,3),'meanvarest3'))
 sdvarest3 = sd(varest3); print(c(round(sdvarest3,3),'sdvarest3'))
 varvarest3 = var(varest3); print(c(round(varvarest3,3),'varvarest3'))
 meanvarest3r = round(meanvarest3,3); varvarest3r = round(varvarest3,3); sdvarest3r = round(sdvarest3,3)
 xt = 4
-text(xt,1200,bquote(~mean(hat(sigma^2)[a]) == .(meanvarest3r)),col='blue',cex=1.5)
-text(xt,900,bquote(~var(hat(sigma^2)[a]) == .(varvarest3r)),col='blue',cex=1.5)
-text(xt,600,bquote(~sd(hat(sigma^2)[a]) == .(sdvarest3r)),col='blue',cex=1.5)
+text(xt,1200,bquote(~mean(hat(sigma)[3]^2) == .(meanvarest3r)),col='blue',cex=1.5)
+text(xt,900,bquote(~var(hat(sigma)[3]^2) == .(varvarest3r)),col='blue',cex=1.5)
+text(xt,600,bquote(~sd(hat(sigma)[3]^2) == .(sdvarest3r)),col='blue',cex=1.5)
 abline(v=1,col='black',lty=1)
 abline(v=meanvarest3,col='blue',lty=4)
 # dev.off()
+# -------------------------------------------------------------------------
