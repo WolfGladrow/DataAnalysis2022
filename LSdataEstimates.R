@@ -20,6 +20,7 @@ b0 = out2$coefficients[1];  print(c(round(b0,4),'intercept b0 (estimate)'))
 b = out2$coefficients[2];   print(c(round(b,4),'slope b (estimate)'))
 ub0 = out2$coefficients[3]; print(c(round(ub0,4),'intercept uncertainty ub0 (estimate)'))
 ub = out2$coefficients[4];  print(c(round(ub,4),'slope uncertainty ub (estimate)'))
+b0r = round(b0,2); br = round(b,2); ub0r = round(ub0,2); ubr = round(ub,2); 
 # --------------------------- plot:
 ymean = numeric(Lx); for(k in 1:Lx) ymean[k] = mean(y[k,])  # mean y-values
 # png('SLFestimates220308.png',width=16,height=16,units='cm',res=300)
