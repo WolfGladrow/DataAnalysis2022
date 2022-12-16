@@ -1,4 +1,5 @@
 print('file: BayesianHypBayarriEst.R')
+print(date())
 # Bayarri et al. (2008): formulate as estimation problem: least squares
 x = 0:3
 y = c(81,9,7,1) # observed frequencies
@@ -34,3 +35,11 @@ if (sflag == 1) {
   text(0.731,1.15,bquote(~lambda[opt] == .(Lopt)),col='magenta',pos=4,cex=1.5)
   # dev.off()
 }
+# -----------------------------------------------------------------------------
+# Results:
+# [1] "file: BayesianHypBayarriEst.R"
+# [1] "Fri Dec 16 09:11:39 2022"
+# [1] "0.745"     "optimal p"
+# [1] "1.183"     "optimal lambda"
+# [1] "0.000421849150042302"   "minimal sum of squares"
+# -----------------------------------------------------------------------------

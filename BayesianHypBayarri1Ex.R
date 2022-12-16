@@ -1,7 +1,8 @@
 print('file: BayesianHypBayarri1Ex.R')
+print(date())
 # Bayarri et al. (2008): Example 1
 x = 0:3         # number of events
-y = c(81,9,7,1) # frequency of events
+y = c(81,9,7,1) # frequency of events 
 sflag = 1
 if (sflag == 1) {
 # png('Bayarri08Data1x191114.png',width=16,height=16,units='cm',res=300)

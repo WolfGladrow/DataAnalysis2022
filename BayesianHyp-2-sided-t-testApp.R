@@ -1,4 +1,5 @@
 print('file: BayesianHyp-2-side-t-testApp.R')
+print(date())
 # 2-sample 2-sided t-test: artificial data: H0 is true
 print(' ---------------------------------------------------')
 print(' 0. Generate artificial data from normal PDF')
@@ -44,3 +45,58 @@ B10 = extractBF(metaBF,onlybf = TRUE); print(c(round(B10,4),'B10'))
 print(c(round(1/B10,4),'B01'))
 ## Using rscale=1 and one-sided test to be
 ## consistent with Rouder & Morey (2011)
+# Jeffreys' scales of evidence (slightly modified):
+BF = B10
+if(BF > 10)                    print('strong evidence against H0/strong evidence for H1')
+if((BF >= 3.16) && (BF <= 10)) print('substantial evidence against H0/substantial evidence for H1')
+if((BF > 1) && (BF < 3.16))    print('slight evidence against H0/slight evidence for H1')
+if((BF >= 0.316) && (BF <= 1)) print('slight evidence against H1/slight evidence for H0')
+if((BF > 0.1) && (BF < 0.316)) print('substantial evidence against H1/substantial evidence for H0')
+if(BF <= 0.1)                  print('strong evidence against H1/strong evidence for H0')
+# -----------------------------------------------------------------------------
+# Results:
+# "file: BayesianHyp-2-side-t-testApp.R"
+# "Fri Dec 16 08:51:03 2022"
+# " ---------------------------------------------------"
+# " 0. Generate artificial data from normal PDF"
+# "H0 is true"
+# " ---------------------------------------------------"
+# " 1. Apply conventional t-test (assume equal variances)"
+# "0.7788" "pt"    
+# " ---------------------------------------------------"
+# " 2. Apply Welch t-test (variances may be unequal)"
+# "0.7787"  "ptWelch"
+# " ---------------------------------------------------"
+# " 3. Apply Bayesian t-test: routine ttestBF, package BayesFactor"
+# 
+# ************
+#   Welcome to BayesFactor 0.9.12-4.2. If you have questions, please contact Richard Morey (richarddmorey@gmail.com).
+# 
+# Type BFManual() to open the manual.
+# ************
+#   [1] "0.1987" "B10"   
+# "5.0319" "B01"   
+# " ---------------------------------------------------"
+# " 4. Bayesian t-test: Rouder et al. (2009)"
+# t          
+# "0.1987"    "B10" 
+# t          
+# "5.0319"    "B01" 
+# " ---------------------------------------------------"
+# " 5. Apply Bayesian t-test: routine meta.ttestBF, package BayesFactor"
+# "0.1987" "B10"   
+# "5.0319" "B01"
+# "substantial evidence against H1/substantial evidence for H0"
+# -----------------------------------------------------------------------------
+# Remarks:
+# The (frequentistic) t-test yields a p-value of 0.7788 and thus
+#   H0 is not rejected on the level of significance alpha = 0.05.
+# The (frequentistic) Welch t-test yields (not assuming equal
+#   variances) yields a only slightly different p-value (0.7787).
+#   Again: H0 is not rejected on the level of significance alpha = 0.05.
+# The Bayesian-t-test yields a Bayes factor B01 of 5.0319 which
+#   (applying a slightly modified form of Jeffreys' scales of evidence)
+#   provides substantial evidence against H1 and substantial 
+#   evidence for H0.
+# Note that H1 is not tested in the frequentistic approach.
+# -----------------------------------------------------------------------------

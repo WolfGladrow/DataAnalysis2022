@@ -1,4 +1,5 @@
 print('file: BayesianEstPoissonFlatPrior.R')
+print(date())
 # Poisson: Bayesian estimation: flat prior, n = 30 
 set.seed(1953); 
 lambdaTrue = 2.7 # true rate (mean number of events) = variance
@@ -58,3 +59,24 @@ text(xt,0.8,paste('sd = ',as.character(round(sd1,3))),col='blue',pos=4,cex=1.5)
 text(xt,0.6,paste('mode = ',as.character(round(mode1,3))),col='green',pos=4,cex=1.5)
 text(xt,0.4,paste('median = ',as.character(round(median1,3))),col='magenta',pos=4,cex=1.5)
 # dev.off()
+# -----------------------------------------------------------------------------
+# Results:
+# "file: BayesianEstPoissonFlatPrior.R"
+# "Fri Dec 16 08:46:52 2022"
+# "79"         "sufficient statistic t"
+# "2.633"      "samplemean"
+# " ---------------------------------------------------"
+# "Likelihood function:"
+# " ---------------------------------------------------"
+# "Analyze likelihood function:"
+# "2.6667" "mean1" 
+# "0.0889" "var1"  
+# "0.2981" "sd1"   
+# "2.63"   "mode1"
+# "2.6333" "mode2 = MLE"
+# "2.65"   "median1"
+# " ---------------------------------------------------"
+# "95% interval"
+# "2.11" "I95L"
+# "3.28" "I95U"
+# -----------------------------------------------------------------------------

@@ -1,5 +1,6 @@
 print('file: BayesianHypPoissonZIP0d3.R')
-# ZIP vs. Poisson
+print(date())
+# Zero Inflated Poisson (ZIP) vs. Poisson
 sflag = 1
 if (sflag == 1) {
   p = 0.4; lambda = 0.3
@@ -17,3 +18,10 @@ if (sflag == 1) {
 }
 print(c(round(y[1],4),'ZIP(x=0)'))
 print(c(round(yp[1],4),'Poisson(x=0)'))
+# -----------------------------------------------------------------------------
+# Results:
+# "file: BayesianHypPoissonZIP0d3.R"
+# "Fri Dec 16 09:16:13 2022"
+# "0.8445"   "ZIP(x=0)"
+# "0.7408"   "Poisson(x=0)"
+# -----------------------------------------------------------------------------

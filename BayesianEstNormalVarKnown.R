@@ -1,4 +1,5 @@
 print('file: BayesianEstNormalVarKnown.R')
+print(date())
 # Bayesian estimation: normal pop., variance known
 print(' ---------------------------------------------------')
 print('(1) generate artificial data:')
@@ -59,3 +60,35 @@ text(muEst-0.1,0.05,'95 % interval',col='magenta',cex=1.5)
 legend('topright',legend=c('posterior','population'),col=c('blue','black'),
        lty=c(1,1),lwd=c(3,1),cex=1.2)
 # dev.off()
+# -----------------------------------------------------------------------------
+# Remarks:
+# Results:
+# "file: BayesianEstNormalVarKnown.R"
+# "Fri Dec 16 08:40:57 2022"
+# " ---------------------------------------------------"
+# "(1) generate artificial data:"
+# "10"          "sample size"
+# "4"            "true variance sigma_0^2 (known)"
+# "3"            "mu true mean"
+# " ---------------------------------------------------"
+# "(2) calculate sufficient statistics:"
+# "3.2683"      "sample mean"
+# "2.8369"      "sample variance"
+# " ---------------------------------------------------"
+# "(3) calculate likelihood function:"
+# " ---------------------------------------------------"
+# "(4) normalize likelihood function:"
+# "6.49954651257341e-09" "qnorm1 normalization factor: integration"
+# "6.49959815833094e-09" "qnorm2 normalization factor: analytical"
+# "normalized likelihood function = posterior"
+# " ---------------------------------------------------"
+# "Analyze posterior: here: mode = mean = median"
+# "3.268"             "mode of posterior"
+# "3.268"             "mean of posterior"
+# "0.4"               "varPost variance of posterior"
+# " 95% interval around muEst:"
+# "0.6325"   "SE: standard error of the mean"
+# "0.4"      "VarPost variance of posterior"
+# "2.003" "I95L" 
+# "4.533" "I95U" 
+# -----------------------------------------------------------------------------

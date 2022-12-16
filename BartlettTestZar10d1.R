@@ -1,4 +1,5 @@
 print('file: BartlettTestZar10d1.R')
+print(date())
 # Bartlett test: Zar (2010) animal weights example 10.1
 # H0: variances in each of the groups are the same
 x1 = c(60.8,67.0,65.0,68.6,61.7)
