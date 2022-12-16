@@ -1,4 +1,5 @@
 print('file: AcetyleneULScorMat.R')
+print(date())
 # plot collinearity correlation matrix for unit-length scaled acytelene data
 print(' ---------------------------------------------------')
 print('(1) Acetylene data: Marquardt & Snee (1975)')

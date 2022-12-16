@@ -1,4 +1,5 @@
 print('file: AcetyleneULSpred.R')
+print(date())
 # MLR, 9 predictors, unit length scaled
 # Acetylene data: MATLAB 'load acetylene' or Marquardt & Snee (1975) or ...
 Yo = c(49.0,50.2,50.5,48.5,47.5,44.5,28.0,31.5,34.5,35.0,38.0,38.5,15.0,17.0,20.5,29.5)

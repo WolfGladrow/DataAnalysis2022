@@ -1,4 +1,5 @@
 print('file: AcetyleneRidgeCon2.R')
+print(date())
 # acetylene data: X1, X3 anticorrelated
 # -------------------------------------------
 # (1) = observed data (Yo,X1o,X2o,X3o) and quadratic predictors
@@ -61,13 +62,13 @@ maxVIFs = max(VIFs)
 #      -> eigenvalues lambda_j
 #      -> condition number: kappa = lambda_max/lambda_min
 outEV = eigen(XX,symmetric=T)
-lambda = outEV$values  # eigen values
-kappa = max(lambda)/min(lambda)
+lambda = outEV$values           # eigen values
+kappa = max(lambda)/min(lambda) # condition number
 # -------------------------------------------
 # (5d) Condition number of X'
 outSVD = svd(X)
-muj = outSVD$d   # singular values
-eta = max(muj)/min(muj)
+muj = outSVD$d          # singular values
+eta = max(muj)/min(muj) # maximum ratio of singular values
 # -------------------------------------------
 r13o = cor(X1o,X3o) # correlation
 # -------------------------------------------
@@ -103,9 +104,56 @@ if (sflag == 6) {
     # YPred = Xo%*%betaEstoRR+InterceptoRR  # prediction
     }}
   print(c('Yex[1,1] =',Yex[1,1]))
+  library(latex2exp)
   # png('AcetyleneRR001kextra170625.png',width=16,height=16,units='cm',res=300)
   contour(U1a,U3a,Yex,col='blue',las=0,xlab=TeX('$X_1(^o C)$'),ylab=NA,cex.lab=1.5)
   title(ylab=TeX('$X_3(s)$'),line=2.3,cex.lab=1.5)
   # dev.off()
   print('-------------------------------------------')
 }
+# -----------------------------------------------------------------------------
+# Remarks:
+# Calculation of the correlation matrix: XX = t(X)%*%X
+#   t(X) is the transpose of the matrix X, i.e. all elements x_ij replaced by x_ji
+#   The product between two matrices (or matrix and vector) is performed by 
+#   applying %*%: C = A%*%C. When A is a k times n matrix and B is A n times m
+#   matrix, C is a k times m matrix (when m = 1, B is a vector of length n).
+# Inverse matrix:
+#   The R routine solve() calculates the inverse of a matrix.
+# Extract diagonal values from a matrix:
+#   R routine diag(); when A is a n times n matrix, diag(A) generates a vector of length n
+# Eigenvalues of a matrix:
+#   R routine eigen(); if you know that the matrix A is symmetric you should
+#      specify the symmetry parameter: symmetric=TRUE; leads to faster and 
+#      more reliable solution
+# Singular value decomposition (SVD):
+#   R routine svd() with matrix X as argument; X = U * D * V^T
+#   The matrices U, D, V can be accessed as follows:
+#   out = svd(X)
+#   U = out$u; d = out$d; V = out$v
+#   Note that d is a vector because the D-matrix is diagonal; it contains the
+#        singular values.
+#      
+# -----------------------------------------------------------------------------
+print('Results of analysis:')
+print(c(round(offdiagmax,4),'largest offdiagonal absolute correlation'))
+print(c(round(maxVIFs),'maximum variance inflation factor'))
+print(c(round(kappa),'condition number (maximum ratio of eigenvalues)'))
+print(c(round(eta),'maximum ratio of singular values'))
+print(c(round(r13o,2),'strong anticorrelation between 1. and 3. predictor'))
+# ----------------------------------------------------------------------------- 
+# 'file: AcetyleneRidgeCon2.R'
+# 'Wed Dec 14 21:01:38 2022'
+# '-------------------------------------------'
+# 'Plot: extrapolation based on ridge regression with k =' '0.01'                                                  
+# 'U2 = ' '12.4' 
+# 'Yex[1,1] ='       '22.6907103993313'
+#  '-------------------------------------------'
+# 'Results of analysis:'
+# '0.9997'     'largest offdiagonal absolute correlation'
+# '2856749'    'maximum variance inflation factor'
+# '50202670'   'condition number (maximum ratio of eigenvalues)'
+# '7085'       'maximum ratio of singular values'
+# '-0.96'      'strong anticorrelation between 1. and 3. predictor'
+# -----------------------------------------------------------------------------
+

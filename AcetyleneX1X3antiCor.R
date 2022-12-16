@@ -1,4 +1,5 @@
 print('file: AcetyleneX1X3antiCor.R')
+print(date())
 # acetylene data: X1, X3 anticorrelated
 # -------------------------------------------
 # (1) = observed data (Yo,X1o,X2o,X3o) and quadratic predictors

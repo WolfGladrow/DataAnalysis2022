@@ -1,5 +1,6 @@
 print('file: AcetyleneCompensation.R')
-# acetylene data: X1, X3 anticorrelated
+print(date())
+# acetylene data: X1, X3 strongly anticorrelated
 # -------------------------------------------
 # (1) = observed data (Yo,X1o,X2o,X3o) and quadratic predictors
 Yo = c(49.0,50.2,50.5,48.5,47.5,44.5,28.0,31.5,34.5,35.0,38.0,38.5,15.0,17.0,20.5,29.5)
@@ -33,7 +34,7 @@ betaEst1 = outLMs$coefficients[2:(NoP+1)]
 # (3c) MLR of scaled data: pedestrian way
 XX = t(X)%*%X             # correlation matrix
 XXI = solve(XX)           # inverse of X'X
-betaEst2 = XXI%*%t(X)%*%y  # least squares solution
+betaEst2 = XXI%*%t(X)%*%y  # least squares solution = slopes for scaled data
 # -------------------------------------------
 # (4) Convert from slopes for scaled data to slopes for original data:
 bA = betaEst2/SX
@@ -42,7 +43,7 @@ bEst2 = betaEst2/SX*SY
 InterceptEst2 = sum(cA)*SY+meanY # intercept for original data
 # -------------------------------------------
 # (5) Multicollinearity diagnostics:
-# (5a) Lagest absolute correlation:
+# (5a) Largest absolute correlation:
 offdiagmax = -1; ioff = 0; joff = 0 # dummy values
 for(i in 1:n) {
   for(j in 1:n) {if(i != j) {
@@ -55,19 +56,19 @@ VIFs = diag(XXI)
 # How many VIFs are > 10? Maximum of the VIFs?
 nVIFsL10 = 0
 for(j in 1:NoP) if (VIFs[j] > 10) nVIFsL10 = nVIFsL10 + 1
-maxVIFs = max(VIFs)
+maxVIFs = max(VIFs) # maximum variance inflation factor
 # -------------------------------------------
 # (5c) Eigensystem analysis of the correlation matrix XX
 #      -> eigenvalues lambda_j
 #      -> condition number: kappa = lambda_max/lambda_min
 outEV = eigen(XX,symmetric=T)
-lambda = outEV$values  # eigen values
-kappa = max(lambda)/min(lambda)
+lambda = outEV$values           # eigen values
+kappa = max(lambda)/min(lambda) # condition number
 # -------------------------------------------
 # (5d) Condition number of X'
 outSVD = svd(X)
-muj = outSVD$d   # singular values
-eta = max(muj)/min(muj)
+muj = outSVD$d          # singular values
+eta = max(muj)/min(muj) # maximum ratio of singular values
 # -------------------------------------------
 r13o = cor(X1o,X3o) # correlation
 # -------------------------------------------
@@ -84,3 +85,43 @@ if (sflag == 11) {
   text(-8,10,'sum: ',col='magenta',pos=4,cex=1.5)
   # dev.off()
 }
+# -----------------------------------------------------------------------------
+# Remarks:
+# Calculation of the correlation matrix: XX = t(X)%*%X
+#   t(X) is the transpose of the matrix X, i.e. all elements x_ij replaced by x_ji
+#   The product between two matrices (or matrix and vector) is performed by 
+#   applying %*%: C = A%*%C. When A is a k times n matrix and B is A n times m
+#   matrix, C is a k times m matrix (when m = 1, B is a vector of length n).
+# Inverse matrix:
+#   The R routine solve() calculates the inverse of a matrix.
+# Extract diagonal values from a matrix:
+#   R routine diag(); when A is a n times n matrix, diag(A) generates a vector of length n
+# Eigenvalues of a matrix:
+#   R routine eigen(); if you know that the matrix A is symmetric you should
+#      specify the symmetry parameter: symmetric=TRUE; leads to faster and 
+#      more reliable solution
+# Singular value decomposition (SVD):
+#   R routine svd() with matrix X as argument; X = U * D * V^T
+#   The matrices U, D, V can be accessed as follows:
+#   out = svd(X)
+#   U = out$u; d = out$d; V = out$v
+#   Note that d is a vector because the D-matrix is diagonal; it contains the
+#        singular values.
+#      
+# -----------------------------------------------------------------------------
+print('Results of analysis:')
+print(c(round(offdiagmax,4),'largest offdiagonal absolute correlation'))
+print(c(round(maxVIFs),'maximum variance inflation factor'))
+print(c(round(kappa),'condition number (maximum ratio of eigenvalues)'))
+print(c(round(eta),'maximum ratio of singular values'))
+print(c(round(r13o,2),'strong anticorrelation between 1. and 3. predictor'))
+# ----------------------------------------------------------------------------- 
+# 'file: AcetyleneCompensation.R'
+# 'Wed Dec 14 15:28:41 2022'
+# 'Results of analysis:'
+# '0.9997'   'largest offdiagonal absolute correlation'
+# '2856749'  'maximum variance inflation factor'
+# '50202670' 'condition number (maximum ratio of eigenvalues)'
+# '7085'     'maximum ratio of singular values'
+# '-0.96'    'strong anticorrelation between 1. and 3. predictor'
+# -----------------------------------------------------------------------------

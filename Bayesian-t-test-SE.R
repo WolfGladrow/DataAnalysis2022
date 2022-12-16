@@ -6,8 +6,8 @@ T0 = 0   # hypothesized temperature of null hypothesis H0
 xmean = mean(x); print(c(round(xmean,2),'sample mean (deg.C)'))
 n = length(x); print(c(n,'sample size n'))   # sample size
 SE = sd(x)/sqrt(n)
-print(c(round(sd(x),2),'s = sd(x) (deg.C)'))
-print(c(round(var(x),2),'s = var(x) (deg.C)^2'))
+print(c(round(sd(x),2),'sd(x) (deg.C)'))
+print(c(round(var(x),2),'var(x) (deg.C)^2'))
 print(c(round(SE,4),'standard error of the mean (deg.C)'))
 dis = (xmean-T0)/SE; print(c(round(dis,2),'t = (xmean-mu0)/SE'))
 tvalue = (xmean-T0)/SE; print(c(round(tvalue,3),'tvalue (pedestrian)'))
@@ -20,3 +20,14 @@ abline(mean(x)+SE,0,col='red',lty=2)
 abline(mean(x)-SE,0,col='red',lty=2)
 abline(T0,0,col='black',lty=4)
 # dev.off()
+# --------------------------------------------------------------------------------
+# Results:
+#  "0.73"      "sample mean (deg.C)"
+#  "25"        "sample size n"
+#  "1.34"      "sd(x) (deg.C)"
+#  "1.8"       "var(x) (deg.C)^2"
+#  "0.2684"    "standard error of the mean (deg.C)"
+#  "2.71"      "t = (xmean-mu0)/SE"
+#  "2.713"     "tvalue (pedestrian)"
+#  "2.713"     "tvalue = tobs (t-test)"
+# --------------------------------------------------------------------------------

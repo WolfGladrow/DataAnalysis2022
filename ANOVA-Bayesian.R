@@ -1,4 +1,5 @@
 print('file: ANOVA-Bayesian.R')
+print(date())
 # Bayesian ANOVA: Zar(2010) example 10.1
 # (1) put data into data frame (optional)
 # (2) Bayesian ANOVA
@@ -50,4 +51,19 @@ p = q[[1]][, 5][1]  # yes, this is obvious!
 Fvalue = q[[1]][, 4][1]
 print(c(p,' p'))
 print(c(Fvalue,' Fvalue'))
+print(c(round(p,5),' p'))
+print(c(round(Fvalue,2),' Fvalue'))
 }
+# -------------------------------------------------------------------------------
+# Results:
+# '90.5339' 'B10'    'strong evidence against H0/strong evidence for H1'
+# '0.00028' ' p'                  
+# '12.04' ' Fvalue' 
+# -------------------------------------------------------------------------------
+# Remarks:
+#  By looking at the data of example 10.1 of Zar (2010) one can reject the
+#  null hypothesis H0. Therefore it does not come as a surprise that there 
+#  is strong evidence against H0 (Bayesian ANOVA) and that H0 should be 
+#  rejected on the level of evidence alpha = 0.05 (frequentistic ANOVA).
+#  The alternative hypothesis H1 is tested only by the Bayesian ANOVA.
+# -------------------------------------------------------------------------------

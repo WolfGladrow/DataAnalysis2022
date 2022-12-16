@@ -1,4 +1,5 @@
 print('file: AcetyleneYpredOrig.R')
+print(date())
 # scaling, MLR, ridge regression of acetylene data (6/2017)')
 # -------------------------------------------
 # (1) = observed data (Yo,X1o,X2o,X3o) and quadratic predictors

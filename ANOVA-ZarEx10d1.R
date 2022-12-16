@@ -30,7 +30,7 @@ g1 = mydata$weight[mydata$group=='group1'] # single group for boxplot
 g2 = mydata$weight[mydata$group=='group2']
 g3 = mydata$weight[mydata$group=='group3']
 g4 = mydata$weight[mydata$group=='group4']
-# png('Zar10Ex10d1Boxplot160726.png',width=16,height=16,units='cm',res=300)
+# png('Zar10Ex10d1Boxplot160726.png',width=16,height=12,units='cm',res=300)
 boxplot(g1,g2,g3,g4,col='blue',las=1,ylab='Weight (kg)',cex.lab=1.5)
 # dev.off()
 # (3) ANOVA:
@@ -47,6 +47,7 @@ print(c(round(Fvalue,2),' Fvalue'))
 # Remarks:
 # In- and output of data/results in R can be confusing. 'Data frame' is a popular
 #    format for data. 
+#
 # Library plyr provides tools for splitting, applying and combining data.
 #  The R routine raply() replicates an expression and returns results in an array.
 #  For example, the command out = raply(.n=length(X1),.exp='group1')
