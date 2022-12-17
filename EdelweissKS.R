@@ -1,4 +1,5 @@
 print('file: EdelweissKS.R')
+print(date())
 # Edelweiss (observed near S-charl by Paul: KS test
 x = c(1853, 1872, 1899, 1949, 1976, 1981, 2001, 2027, 2033, 2044, 2111, 2166, 2245)
 L = length(x); ka = seq(1,L)
@@ -31,6 +32,9 @@ if (sflag == 2) {
 }
 if (sflag == 7) {
   # Plot PDF of KS-distribution
+  # install.packages('kolmim')
+  library(kolmim) # contains routine pkolm() = cumulative distribution function 
+                                     # for Kolmogorov's goodness-of-fit measure.
   dx = 0.001; dx2i = 1/(2*dx)
   xPDF = seq(dx,0.999,dx); LPDF = length(xPDF); yPDF = numeric(LPDF)
   for (k in 2:(LPDF-1)) yPDF[k] = (pkolm(xPDF[k+1],L)-pkolm(xPDF[k-1],L))*dx2i
@@ -44,3 +48,16 @@ if (sflag == 7) {
   text(0.42,4,paste('p = ',as.character(round(p,2))),col='red',cex=1.5)
   # dev.off()
 }
+# -----------------------------------------------------------------------------
+# Results:
+"file: EdelweissKS.R"
+# "Sat Dec 17 11:56:18 2022"
+# "0.2605"  "D test statistic" 
+# "0.2877"  "p-value"
+# -----------------------------------------------------------------------------
+# Remarks:
+# The density of the KS-distribution is calculated by numerical differentiation
+#   of the cumulative KS-distribution.
+# The p-value of 0.29 is larger than alpha = 0.05 -> H0 not rejected
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
