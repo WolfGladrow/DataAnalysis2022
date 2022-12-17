@@ -1,4 +1,5 @@
 print('file: CorTestFct.R')
+print(date())
 # Correlation different from zero? testcorsig0()
 testcorsig0 = function(r,n) {
   # Test: Is correlation significantly different from 0?
@@ -29,3 +30,32 @@ abline(h=0.05,col='red',lty=4); abline(v=11.5,col='black',lty=2)
 text(7,0.19,pos=4,TeX('$H_0 \\, not\\, rejected$'),col='black',cex=1.5)
 text(14,0.035,pos=4,TeX('$H_0 \\, rejected$'),col='red',cex=1.5)
 # dev.off()
+# -----------------------------------------------------------------------------
+# Results:
+# "file: CorTestFct.R"
+# "Sat Dec 17 10:41:21 2022"
+# "p =  0.208"
+# "Null hypothesis (no correlation) not rejected (alpha=0.05)"
+# "p =  0.1544"
+# "Null hypothesis (no correlation) not rejected (alpha=0.05)"
+# "p =  0.1158"
+# "Null hypothesis (no correlation) not rejected (alpha=0.05)"
+# "p =  0.0876"
+# "Null hypothesis (no correlation) not rejected (alpha=0.05)"
+# "p =  0.0667"
+# "Null hypothesis (no correlation) not rejected (alpha=0.05)"
+# "p =  0.051"
+# "Null hypothesis (no correlation) not rejected (alpha=0.05)"
+# "p =  0.0392"
+# "Null hypothesis (no correlation) rejected (alpha=0.05)"
+# "p =  0.0302"
+# "Null hypothesis (no correlation) rejected (alpha=0.05)"
+# "p =  0.0233"
+# "Null hypothesis (no correlation) rejected (alpha=0.05)"
+# "p =  0.0181"
+# "Null hypothesis (no correlation) rejected (alpha=0.05)"
+# "p =  0.014"
+# "Null hypothesis (no correlation) rejected (alpha=0.05)"
+# "p =  0.0109"
+# "Null hypothesis (no correlation) rejected (alpha=0.05)"
+# -----------------------------------------------------------------------------
