@@ -1,4 +1,5 @@
 print('file: DemingRegression.R')
+print(date())
 # Deming regression: NO3 & PO4 & Redfield ratios
 # estimate variances; notation: Casella & Berger, 2002, p.583-585
 # install.packages('ncdf4') # install package (apply only once on your computer)  # ncdf4
@@ -62,3 +63,27 @@ text(2.3,5,bquote(~hat(beta)[Deming] == .(b1r)),col='red',pos=4,cex=1.5)
 lambdar = round(lambda,4)
 text(2.3,15,bquote(~hat(lambda) == .(lambdar)),col='red',pos=4,cex=1.5)
 # dev.off()
+print(date())
+# -----------------------------------------------------------------------------
+# Results:
+# "file: DemingRegression.R"
+# "Sat Dec 17 11:07:51 2022"
+# "correlation NO3 PO4 = " "0.9828"                
+# "-1.7"  "b0est"
+# "0.005"  "ub0est"
+# "14.783" "b1est" 
+# "0.003"  "ub1est"
+# "0.168" "b2est"
+# "0"      "ub2est"
+# "0.065" "b3est"
+# "0"      "ub3est"
+# "15.306" "slope2"
+# "-2.567" "ic2"   
+# "lambdaS = " "0.00442"   
+# "lambda = " "0.00442"  
+# "---------------- Plot data & lines: ----------------"
+# "Sat Dec 17 11:08:01 2022"
+# -----------------------------------------------------------------------------
+# Remarks:
+# Generating the plot takes a few seconds.
+# -----------------------------------------------------------------------------
