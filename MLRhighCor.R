@@ -1,13 +1,16 @@
 print('file: MLRhighCor.R')
+print(date())
 # MLR: high correlation, noise level approx. 0.2
 beta0 = 1.5; beta1 = -0.3; beta2 = 0.8; beta3 = 1  # model parameters
 n = 100   # sample size
+print(c(n,'sample size n'))
 cflag = 1     # 0 = low correlation between x1 & x2
               # 1 = high correlation between x1 & x2
 set.seed(1953) # set seed for random number generators
 if (cflag == 0) x1 = runif(n); x2 = runif(n)
 if (cflag == 1) {source('sampleUcorFct.R');
-  r = -0.95; out1 = sampleUcorFct(r,n); 
+  r = -0.95; print(c(r,'chosen correlation value'))
+  out1 = sampleUcorFct(r,n); 
   x1 = out1[1:n]; x2 = out1[(n+1):(2*n)]}
 x1 = x1+4
 x3 = runif(n)
@@ -47,3 +50,18 @@ if (sflag == 2) {
   points(yfit,yobserved,col='blue',lwd=3,cex=0.5,lty=24)
   # dev.off()
 }
+# -----------------------------------------------------------------------------
+# Remarks:
+# sampleUcorFct(r,n) is a function generating random samples (x,y) from standard
+#    uniform PDF of size n with prescribed correlation r
+# Here, r = -0.95 and n = 100 were chosen.
+# The correlation between the randomly generated samples x and y is -0.9512, i.e.
+#    very close to the strived for value.
+# -----------------------------------------------------------------------------
+# Results: 
+# "file: MLRhighCor.R"
+# "Sun Dec 18 00:09:30 2022"
+# "100"              "sample size n"
+# "-0.95"            "chosen correlation value"
+# "-0.9512"          "cor12" 
+# -----------------------------------------------------------------------------
