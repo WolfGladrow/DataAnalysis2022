@@ -1,4 +1,5 @@
 print('file: ChiSquaredTestZar22d1.R')
+print(date())
 # chisq.test Zar (2010, Example 22.1, modified)
 fobs = c(84,16)        # observed frequencies
 fthe = c(75,25)        # theoretical/hypothesized frequencies
@@ -34,3 +35,19 @@ text(1.5,0.25,bquote(~alpha == .(alpha)),col='magenta',pos=4,cex=1.5)
 print(c(round(out$p.value,4),' out$p.value'))
 print(c(round(chsq0051,2),' chsq0051'))
 print(c(as.double(chisqTS),' chisqTS'))
+# -----------------------------------------------------------------------------
+# Results:
+# "file: ChiSquaredTestZar22d1.R"
+# "Sat Dec 17 10:23:10 2022"
+# "0.0377"       " out$p.value"
+# "3.84"      " chsq0051"
+# "4.32"     " chisqTS"
+# -----------------------------------------------------------------------------
+# Remarks:
+# p = 0.0377 is smaller than alpha = 0.05 
+# The null hypothesis H0 ’data follow partitioning of 3:1’ is rejected on the 
+# (chosen) level of significance alpha = 0.05 
+# -----------------------------------------------------------------------------
+
+
+# -----------------------------------------------------------------------------
