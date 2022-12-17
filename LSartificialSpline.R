@@ -16,9 +16,15 @@ for(k in 1:Lx) ymean[k] = mean(y[k,])
 plot(x,y[,1],type='p',lwd=4,col='black',cex=0.6,ylim=c(0,10),     # plot 1. sample
              xlim=c(0,max(x)),xlab='x',ylab='y',las=1,cex.lab=1.5)
 for(k in 2:Lr) points(x,y[,k],lwd=4,col='black',cex=0.6)          # plot replicates
-lines(spline(x,ymean),col='blue')
+lines(spline(x,ymean),col='blue')  # <---- spline()
 points(x,ymean,lwd=3,col='blue',cex=1,pch=24)
 xn = seq(-3,3,0.01); yn = dnorm(xn,mean=0,sd=sigma)
 lines(-yn+x[1],xn+beta0+beta*x[1],col='black')
 lines(-yn+x[Lx],xn+beta0+beta*x[Lx],col='black')
 # dev.off()
+# -----------------------------------------------------------------------------
+# Remarks:
+# The R routine spline() performs cubic (or Hermite) spline interpolation of given data 
+#   points, returning a list of points obtained by the interpolation.
+# Compare also splinefun(): it returns a function performing the interpolation
+# -----------------------------------------------------------------------------
