@@ -2,8 +2,7 @@ print('file: MLRhighCor.R')
 print(date())
 # MLR: high correlation, noise level approx. 0.2
 beta0 = 1.5; beta1 = -0.3; beta2 = 0.8; beta3 = 1  # model parameters
-n = 100   # sample size
-print(c(n,'sample size n'))
+n = 100; print(c(n,'sample size n'))
 cflag = 1     # 0 = low correlation between x1 & x2
               # 1 = high correlation between x1 & x2
 set.seed(1953) # set seed for random number generators
