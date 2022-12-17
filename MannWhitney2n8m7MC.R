@@ -1,4 +1,5 @@
 print('file: MannWhitney2n8m7MC.R') 
+print(date())
 # PD & CDF Mann & Whitney (1947) 
 n = 8; m = 7; Ua = seq(0,n*m)
 L = n*m+1; pcum = numeric(L)
@@ -35,3 +36,8 @@ if (sflag == 2) {
        ylab='Monte Carlo estimate of p',las=1,cex=0.6,cex.lab=1.5)
   # dev.off()
 }
+print(date())
+# -----------------------------------------------------------------------------
+# Remarks:
+# Run time 24 s
+# -----------------------------------------------------------------------------
