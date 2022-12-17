@@ -1,4 +1,5 @@
 print('file: CLTdensity1e5MC.R')
+print(date())
 # Central Limit Theorem (CLT): sum of random numbers -> normal distribution
 M = 1e5  
 N = 10000   # number of random numbers to sum up
@@ -23,3 +24,17 @@ print(c('Smean = ',round(Smean,3)))
 print(c('should be close to ',SmeanTheory))        
 print(c('Ssd = ',round(Ssd,3)))                    
 print(c('should be close to ',round(SsdTheory,3))) 
+print(date())
+# --------------------------------------------------------------
+# "file: CLTdensity1e5MC.R"
+# "Sat Dec 17 10:09:13 2022"
+# "M = "  "1e+05"
+# "Smean = " "4999.944"
+# "should be close to " "5000"               
+# "Ssd = " "28.892"
+# "should be close to " "28.868"             
+# "Sat Dec 17 10:09:30 2022"
+# --------------------------------------------------------------
+# Remarks:
+# run time: 17 s
+# --------------------------------------------------------------
