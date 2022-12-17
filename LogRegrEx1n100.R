@@ -1,4 +1,5 @@
 print('file: LogRegrEx1n100.R')
+print(date())
 # apply logistic regression to artificial data
 # data: dflag = 1 generate artificial data
 #       dflag = 2 read data from file
@@ -20,7 +21,7 @@ xread = read.table('xLogReg160930n100.txt',header=T); x = xread$x
 yread = read.table('yLogReg160930n100.txt',header=T); y = yread$x # note: $x!!!
 }
 # logistic regression:
-out1 = glm(y ~ x,family=binomial(link='logit'))
+out1 = glm(y ~ x,family=binomial(link='logit')) # < ----- logistic regression
 out2 = summary(out1)
 b0 = out2$coefficients[1]; print(c(round(b0,2),'b0'))  # estimate of beta0
 b  = out2$coefficients[2]; print(c(round(b,2),'b'))  # estimate of beta
@@ -49,3 +50,19 @@ if(sflag == 2) {
     text(-0.85,0.5,bquote(~beta == .(beta)),col='black',pos=4,cex=1.5)
     # dev.off()
 }
+# -----------------------------------------------------------------------------
+# Results:
+# "file: LogRegrEx1n100.R"
+# "Sat Dec 17 20:56:43 2022"
+# "0.2" "b0" 
+# "3.03" "b"   
+# "0.26" "ub0" 
+# "0.58" "ub"  
+# -----------------------------------------------------------------------------
+# Remarks:
+# For the logistic regression we use the R routine glm() for fitting 
+#   generalized linear models (GLMs). One has to specify the link function
+#   (logit for logistic regression) and the probability distributions (here:
+#   binomial distributions): 
+#   glm(y ~ x,family=binomial(link='logit'))
+# -----------------------------------------------------------------------------
