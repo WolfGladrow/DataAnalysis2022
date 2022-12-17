@@ -1,4 +1,5 @@
 print('file: CorTestMCtPDF.R')
+print(date())
 # Significant correlations: t_cor following t-dist.? small n: n=6
 set.seed(1953)
 M = 1e6   # number of Monte Carlo runs
@@ -13,7 +14,8 @@ lines(xp,dt(xp,df=n-2),col='magenta',lwd=2,lty=2)
 legend('topleft',legend=c('Monte-Carlo','t(x;4)'),col=c('black','magenta'),lty=c(1,2),
        lwd=c(4,2),cex=1.3)
 # dev.off()
+print(date())
 # ----------------------------------------------------------------
 # Remarks:
-# Monte-Carlo simulation takes about 1 minute.
+# Monte-Carlo simulation takes about 20 s.
 # ----------------------------------------------------------------
