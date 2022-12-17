@@ -1,4 +1,5 @@
 print('file: Gerrodette3Densities.R')
+print(date())
 # Gerrodette11: plot neg. binomial, normal, lognormal
 LNparams = function(mu,sigma){
   # Calculate parameters alpha, beta for lognormal PDF from
@@ -37,3 +38,14 @@ if (sflag == 2) {
   text(450,1.85,col='magenta','negative binomial PD',pos=4,cex=1.5)
   # dev.off()
 }
+# -----------------------------------------------------------------------------
+# Results:
+# "file: Gerrodette3Densities.R"
+# "Sat Dec 17 17:44:32 2022"
+# "409"                "mean"
+# "250"                "standard deviation"
+# "5.855"              "alpha (lognormal PDF)"
+# "0.5634"             "beta (lognormal PDF)"
+# "2.6941"             "s (negative binomial PD)"
+# "0.00654"            "p (negative binomial PD)"
+# -----------------------------------------------------------------------------
