@@ -1,4 +1,5 @@
 print('file: MC-F-PDFs-VRTcount.R')
+print(date())
 # variance ratio test for sampling from uniform PDs (Monte Carlo simulation)
 # use centered distributions
 # purpose: Estimate PDF of F with Monte Carlo simulations under the assumption that
@@ -44,8 +45,18 @@ if (sflag == 2) {
   text(xt,-0.3,bquote(~p == .(p)),col='magenta',pos=4,cex=1.5)
   # dev.off()
 }
+print(date())
+# ----------------------------------------------------------------
+# Results:
+# "file: MC-F-PDFs-VRTcount.R"
+# "Sat Dec 17 23:07:50 2022"
+# "0.26" "pMC2"
+# "0.2196" "pleft" 
+# "0.44" "p"   
+# "Sat Dec 17 23:09:20 2022"
 # ----------------------------------------------------------------
 # Remarks:
 # my.Fsimulation=function(){ ... } defines a function without input
 # replicate(1e6,my.Fsimulation())  applies this function 1 million times
+# Run time less than 2 minutes
 # ----------------------------------------------------------------

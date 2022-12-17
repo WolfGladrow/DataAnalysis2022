@@ -1,4 +1,5 @@
 print('file: MC-F-PDFs-VRTnormal.R')
+print(date())
 # variance ratio test for sampling from normal PDFs (Monte Carlo simulation)
 # purpose: Estimate PDF of F with Monte Carlo simulations under the assumption that
 #          the samples stem from normal PDFs with different means, however, equal variances
@@ -20,3 +21,10 @@ if(sflag == 1) {
          col=c('black','magenta','blue'),lty=c(1,4,1))
   # dev.off()
 }
+print(date())
+# ----------------------------------------------------------------
+# Remarks:
+# my.Fsimulation=function(){ ... } defines a function without input
+# replicate(1e6,my.Fsimulation())  applies this function 1 million times
+# Run time less than 1 minutes
+# ----------------------------------------------------------------
