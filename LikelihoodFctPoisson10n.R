@@ -1,4 +1,5 @@
 print('file: LikelihoodFctPoisson10n.R')
+print(date())
 # Likelihood function, Poisson PD, n=10
 set.seed(1953)
 lambda0 = 2.73; print(c(lambda0,' lambda0'))  # exact rate parameter lambda of Poisson distribution
@@ -20,3 +21,11 @@ abline(v=lambdaEst,col='blue',lty=2)
 text(1.1,3,bquote(~hat(lambda) == .(lambdaEst)),col='blue',pos=4,cex=1.5)
 text(3.1,3,bquote(~lambda == .(lambda0)),col='black',pos=4,cex=1.5)
 # dev.off()
+# ----------------------------------------------------------------
+# Results:
+# "file: LikelihoodFctPoisson10n.R"
+# "Sat Dec 17 19:51:42 2022"
+# "2.73"     " lambda0"
+# "3"   "2"   "1"   "2"   "3"   "1"   "3"   "3"   "3"   "6"   " ka"
+# "2.7"        " lambdaEst"
+# ----------------------------------------------------------------
