@@ -1,4 +1,5 @@
 print('file: Gelman20p95NHSTvsBayesian.R')
+print(date())
 # Gelman20p95: Hypothesis testing vs Bayesian analysis
 # ----------------------------------------------------------------------------
 sigma = 1    # true standard deviation
@@ -48,3 +49,11 @@ if (sflag == 2) { # likelihood function, posterior
   text(-1.8,0.35,bquote(~{1 - p[B]} == .(qB)),col='magenta',pos=4,cex=1.5)
   # dev.off()
 }
+# -----------------------------------------------------------------------------
+# Results:
+# "file: Gelman20p95NHSTvsBayesian.R"
+# "Sat Dec 17 17:40:53 2022"
+# "0.16"              "one-sided p-value"
+# "0.32"              "two-sided p-value"
+# "0.84"              "Pr(theta > 0)"
+# -----------------------------------------------------------------------------
