@@ -1,4 +1,5 @@
 print('File: Lilliefors3Ex.R')
+print(date())
 # Lilliefors test: 3 examples
 y1 = c(-0.68644781, -0.82379154, -0.98416919, -2.02230891, -0.43507791, -0.76655674,  
        1.22178443,  0.09767100, -0.93391714, -1.23458941,  0.09188711,  0.56736177,
@@ -17,7 +18,7 @@ y3 = c(0.09188711,  0.56736177, -0.55276453, -0.07969400,  0.11767092,  2.075412
        2.52475885, -0.22159314, -0.17360687, -0.24747086, -0.25016363, -0.39612793)
 # install.packages('fBasics')  # install package
 library(fBasics)         
-sflag = 1
+sflag = 3
 if (sflag == 1) {
   y = (y1 - mean(y1))/sd(y1) # standardize
   outKS = lillieTest(y)
@@ -70,3 +71,21 @@ if (sflag == 3) {
   print('outKS')
   print(outKS)
 }
+# -----------------------------------------------------------------------------
+# Results:
+# "File: Lilliefors3Ex.R"
+# "Sat Dec 17 19:57:55 2022"
+# "outKS3 (Lilliefors"
+# Title: Lilliefors (KS) Normality Test
+# Test Results:
+#  STATISTIC:  D: 0.2061
+# P VALUE:  0.002211 
+# Description:
+#  Sat Dec 17 19:57:55 2022 by user: 
+# "outKS"
+# One-sample Kolmogorov-Smirnov test
+# data:  y
+# D = 0.20606, p-value = 0.1355
+# alternative hypothesis: two-sided
+# -----------------------------------------------------------------------------
+
