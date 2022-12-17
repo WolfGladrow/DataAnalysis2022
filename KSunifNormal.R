@@ -1,4 +1,5 @@
-print('file:KSunifNormal.R')
+print('file: KSunifNormal.R')
+print(date())
 # KS-test: uniform versus normal
 print(' ---------------------------------------------------')
 print('56 = KS-test: uniform versus normal (4/2022)')
@@ -33,3 +34,24 @@ text(0.4,0.1,paste('p = ',as.character(round(p6,2))),col='blue',pos=4,cex=1.5)
 text(-2,0.72,paste('D = ',as.character(round(DN,2))),col='black',pos=4,cex=1.5)
 text(-2,0.6,paste('p = ',as.character(round(pN,2))),col='black',pos=4,cex=1.5)
 # dev.off()
+# -----------------------------------------------------------------------------
+# Results:
+# "file: KSunifNormal.R"
+# "Sat Dec 17 17:59:50 2022"
+# " ---------------------------------------------------"
+# "56 = KS-test: uniform versus normal (4/2022)"
+# " ---------------------------------------------------"
+# "0.488169"      "KS-test: p standard normal PDF"
+# "0.1473"        "KS-test: D standard mormal PDF"
+# "0.265944"      "KS-test: p standardized uniform PDF"
+# "0.1778"        "KS-test: D standardized uniform PDF"
+# "0.0572"        "maximal absolute difference between U & N CDF"
+# -----------------------------------------------------------------------------
+# Remark:
+# p-values for both null hypotheses (1. sample from standard normal PDF and
+#   2. sample from standardized uniform PDF) are larger than alpha = 0.05
+#   and thus both are not rejected on this chosen level of significance.
+#   However, we are not allowed to accept the alternative hypotheses which
+#   would mean that the same sample is from a normal and from a uniform 
+#   distribution which is a contradiction!
+# -----------------------------------------------------------------------------
