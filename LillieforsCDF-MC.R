@@ -1,4 +1,5 @@
 print('file: LillieforsCDF-MC.R')
+print(date())
 # Lilliefors CDF & p-values: Monte Carlo simulations
 M = 1e5  # number of Monte Carlo runs
 n = 30   # sample size
@@ -30,6 +31,8 @@ text(0.07,0.85,'CDF = 0.95',col='magenta',cex=1.5)
 points(Dapp,1-papp,col='black',lty=1,lwd=4,cex=0.6)
 # dev.off()
 }
-D1 = 0.0925906
-k1 = which.min( (sDarr-D1)^2) 
-p = 1-CDFest[k1]  # 0.72957
+print(date())
+# -----------------------------------------------------------------------------
+# Remarks: 
+# Run time 17 s
+# -----------------------------------------------------------------------------
