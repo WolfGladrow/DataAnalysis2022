@@ -11,7 +11,7 @@ p = 1/(1+exp(-logitp))
 set.seed(1953) # set seed for random number generators
 y = numeric(n)
 for(k in 1:n) y[k] = rbinom(1,1,prob=p[k])
-out1 = glm(y ~ x,family=binomial(link='logit'))
+out1 = glm(y ~ x,family=binomial(link='logit')) # <--- logistic regression
 out2 = summary(out1)
 b0 = out2$coefficients[1]  # estimate of beta0
 b  = out2$coefficients[2]  # estimate of beta
@@ -32,3 +32,11 @@ text(-0.85,0.8,bquote(~hat(beta) == .(br) %+-% .(ubr)),col='magenta',pos=4,cex=1
 text(-0.85,0.6,bquote(~beta[0] == .(beta0)),col='black',pos=4,cex=1.5)
 text(-0.85,0.5,bquote(~beta == .(beta)),col='black',pos=4,cex=1.5)
 # dev.off()
+# -----------------------------------------------------------------------------
+# Remarks:
+# For the logistic regression we use the R routine glm() for fitting 
+#   generalized linear models (GLMs). One has to specify the link function
+#   (logit for logistic regression) and the probability distributions (here:
+#   binomial distributions): 
+#   glm(y ~ x,family=binomial(link='logit'))
+# -----------------------------------------------------------------------------
