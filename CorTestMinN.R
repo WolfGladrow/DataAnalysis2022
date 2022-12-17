@@ -1,4 +1,5 @@
 print('file: CorTestMinN.R')
+print(date())
 # minimum n for sig. correlation test
 alpha = 0.05; r = 0.6; n1 = 6; n2 = 50   # n range tested (depends on considered r range)
 ra = seq(0.3,0.9,0.001); L = length(ra)
