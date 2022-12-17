@@ -1,4 +1,5 @@
 print('file: LeveneTestZar10d1Ex.R')
+print(date())
 # Levene test: homogeneity of variances? Zar (2010) Example 10.1 with 4 samples
 # apply routine leveneTest() from package car 
 # -------------------------------------------------------------------
@@ -31,3 +32,14 @@ alpha = 0.05   # (-) chosen level of significance
 print(c(alpha,'alpha'))
 if (p > alpha) print('H_0 not rejected because p > alpha')
 if (p <= alpha) print('H_0 rejected because p <= alpha')
+# ----------------------------------------------------------------
+# Results:
+# "file: LeveneTestZar10d1Ex.R"
+# "Sat Dec 17 19:46:57 2022"
+# "---------------------------------------------------------------"
+# "(1) routine leveneTest() from package car"
+# "---------------------------------------------------------------"
+# "0.7205"  "p-value"
+# "0.05"    "alpha"
+# "H_0 not rejected because p > alpha"
+# ----------------------------------------------------------------
