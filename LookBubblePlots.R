@@ -22,3 +22,15 @@ plot(x,y,main='',pch=21,col='white',bg='brown',
 lines(x,y,col='blue')
 text(0,280,TeX('$r = \\sqrt{NO_3\\, (\\mu mol/L)}$'),col='brown',pos=4,cex=1.3)
 # dev.off()
+# -----------------------------------------------------------------------------
+# Remarks:
+# Several panels in a single plot: setting the parameter mfrow to c(nr,nc) as, 
+#   for example, by the command par(mfrow=c(1,2)) -> 1 row with two panels
+#   (two columns) 
+#   par(mfrow=c(2,1)) would produce two panels ontop of each other
+#   par(mfrow=c(2,2)) would produce two times two panels
+# In the left panel (1. plot) the symbol radius varies linearly with the 
+#   nitrate concentration: cex=5*NO3/max(NO3).
+# In the right panel (2. plot) the symbol area varies linearly with the 
+#   nitrate concentration: cex=5*sqrt(NO3/max(NO3)).
+# -----------------------------------------------------------------------------
