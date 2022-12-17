@@ -1,4 +1,5 @@
 print('file: MannWhitney3n8m7MC.R')
+print(date())
 # PD & CDF Mann & Whitney (1947) 
 n = 8; m = 7; Ua = seq(0,n*m)
 L = n*m+1; pcum = numeric(L)
@@ -39,7 +40,8 @@ if (sflag == 3) {
   text(L*1/3,0.85,'0.95',col='magenta',pos=4,cex=1.5)
   # dev.off()
 }
+print(date())
 # ----------------------------------------------------------------
 # Remarks:
-# Calculation takes less than 1 minute.
+# Calculation takes 24 s
 # ----------------------------------------------------------------
