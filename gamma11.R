@@ -1,4 +1,6 @@
 print('file: gamma11.R')
+print(date())
+# Gamma PDF as informative prior
 library(latex2exp)
 dx = 0.01; x = seq(dx,5,dx) 
 alpha = 1; beta = 1
@@ -16,3 +18,14 @@ alphaF = 1; betaF = 0
 s = 1792+alphaF; n = 2306+betaF
 LestF = (s+1)/n;      print(c(round(LestF,5),'LestF'))
 uLestF = sqrt(s+1)/n; print(c(round(uLestF,5),'uLestF'))
+# -----------------------------------------------------------------------------
+# Results:
+# "file: gamma11.R"
+# "Sat Dec 17 14:03:27 2022"
+# "0.77763" "Lest"   
+# "0.01836" "uLest"  
+# "0.77797" "LestF"  
+# "0.01837" "uLestF" 
+# -----------------------------------------------------------------------------
+# Remarks:
+# -----------------------------------------------------------------------------
