@@ -1,4 +1,5 @@
 print('file: LSdataEstimates.R')
+print(date())
 # generate & plot artificial data & mean values (with respect to y)
 beta0 = 8; beta = -1.2 # true intercept & slope
 sigma = 1              # true standard deviation of normal noise
@@ -37,3 +38,13 @@ xt = 3
 text(xt,9,bquote(~beta[0] == .(beta0)),col='black',cex=1.5,pos=4)
 text(xt,7.5,bquote(~beta == .(beta)),col='black',cex=1.5,pos=4)
 # dev.off()
+# -----------------------------------------------------------------------------
+# Results:
+# "file: LSdataEstimates.R"
+# "Sat Dec 17 18:47:40 2022"
+# "0.3162"         "standard error"
+# "7.8504"         "intercept b0 (estimate)"
+# "-1.1594"        "slope b (estimate)"
+# "0.1953"         "intercept uncertainty ub0 (estimate)"
+# "0.0603"         "slope uncertainty ub (estimate)"
+# -----------------------------------------------------------------------------
