@@ -1,4 +1,5 @@
 print('file: LSthroughOrigin.R')
+print(date())
 # straight line through origin
 # ------------------------- generate artificial data
 set.seed(1953) # set seed for random number generators
@@ -32,3 +33,19 @@ text(4.4,0,bquote(~hat(beta)[0]  == .(b0r) %+-% .(ub0r)),col='black',pos=4,cex=1
 legend('topleft',legend=c('linear regression through origin','linear regression, unconstrained'),
        col=c('red','black'),lty=c(1,4),lwd=c(3,1),cex=1.2)
 # dev.off()
+# -----------------------------------------------------------------------------
+# Results:
+# "file: LSthroughOrigin.R"
+# "Sat Dec 17 19:20:05 2022"
+# "-2.02" "b0"   
+#  "2.78" "b"   
+#  "1.14" "ub0" 
+#  "0.23" "ub"  
+#  "2.42" "c1"  
+#  "0.12" "uc1"
+# -----------------------------------------------------------------------------
+# Remarks: 
+# The -1 in the command lm(y ~ x-1) enforces an intercept value of 0, i.e.
+#   a straight line through the origin (-1 stands for 'no constant value');
+#   it does not mean that q = x-1 is the predictor.
+# -----------------------------------------------------------------------------
