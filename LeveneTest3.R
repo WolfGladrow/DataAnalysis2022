@@ -1,4 +1,5 @@
 print('file: LeveneTest3.R')
+print(date())
 # Levene test: homogeneity of variances? Zar (2010) Example 8.9 p.155-156
 # 3 approaches: 
 # (1) routine leveneTest() from package car 
@@ -122,12 +123,12 @@ if (p <= alpha) print('H_0 rejected because p <= alpha')
 }
 # ----------------------------------------------------------------
 # Remarks:
-# The two pedestrian methods based on sample means (2) or sample medians (3) yielded
+# The two pedestrian methods based on sample means (2) or sample medians (3) yield
 #   slightly different p-values.
-# The routine leveneTest() and the pedestrian method based an sample medians yielded
+# The routine leveneTest() and the pedestrian method based an sample medians yield
 #   identical results for the p-value (at least up to 4 digits) -> most probably
 #   leveneTest() is based on sample medians.
-# leveneTest() works fine, however, the input to leveneTest() is a bit akward 
+# leveneTest() works fine, however, the input to leveneTest() is a bit awkward 
 #   (not just leveneTest(x1,x2)) and not well explained. One has to first concatenate
 #   the two samples (c(x1,x2)) and then to generate a vector that gives different
 #   factors to elements of x1 and x2: 
@@ -137,5 +138,53 @@ if (p <= alpha) print('H_0 rejected because p <= alpha')
 # Although the test statistic of the Levene test follows a t-distribution, it is
 #    called F in the output of leveneTest().
 # In order to obtain the p-value from the output of leveneTest() one has to use 
-#    
+#    the command out$`Pr(>F)`[1] (which is not obvious!)
+# ----------------------------------------------------------------
+# Results:
+# "file: LeveneTest3.R"
+# "Sat Dec 17 19:38:09 2022"
+# "---------------------------------------------------------------"
+# "(1) routine leveneTest() from package car"
+# "---------------------------------------------------------------"
+# "0.4699"  "p-value"
+# "0.05"  "alpha"
+# "H_0 not rejected because p > alpha"
+# "---------------------------------------------------------------"
+# "(2) Pedestrian method (following Zar) using sample means"
+# "---------------------------------------------------------------"
+# "401"   "sumx1"
+# "577"   "sumx2"
+# "39.45"      "sumx1prime"
+# "28.4"       "sumx2prime"
+# "3.59"   "devx1p"
+# "2.84"   "devx2p"
+# "77.21" "SS1p" 
+# "35.44" "SS2p" 
+# "5.93"  "spsqp"
+# "1.06"     "sx1x2sqp"
+# "0.7"    "tprime"
+# "2.093" "tc"   
+# "0.4913" "p"     
+# "H_0 not rejected because |t| < t_c"
+# "0.05"  "alpha"
+# "H_0 not rejected because p > alpha"
+# "---------------------------------------------------------------"
+# "(3) Pedestrian method (following Zar) using sample medians"
+# "---------------------------------------------------------------"
+# "401"   "sumx1"
+# "577"   "sumx2"
+# "39"         "sumx1prime"
+# "27"         "sumx2prime"
+# "3.55"   "devx1p"
+# "2.7"    "devx2p"
+# "82.73" "SS1p" 
+# "48.1" "SS2p"
+# "6.89"  "spsqp"
+# "1.15"     "sx1x2sqp"
+# "0.74"   "tprime"
+# "2.093" "tc"   
+# "0.4699" "p"     
+# "H_0 not rejected because |t| < t_c"
+# "0.05"  "alpha"
+# "H_0 not rejected because p > alpha"
 # ----------------------------------------------------------------
