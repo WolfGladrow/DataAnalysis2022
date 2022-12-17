@@ -1,4 +1,5 @@
 print('file: KStestNormal.R')
+print(date())
 # Kolmogorov-Smirnov (KS) test for random sample from normal PDF
 set.seed(1953) # set seed for random number generators
 n = 30 # sample size (should be >= 30 for application of KS test)
@@ -37,9 +38,26 @@ if (sflag == 3) {
   # dev.off()
 }
 # install.packages('kolmim')
-library(kolmim)
+library(kolmim) # contains routine pkolm() = cumulative distribution function 
+                # for Kolmogorov's goodness-of-fit measure.
 pK = (1-pkolm(D,n))
 pM = (1-pkolmim(D,n))
 out1KSimp = ks.test.imp(x,'pnorm')
 print(c(round(pK,4),' pK'))
 print(c(round(pM,4),' pM'))
+# -----------------------------------------------------------------------------
+# Results:
+# "file: KStestNormal.R"
+# "Sat Dec 17 12:04:26 2022"
+# "0.1473"  "D for x"
+# "0.4882"  "p for x"
+# "0.1471"  "D for xs"
+# "0.4895"  "p for xs"
+# "0.1471"                  "D for x, ks.test(x,m,s)"
+# "0.4895"                  "p for x, ks.test(x,m,s)"
+# "0.4882" " pK"   
+# "0.4882" " pM"   
+# -----------------------------------------------------------------------------
+# Remarks:
+# All p-values are larger than alpha = 0.05 -> H0 not rejected
+# -----------------------------------------------------------------------------
