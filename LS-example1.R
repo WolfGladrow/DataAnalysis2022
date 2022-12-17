@@ -1,4 +1,5 @@
 print('file: LS-example1.R')
+print(date())
 # generate artificial data & fit straight line; n=30
 beta0 = 8; beta = -1.2 # true intercept & slope
 sigma = 1;             # true standard deviation of normal noise
@@ -76,8 +77,17 @@ if (sflag == 6) { # estimate of density of standardized noise
 }
 print('Test for homo- versus heteroskedasticity:')
 # install.packages('car')
-library(car)
+library(car) # contains ncvTest() = Score Test for Non-Constant Error Variance
 pskedasticity = ncvTest(lm(y ~ x))$p; print(c(round(pskedasticity,4),'p(skedasticity)'))
 print('Null hypothesis H0: residuals are homoskedastic')
 if (pskedasticity >= 0.05) print('Do not reject H0 on significance level alpha=0.05')
 if (pskedasticity < 0.05)  print('Reject H0 on significance level alpha=0.05')
+# -----------------------------------------------------------------------------
+# Results:
+# "file: LS-example1.R"
+# "Sat Dec 17 18:21:17 2022"
+# "Test for homo- versus heteroskedasticity:"
+# "0.5248"          "p(skedasticity)"
+# "Null hypothesis H0: residuals are homoskedastic"
+# "Do not reject H0 on significance level alpha=0.05"
+# -----------------------------------------------------------------------------
