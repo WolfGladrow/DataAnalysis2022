@@ -1,4 +1,5 @@
 print('file: GerrodetteLikelihood.R')
+print(date())
 # Gerrodette11: vaquita abundance, summarized data, likelihood; 3D-plot
 print(' ---------------------------------------------------')
 print('(1) Frequentistic inference:')
@@ -59,3 +60,16 @@ if (sflag == 4) {
           ylab='d',xlab='N97',zlab='Likelihood',ticktype='detailed',nticks=2,cex.lab=1.5)
   # dev.off()
 }
+# -----------------------------------------------------------------------------
+# Results:
+# "file: GerrodetteLikelihood.R"
+# "Sat Dec 17 17:47:37 2022"
+# " ---------------------------------------------------"
+# "(1) Frequentistic inference:"
+# "(0) Data (summarized):"
+# "-0.8822"        "test statistic"
+# "-230"           "difference N08-N97"
+# "260.7"          "standard error of difference"
+# "62500"          "variance estimate 1997"
+# "5476"           "variance estimate 2008"
+# -----------------------------------------------------------------------------
