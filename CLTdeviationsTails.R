@@ -1,4 +1,5 @@
 print('file: CLTdeviationsTails.R')
+print(date())
 # Central Limit Theorem: deviations in tails
 set.seed(1953) # set seed for random number generators
 N = 1e4     # number of random numbers to sum up 
@@ -19,3 +20,16 @@ plot(xest,r,type='l',lwd=3,col='blue',xlab='Sum over 10000 random numbers',cex.l
 abline(1,0,col='black')
 text(4900,1.4,TeX('$M = 10^5$'),pos=4,col='blue',cex=1.5)
 # dev.off()
+print(date())
+# -----------------------------------------------------------------------------
+# Results:
+# "file: CLTdeviationsTails.R"
+# "Sat Dec 17 10:13:41 2022"
+# "0.0833" "varud" 
+# "833.3333" "varsN"   
+# "28.8675" "stdsN"  
+# "Sat Dec 17 10:13:58 2022"
+# -----------------------------------------------------------------------------
+# Remarks:
+# run time 17 s
+# -----------------------------------------------------------------------------
