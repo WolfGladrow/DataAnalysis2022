@@ -1,4 +1,5 @@
 print('file: BayesianNHST-t-testAll.R')
+print(date())
 # hist: compare t- and Bayesian-t-test: different effect size & n
 # effect sizes = 0, 0.2, 1.2; sample size n = 10, 100 
 # -> 6 different Monte Carlo simulations
@@ -175,8 +176,30 @@ if (sflag == 6) {
   title(ylab='Frequency',line=2.3,cex.lab=1.5)
   # dev.off()
 }
+print(date())
+# ----------------------------------------------------------------
+# Results:
+# "file: BayesianNHST-t-testAll.R"
+# "Sat Dec 17 09:44:56 2022"
+# "1"     "sflag"
+# "10000" "M"    
+# "10" "n" 
+# "0"     "delta"
+# "0.232"    "min(B10)"
+# "419.408"  "max(B10)"
+# "0.232326295914857" "min(B10)"         
+# "419.408004100236" "max(B10)"        
+# "5.14"          "p < alpha (%)"
+# "94.86"         "p > alpha (%)"
+# "0.63"              "B10 > 10 (%)"
+# "1.88"         "10 > B10 > 3.16 (%)"
+# "6.21"       "3.16 > B10 > 1 (%)"
+# "34.96"       "0.316 B10 < 1 (%)"
+# "56.32"         "0.1 B10 < 0.316 (%)"
+# "0"                 "B10 < 0.1 (%)"
+# "Sat Dec 17 09:45:36 2022"
 # ----------------------------------------------------------------
 # Remarks:
-# Calculation with large sample size (n = 100) and many Monte Carlo runs (M = 1e4) will take a
-#   few minutes.
+# Calculation with large sample size (n = 100) and many Monte Carlo runs 
+#   (M = 1e4) will take a few minutes. For n = 10: 40 s
 # ----------------------------------------------------------------

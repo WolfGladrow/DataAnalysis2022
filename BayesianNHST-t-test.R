@@ -1,4 +1,5 @@
 print('file: BayesianNHST-t-test.R')
+print(date())
 # compare NHST and Bayesian t-test: different effect size & n; ttestBF
 # effect sizes = 0, 0.2, 1.2; sample size n = 10, 100 
 # -> 6 different Monte Carlo simulations
@@ -222,3 +223,29 @@ if (sflag == 6) {
   text(0.4,100,TeX('strong evidence against $H_0$'),col='blue',pos=4)
   # dev.off()
 }
+print(date())
+# -----------------------------------------------------------------------------
+# Results:
+# "file: BayesianNHST-t-test.R"
+# "Sat Dec 17 09:39:54 2022"
+# "1"     "sflag"
+# "10000" "M"    
+# "10" "n" 
+# "0"     "delta"
+# "0.232"    "min(B10)"
+# "419.408"  "max(B10)"
+# "0.232326295914857" "min(B10)"         
+# "419.408004100236" "max(B10)"        
+# "5.14"          "p < alpha (%)"
+# "94.86"         "p > alpha (%)"
+# "0.63"             "B10 > 10 (%)"
+# "1.88"        "10 > B10 > 3.16 (%)"
+# "6.21"      "3.16 > B10 > 1 (%)"
+# "34.96"      "0.316 B10 < 1 (%)"
+# "56.32"        "0.1 B10 < 0.316 (%)"
+# "0"                "B10 < 0.1 (%)"
+# "Sat Dec 17 09:40:35 2022"
+# -----------------------------------------------------------------------------
+# Remarks:
+# Run time of script: less than 1 minute (MacBook Air)
+# -----------------------------------------------------------------------------
