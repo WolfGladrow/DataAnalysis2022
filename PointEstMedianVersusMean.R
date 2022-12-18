@@ -1,4 +1,5 @@
 print('file: PointEstMedianVersusMean.R')
+print(date())
 # median not equal mean (3/2022)')
 library(latex2exp)
 # png('Median220304.png',width=16,height=16,units='cm',res=300)
@@ -38,3 +39,10 @@ text(1,0.45,TeX('$\\mu = 1.15$'),col='black',cex=1.2,pos=4)
 abline(v=Fmedian,col='magenta',lty=2)
 abline(v=Fmean,col='black',lty=4)
 # dev.off()
+# -----------------------------------------------------------------------------
+# Results:
+# "file: PointEstMedianVersusMean.R"
+# "Sun Dec 18 12:06:14 2022"
+# "1.1538"  "Fmean" 
+# "0.8257"  "Fmedian"
+# -----------------------------------------------------------------------------
