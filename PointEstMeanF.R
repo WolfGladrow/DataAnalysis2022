@@ -1,4 +1,5 @@
 print('file: PointEstMeanF.R')
+print(date())
 # Estimate mean from random samples of F distribution
 set.seed(1953)
 M = 1000   # number of Monte-Carlo runs
@@ -25,3 +26,20 @@ text(xt,200,bquote(~sd(hat(mu)) == .(sdmuestr)),col='blue',cex=1.5)
 abline(v=5/3,col='black',lty=1)
 abline(v=meanmuest,col='blue',lty=4)
 # dev.off()
+# -----------------------------------------------------------------------------
+# Results:
+# "file: PointEstMeanF.R"
+# "Sun Dec 18 11:22:01 2022"
+# "1.6667"     "expectedmean"
+# "6.6667"     "expectedvar"
+# "1.3333"     "expectedvarofmean"
+# "1.6419"     "meanmuest"
+# "0.8764"     "varmuest"
+# "0.9362"     "sdmuest"
+# -----------------------------------------------------------------------------
+# Remarks:
+#  Although the estimate of the mean of the F-distribution is close to the true
+#    mean (1.642 versus 1.667), the estimates of variance and standard deviation
+#    are far away from the true values. Small samples (here: n = 5) are not 
+#    able to extract the large variance that 'is located in the right tail'.
+# -----------------------------------------------------------------------------
