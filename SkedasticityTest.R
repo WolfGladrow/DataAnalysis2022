@@ -13,3 +13,10 @@ pskedasticity = ncvTest(lm(y ~ x))$p; print(c(round(pskedasticity,4),'p(skedasti
 print('Null hypothesis H0: residuals are homoskedastic')
 if (pskedasticity >= 0.05) print('Do not reject H0 on significance level alpha=0.05')
 if (pskedasticity < 0.05)  print('Reject H0 on significance level alpha=0.05')
+# -----------------------------------------------------------------------------
+# Results:
+# "file: SkedasticityTest.R"
+# "0.5248"          "p(skedasticity)"
+# "Null hypothesis H0: residuals are homoskedastic"
+# "Do not reject H0 on significance level alpha=0.05"
+# -----------------------------------------------------------------------------
