@@ -1,4 +1,5 @@
 print('file: RefPriorExpBernardo.R')
+print(date())
 # Bernardo (2005) numerical reference prior for exponential PDF
 M = 500 # number of sample (Monte Carlo)
 K = 75  # number of observations per sample
@@ -26,10 +27,19 @@ print(c(round(prior,4),'prior'))
 (DeltaRel = 100*(prior - 1/thetaA)/(1/thetaA)) # percent
 print(c(round(DeltaRel,4),'DeltaRel'))
 library(latex2exp)
-  xp = seq(0.04,22,0.01); yp = 1/xp
+xp = seq(0.04,22,0.01); yp = 1/xp
 # png('Bernardo05RefPriorExp210609.png',width=16,height=16,units='cm',res=300)
-  plot(xp,yp,type='l',lwd=1,col='blue',xlab=NA,
+plot(xp,yp,type='l',lwd=1,col='blue',xlab=NA,
        ylab='Prior',las=1,cex.lab=1.5,xlim=c(0,20),ylim=c(0,22))
-  points(thetaA,prior,col='black',lwd=4,cex=0.6)
-  title(xlab=TeX('$\\theta$'),cex.lab=1.5)
+points(thetaA,prior,col='black',lwd=4,cex=0.6)
+title(xlab=TeX('$\\theta$'),cex.lab=1.5)
 # dev.off()
+# -----------------------------------------------------------------------------
+# Results:
+# "file: RefPriorExpBernardo.R"
+# "Sun Dec 18 19:54:42 2022"
+# "20.8311" "9.8651"  "4.5261"  "2.1923"  "1" "0.4909"  "0.2219"  "0.1088" 
+# "0.0505"  "prior"  
+# "3.7118"   "3.9775"   "0.991"    "3.5561" "0" "3.9143"   "-0.5606" 
+# "3.1845"   "1.4234"   "DeltaRel"
+# -----------------------------------------------------------------------------
