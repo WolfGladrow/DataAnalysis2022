@@ -47,3 +47,14 @@ print('file: PolynomialFit.R')
   AIC2 = AIC(Poly2); print(c(round(AIC2,2),'AIC2'))
   AIC3 = AIC(Poly3); print(c(round(AIC3,2),'AIC3'))
   AIC5 = AIC(Poly5); print(c(round(AIC5,2),'AIC5'))
+  # -----------------------------------------------------------------------------
+  # Remarks:
+  # The command lm(y ~ x+x^2+x^3) would yield an intercept and a slope
+  #    because q = x+x^2+x^3 is used as single predictor.
+  #
+  # If we want to obtain a polynomial fit instead, we have to inhibit the
+  #   interpretation of the polynomial terms by applying I() both to x^2 and x^3: 
+  #   lm(y ~ x+I(x^2)+I(x^3)). As a result we obtain 4 coefficients (intercept, 
+  #   slopes for x, x^2, and x^3).
+  # -----------------------------------------------------------------------------
+  
