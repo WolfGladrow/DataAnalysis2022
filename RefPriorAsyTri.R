@@ -1,4 +1,5 @@
 print('file: RefPriorAsyTri.R')
+print(date())
 # Berger(2011, Example 11) asysmmetric triangular PDF
 # ---------------------------------------------------
 # Numerical estimation of reference prior: Monte Carlo
@@ -50,7 +51,8 @@ lines(xp,yp,col='black',lwd=1)
 title(ylab=TeX('Prior $\\pi(\\theta)$'),line=2.5,cex.lab=1.5)
 title(xlab=TeX('$\\theta$'),cex.lab=1.5)
 # dev.off()
+print(date())
 # ----------------------------------------------------------------
 # Remarks:
-# Calculation takes a few minutes.
+# Calculation took less than 2 minutes.
 # ----------------------------------------------------------------
