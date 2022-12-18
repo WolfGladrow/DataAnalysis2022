@@ -34,4 +34,3 @@ x0=mean(r1); y0 = 0.75
 arrows(x0,y0,x0+sd(r1),y0,length = 0.15, angle = 15)
 arrows(x0,y0,x0-sd(r1),y0,length = 0.15, angle = 15)
 # dev.off()
-}
