@@ -1,4 +1,5 @@
 print('file: WilcoxonPairedCritValMC2.R')
+print(date())
 # Wilcoxon paired-sample critical values: Monte Carlo
 set.seed(1953) # set seed for random number generators
 M = 1e5 # Tplusa = numeric(M); Tminusa = numeric(M)
@@ -38,7 +39,11 @@ if (sflag == 2) {
        las=1,cex=0.6,cex.lab=1.5)
   # dev.off()
 }
+print(date())
 # ----------------------------------------------------------------
 # Remarks:
-#   calculations take several minutes -> save output: write.table()
+#   Calculations took seven minutes -> save output: write.table()
+# "file: WilcoxonPairedCritValMC2.R"
+# "Sun Dec 18 22:40:01 2022"
+# "Sun Dec 18 22:46:31 2022"
 # ----------------------------------------------------------------
