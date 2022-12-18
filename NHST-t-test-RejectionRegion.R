@@ -1,4 +1,5 @@
 print('file: NHST-t-test-RejectionRegion.R')
+print(date())
 # plot data & mu0, SE, 1-sample-t-test 
 x = c(1.5,0.3,1.8,-1.4,0.8,3.0,-0.3,0.2,-0.4,1.9,0.0,0.3,-1.0,
       1.2,3.8,0.5,-0.8,2.0,1.1,1.2,-0.4,2.7,0.5,-1.4,1.1)
@@ -38,3 +39,16 @@ text(-tc,0.35,TeX('$-t_c$'),col='red',pos=4,cex=1.5)
 text(0,0.1,bquote(~t[c] == .(tcr)),col='red',pos=1,cex=1.5)
 text(0,0.05,bquote(~alpha == .(alpha)),col='red',pos=1,cex=1.5)
 # dev.off()
+# -----------------------------------------------------------------------------
+# Results:
+# "file: NHST-t-test-RejectionRegion.R"
+# "Sun Dec 18 09:30:43 2022"
+# "0.73"          "sample mean (deg.C)"
+# "25"            "sample size n"
+# "1.34"          "s = sd(x) (deg.C)"
+# "1.8"           "s = var(x) (deg.C)^2"
+# "0.2684"        "standard error of the mean (deg.C)"
+# "2.71"          "t = (xmean-mu0)/SE"
+# "2.713"         "tvalue (pedestrian)"
+# "2.713"         "tvalue = tobs (t-test)"
+# -----------------------------------------------------------------------------
