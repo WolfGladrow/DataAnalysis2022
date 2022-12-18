@@ -1,4 +1,5 @@
 print('file: RejectTrueH0.R')
+print(date())
 # H0 true: p lower alpha = 0.05 versus B10 > 3.16'
 narr = c(10,50,100,500,1000,5000,1e4); L = length(narr)
 HighB10 = sqrt(10)
@@ -32,9 +33,10 @@ for(j in 1:L) {
   points(narr,B10higher3,col='red',lwd=4,cex=0.6,pch=24)
   abline(h=alpha*100,col='green',lty=4)
 # dev.off()
+  print(date())
 # ----------------------------------------------------------------
 # Remarks:
-# Calculation takes 10 minutes. Recommendation: write results to a file.
+# Calculation took 6 minutes. Recommendation: write results to a file.
 # ----------------------------------------------------------------
 # narr            10    50   100   500  1000  5000 10000
 # ploweralpha  4.892 4.931 5.022 5.011 5.042 5.023 5.001
