@@ -15,3 +15,14 @@ lines(x,y,col='black',lwd=4)
 text(-3,0.25,TeX('$P_1 = 1/2$'),col='blue',cex=1.5,pos=4)
 text(1.2,0.25,bquote(~P[2] == .(P2r)),col='magenta',cex=1.5,pos=4)
 # dev.off()
+P2a = pnorm(x4) - pnorm(x3)
+# -----------------------------------------------------------------------------
+# Remarks:
+# Here, the aim was to show that probabilities can be calculated by integration
+#   over probability densities.
+# The R routine pnorm() provides such integrals in fast way and, for example,
+#   the probability for x3 = 1 <= x <= x4 = 2 can be calculated as follows:
+#   pnorm(x4) - pnorm(x3)
+# Actually, pnorm() provides the cumulative distribution function (CDF) for the
+#   normal distribution.
+# -----------------------------------------------------------------------------
