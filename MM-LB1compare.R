@@ -1,4 +1,5 @@
 print('file: MM-LB1compare.R')
+print(date())
 # Michaelis-Menten: compare non-linear fit with Lineweaver-Burk estimate
 # data: I
 x = c(0.40, 1.05, 1.62, 2.07, 2.32, 2.46, 2.55, 3.21, 3.87, 4.17, 4.64, 4.64, 
@@ -50,8 +51,8 @@ print(' ---------------------------------------------------')
 # H0: residuals are normally distributed
 ShLB = shapiro.test(resLB); 
 pShLB = ShLB$p.value; print(c(round(pShLB,5),'p (Shapiro-Wilk test)'))
-if (pShLB >= 0.05) print('Do not reject H0 (on significance level = 0.05')
-if (pShLB < 0.05) print('Reject H0 (on significance level = 0.05')
+if (pShLB >= 0.05) print('Do not reject H0 (on significance level = 0.05)')
+if (pShLB < 0.05) print('Reject H0 (on significance level = 0.05)')
 # ---------------------------------------------------
 # (3d) derive estimates for alpha, beta via Lineweaver-Burk
 aEst = 1/cEst; print(c(round(aEst,2),'estimate of alpha via LB'))
@@ -89,3 +90,25 @@ if (sflag == 11) { # non-linear regression
   text(xt,1.01,bquote(~hat(beta) == .(bNLr) %+-% .(ubNLr)),col='black',pos=4,cex=1.5)
   # dev.off()
 }
+# -----------------------------------------------------------------------------
+# Results:
+# "file: MM-LB1compare.R"
+# "30"            "n sample size"
+# "5"             "start value for alpha = Vmax"
+# "3"             "start value for beta = K"
+# "estimated alpha = " "3.72"   "+-"  "0.13"              
+# "estimated  beta = " "1.58"   "+-"  "0.22"              
+# "0.20856"               "p (Shapiro-Wilk test)"
+# "Do not reject H0 (on significance level = 0.05"
+# "0.25"               "gamma   true y-intercept"
+# "0.5"                "delta   true slope"
+# "cEst = " "0.14"    "+-"      "0.027"  
+# "dEst = " "0.959"   "+-"      "0.049"  
+# " ---------------------------------------------------"
+# "0.00016"               "p (Shapiro-Wilk test)"
+# "Reject H0 (on significance level = 0.05)"
+# "7.14"                  "estimate of alpha via LB"
+# "6.85"                  "estimate of beta via LB"
+# "Estimate of alpha = " "7.139"  "+-"  "1.36"                
+# "Estimate of beta = "  "6.846"  "+-"  "1.349"   
+# -----------------------------------------------------------------------------
