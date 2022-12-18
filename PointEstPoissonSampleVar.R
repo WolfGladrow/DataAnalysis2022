@@ -1,4 +1,5 @@
 print('file: PointEstPoissonSampleVar.R')
+print(date())
 # Poisson: estimate rate parameter lambda by sample variance
 set.seed(1953)
 M = 1e4   # number of Monte-Carlo runs
@@ -20,3 +21,12 @@ text(xt,800,bquote(~sd(hat(lambda)) == .(sdvarestr)),col='blue',cex=1.5)
 abline(v=lambda1,col='black',lty=1)
 abline(v=meanvarest,col='blue',lty=4)
 # dev.off()
+# -----------------------------------------------------------------------------
+# Results:
+# "file: PointEstPoissonSampleVar.R"
+# "Sun Dec 18 12:48:34 2022"
+# "2.70002" "meanvarest"
+# "4.19"    "varvarest"
+# "2.05"    "sdvarest"
+# -----------------------------------------------------------------------------
+
