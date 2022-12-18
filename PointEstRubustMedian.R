@@ -1,4 +1,5 @@
 print('file: PointEstRubustMedian.R')
+print(date())
 # Robust estimate of central tendency: median, normal distribution
 set.seed(1953)
 M = 1000   # number of Monte-Carlo runs
@@ -17,3 +18,11 @@ text(0.9,70,paste('= ',as.character(round(sdmuest,3))),col='blue',cex=1.5)
 abline(v=0,col='black',lty=1)
 abline(v=meanmuest,col='blue',lty=4)
 # dev.off()
+# -----------------------------------------------------------------------------
+# Results:
+# "file: PointEstRubustMedian.R"
+# "Sun Dec 18 12:45:40 2022"
+# "-0.015"   "meanmuest"
+#  "0.268"   "varmuest"
+#  "0.518"   "sdmuest"
+# -----------------------------------------------------------------------------
