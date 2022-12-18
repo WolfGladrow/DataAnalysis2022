@@ -1,4 +1,5 @@
 print('file: NHST-Mendel-Fisher.R')
+print(date())
 # Example from Fisher (1925, Table 12) Mendelian class frequencies
 fobs = c(328,122,77,33)       # observed frequencies m+x
 total = sum(fobs)
@@ -17,3 +18,14 @@ plot(xp,fobs,type='p',lwd=4,col='blue',xlab='Sample',ylab='# of individuals',
      las=1,cex=0.6,ylim=c(0,350),cex.lab=1.5)
 points(xp,fexp,col='magenta',lwd=4,pch=24,cex=0.6)
 # dev.off()
+# -----------------------------------------------------------------------------
+# Results:
+# "file: NHST-Mendel-Fisher.R"
+# "Sun Dec 18 09:09:52 2022"
+# "3"        " degrees of freedom, nu"
+# "7.81"     " critical chi-square value for alpha=0.05"
+# "0.0125"   " p-value"
+# -----------------------------------------------------------------------------
+# Remarks:
+# p = 0.01 < alpha = 0.05 -> reject H0 
+# -----------------------------------------------------------------------------
