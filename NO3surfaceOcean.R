@@ -1,5 +1,9 @@
 print('file: NO3surfaceOcean.R')
 # read NO3 & surface ocean plot
+# install.packages('ncdf4') # install package (apply only once on your computer)
+library(ncdf4)
+# install.packages('fields') # install package (apply only once on your computer)
+library(fields)
 info.nc = nc_open('nitrate_annual_1deg.nc')  # open netCDF file
 nitrate.lon = ncvar_get( info.nc, 'lon')     # eastern longitude
 nitrate.lat = ncvar_get( info.nc, 'lat')     # latitude
