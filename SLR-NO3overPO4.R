@@ -1,4 +1,5 @@
 print('file: SLR-NO3overPO4.R')
+print(date())
 # Simple Linear rRegressio: NO3 over PO4; whole ocean: 
 # install.packages('ncdf4')
 library(ncdf4)
@@ -40,6 +41,7 @@ if (sflag == 1) {
   text(0.05,47,bquote(~hat(beta)[0]  == .(b0r) %+-% .(ub0r)),col='magenta',pos=4,cex=1.5)
   # dev.off()
 }
+print(date())
 # ----------------------------------------------------------------
 # Remarks:
 #   Plotting of more than 1 million data points takes a few seconds!
