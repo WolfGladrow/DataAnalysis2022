@@ -1,4 +1,5 @@
 print('file: PointEstNeutrinos.R')
+print(date())
 # Poisson: neutrinos 
 ja=seq(0,9)  # number of events (neutrinos in 10 s intervals)
 frequencies=c(1042,860,307,78,15,3,0,0,0,1) # frequencies
@@ -56,4 +57,3 @@ ja1=seq(0,8)  # number of events (neutrinos in 10 s intervals)
 frequencies1=c(1042,860,307,78,15,3,0,0,0) # frequencies
 lambdaEst1=sum(ja1*frequencies1)/sum(frequencies1)
 print(c('estimate of mean rate  = ',lambdaEst1)) # 0.77353579175705
-}
