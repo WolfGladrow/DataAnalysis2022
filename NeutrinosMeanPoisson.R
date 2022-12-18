@@ -1,4 +1,5 @@
-file('print: NeutrinosMeanPoisson.R')
+print('file: NeutrinosMeanPoisson.R')
+print(date())
 # neutrinos: calculate sample mean and compare relative frequencies with Poisson probabilities
 k=seq(0,9)  # number of events (neutrinos in 10 s intervals)
 frequencies=c(1042,860,307,78,15,3,0,0,0,1) # frequencies
@@ -20,3 +21,11 @@ if (sflag == 2) {
   text(5.6,0.2,bquote(~hat(lambda) == .(lambdar)),col='magenta',pos=4,cex=1.5)
   # dev.off()
 }
+# -----------------------------------------------------------------------------
+# Results:
+# "file: NeutrinosMeanPoisson.R"
+# "Sun Dec 18 10:19:31 2022"
+# "0.777"     "lambdaEst"
+# "0.777"     "lambdaEst2"
+# "0.778"     "lambdaEst3"
+# -----------------------------------------------------------------------------
