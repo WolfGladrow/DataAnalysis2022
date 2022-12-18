@@ -1,4 +1,5 @@
 print('file: PointEstMLEnormalBiasVar.R')
+print(date())
 # Maximum Likelihood Estimate for variance of standard normal PDF: bias & variance
 set.seed(1953) # set seed for random number generators
 n = 5     # sample size
@@ -6,6 +7,7 @@ M = 1e4   # number of Monte Carlo runs
 ssq = numeric(M)
 for(i in 1:M) {x=rnorm(n); xmean=mean(x); ssq[i]=sum((x-xmean)^2)/n}
 ssqmean = mean(ssq); print(c(round(ssqmean,4),' ssqmean'))
+ssqmeanr = round(ssqmean,4)
 library(latex2exp)
 # png('MLEvarNormal181228.png',width=16,height=16,units='cm',res=300)
 hist(ssq,col='blue',breaks=round(sqrt(M)),
