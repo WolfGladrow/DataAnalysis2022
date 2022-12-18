@@ -19,7 +19,7 @@ aNL = NLs$coefficients[1]; bNL = NLs$coefficients[2]
 uaNL = NLs$coefficients[3]; ubNL = NLs$coefficients[4]
 print(c('estimated alpha = ',round(aNL,2),'+-',round(uaNL,2)))
 print(c('estimated  beta = ',round(bNL,2),'+-',round(ubNL,2)))
-resNL = NLs$residuals
+resNL = NLs$residuals                              # <----- extract residuals
 # png('MichaelisResNL210228.png',width=16,height=16,units='cm',res=300)
 plot(x,resNL,type='p',lwd=4,col='blue',xlab='x',ylab='Residuals',las=1,cex=0.6,cex.lab=1.5)
 abline(h=0,col='magenta',lty=4)
