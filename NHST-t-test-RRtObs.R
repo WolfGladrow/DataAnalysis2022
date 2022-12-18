@@ -42,3 +42,15 @@ abline(v=-tc,col='red',lty=2)
 text(tc-0.4,0.35,TeX('$t_c$'),col='red',pos=4,cex=1.5)
 text(-tc,0.35,TeX('$-t_c$'),col='red',pos=4,cex=1.5)
 # dev.off()
+# -----------------------------------------------------------------------------
+# Results:
+# "file: NHST-t-test-RRtObs.R"
+# "0.73"          "sample mean (deg.C)"
+# "25"            "sample size n"
+# "1.34"          "s = sd(x) (deg.C)"
+# "1.8"           "s = var(x) (deg.C)^2"
+# "0.2684"        "standard error of the mean (deg.C)"
+# "2.71"          "t = (xmean-mu0)/SE"
+# "2.713"         "tvalue (pedestrian)"
+# "2.713"         "tvalue = tobs (t-test)"
+# -----------------------------------------------------------------------------
