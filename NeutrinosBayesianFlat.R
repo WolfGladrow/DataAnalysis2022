@@ -1,4 +1,5 @@
 print('file: NeutrinosBayesianFlat.R')
+print(date())
 # neutrinos, Bayesian approach: flat prior -> gamma posterior
 # (0) data:
 k=seq(0,9)  # number of events (neutrinos in 10 s intervals)
@@ -31,3 +32,15 @@ lines(xp95,yp95,col='magenta',lwd=3,lty=1)
 text(0.8,20,bquote(~hat(lambda) == .(muEstr) %+-% .(sdEstr)),col='black',pos=4,cex=1.5)
 text(muEst,1,'95% CRI',col='magenta',cex=1.5)
 # dev.off()
+# -----------------------------------------------------------------------------
+# Results
+# "file: NeutrinosBayesianFlat.R"
+# "Sun Dec 18 09:41:21 2022"
+# "1793"  "alpha"
+# "2306" "beta"
+# "0.778" "muEst"
+# "0.00034" "varEst" 
+# "0.018" "sdEst"
+# "0.742" "xL"   
+# "0.814" "xU"  
+# -----------------------------------------------------------------------------
