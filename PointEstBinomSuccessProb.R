@@ -1,4 +1,5 @@
 print('file: PointEstBinomSuccessProb.R')
+print(date())
 # Estimate probability of success in single trial (binomial distribution)
 set.seed(1953)
 M = 1000   # number of Monte-Carlo runs
@@ -29,3 +30,16 @@ text(xt,60,bquote(~sd(hat(p)) == .(sdpEstsr)),col='blue',cex=1.5)
 abline(v=p,col='black',lty=1)
 abline(v=pEst,col='blue',lty=4)
 # dev.off()
+# -----------------------------------------------------------------------------
+# Results:
+# "file: PointEstBinomSuccessProb.R"
+# "Sun Dec 18 10:54:52 2022"
+# "6"       "expectedmean"
+# "2.4"     "expectedvar"
+# "1.5492"  "expectedSD"
+# "0.6001"  "pEst"  
+# "6.0006"  "meanEst"
+# "0.005"   "varpEsts"
+# "0.005"   "varpExp"
+# "0.0707"  "sdpEsts"
+# -----------------------------------------------------------------------------
