@@ -7,3 +7,10 @@ out3a = var.test(x2,x1); p2 = out3a$p.value; print(c(round(p2,4),'p2'))
 alpha = 0.05
 if(p < alpha) print(c('p < alpha = ',alpha,': reject H0'))
 if(p >= alpha) print(c('p >= alpha = ',alpha,': do not reject H0'))
+# -----------------------------------------------------------------------------
+# Results:
+# "file: VarRatioTestCountData.R"
+# "0.4401" "p"     
+# "0.4401" "p2"    
+# "p >= alpha = " "0.05"  ": do not reject H0"
+# -----------------------------------------------------------------------------
