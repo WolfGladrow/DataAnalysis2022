@@ -5,6 +5,8 @@ Vmax = 4; K = 2; S = seq(0.25,100,0.05); V = Vmax*S/(S+K)
 Si = 1/S; Vi = 1/V
 xp1 = c(2,3); yp1 = c(1,1)*2*K/Vmax+1/Vmax
 xp2 = c(3,3); yp2 = c(2*K/Vmax+1/Vmax,3*K/Vmax+1/Vmax)
+# install.packages('latex2exp')
+library(latex2exp)
 sflag = 1
 if (sflag == 1) {
 # png('LineweaverIllustration210228.png',width=16,height=16,units='cm',res=300)
