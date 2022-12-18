@@ -1,4 +1,5 @@
-file('print: NeutrinosMeanPoissonLog.R')
+print('file: NeutrinosMeanPoissonLog.R')
+print(date())
 # neutrinos: calculate sample mean and compare relative frequencies with Poisson probabilities
 k=seq(0,9)  # number of events (neutrinos in 10 s intervals)
 frequencies=c(1042,860,307,78,15,3,0,0,0,1) # frequencies
@@ -20,6 +21,13 @@ if (sflag == 3) { # log-y
   text(5.6,0.2,bquote(~hat(lambda) == .(lambdar)),col='magenta',pos=4,cex=1.5)
   # dev.off()
 }
+# -----------------------------------------------------------------------------
+# Results:
+# "file: NeutrinosMeanPoissonLog.R"
+# "Sun Dec 18 10:22:28 2022"
+# "0.777"     "lambdaEst"
+# "0.777"     "lambdaEst2"
+# "0.778"     "lambdaEst3"
 # ----------------------------------------------------------------
 # Remarks:
 # Switch to logarithmic scale for the y-axis by adding log='y' as parameter in plot().
