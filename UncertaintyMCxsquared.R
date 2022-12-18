@@ -16,8 +16,10 @@ meanrf = mean(rf); print(c(round(meanrf,1),'meanrf'))  # 4.63279
 sdrf = sd(rf); print(c(round(sdrf,1),'sdrf'))      # standard deviation 2.134695
 # robust estimation:
 medianMC = median(rf); print(c(round(medianMC,1),'medianMC'))  # 4.407125
+medianMCr = round(medianMC,1)
 #  Normalized Median Absolute Deviation (MADN) estimate of dispersion:
 sfMCrobust= median(abs(rf-median(rf)))/0.6745  # 2.071515 MADN
+sfMCrobustr = round(sfMCrobust,1)
 print(c(round(sfMCrobust,1),'sfMCrobust'))
 library(latex2exp)
 sflag = 1
@@ -40,3 +42,12 @@ if (sflag == 2) {
          lty=c(1,2),lwd=c(3,1),cex=1.3)
    # dev.off()
 }
+# -----------------------------------------------------------------------------
+# Results:
+# "file: UncertaintyMCxsquared.R"
+# "4.6"  "meanrf"
+# "2.1"  "sdrf"
+# "4.4"  "medianMC"
+# "2.1"  "sfMCrobust"
+# -------------------------------------------------------------------
+
