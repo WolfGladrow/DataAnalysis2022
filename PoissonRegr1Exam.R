@@ -10,7 +10,7 @@ mu = exp(beta0+beta*x)
 y = numeric(n)
 for(k in 1:n) y[k] = rpois(1,lambda=mu[k])
 # (3) Poisson regression
-out1 = glm(y ~ x,family=poisson)
+out1 = glm(y ~ x,family=poisson)  # < -------------- Poisson regression
 out2 = summary(out1)
 b0 = out2$coefficients[1]  # estimate of beta0
 b  = out2$coefficients[2]  # estimate of beta
@@ -32,3 +32,17 @@ text(0.3,14,bquote(~beta == .(beta)),col='black',pos=4,cex=1.5)
 text(0.3,17,TeX('$log(\\mu) = \\beta_0 + \\beta x$'),col='black',cex=1.5)
 legend('topleft',legend=c('estimated','true'),col=c('blue','black'),lty=c(1,4),lwd=c(3,2),cex=1.5)
 # dev.off()
+# -----------------------------------------------------------------------------
+# Remarks:
+# When applying Poisson regression one assumes that the data stem from Poisson
+#   distributions. The link function is always the exponential function; this
+#   assures that the mean rates of the various Poisson distributions are non-negative.
+# The Poisson regression is performed by calling the R routine glm() for fitting 
+#   Generalized Linear Models (GLMs). The call is simply glm(y ~ x,family=poisson),
+#   i.e. similar to the call for simple linear regression with x as predictor and
+#   y as response, except that glm (instead of lm) is called and the family 
+#   parameter is specified as poisson (note: lowercase).
+# -----------------------------------------------------------------------------
+
+
+# 
