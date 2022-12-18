@@ -1,4 +1,5 @@
 print('file: MMnonlinearFit.R')
+print(date())
 # Michaelis-Menten: non-linear regression 
 # ---------------------------------------------------
 # data:
@@ -9,16 +10,18 @@ print('file: MMnonlinearFit.R')
         2.54, 2.52, 3.00, 2.86,2.76, 3.13, 3.05, 3.03, 2.70, 2.97, 2.62, 3.13, 
         2.95, 3.31, 3.32, 3.02, 3.21, 3.24)
 n = length(x); print(c(n,'n sample size'))
-alpha = 4 # true Vmax
-beta  = 2 # true half-saturation constant K
+alpha = 4; print(c(alpha,'true alpha')) # true Vmax
+beta  = 2; print(c(beta,'true beta'))   # true half-saturation constant K
 # non-linear regression: you have to choose start values for model parameters
 astart = 5; print(c(astart,'start value for alpha = Vmax'))
 bstart = 3; print(c(bstart,'start value for beta = K'))
-NLs = summary(nls(y ~ a*x/(x+b),start=list(a=astart,b=bstart)))
+NLs = summary(nls(y ~ a*x/(x+b),start=list(a=astart,b=bstart))) # <-----
 aNL = NLs$coefficients[1]; bNL = NLs$coefficients[2]
 uaNL = NLs$coefficients[3]; ubNL = NLs$coefficients[4]
 print(c('estimated alpha = ',round(aNL,2),'+-',round(uaNL,2)))
 print(c('estimated  beta = ',round(bNL,2),'+-',round(ubNL,2)))
+# install.packages('latex2exp') 
+library(latex2exp)
 sflag = 1
 if (sflag == 1) { # data plus non-linear regression
   xp = seq(0,10,0.01); yp = aNL*xp/(xp+bNL)
@@ -34,3 +37,24 @@ if (sflag == 1) { # data plus non-linear regression
   text(5.9,1.1,bquote(~hat(beta) == .(bNLr) %+-% .(ubNLr)),col='black',pos=4,cex=1.5)
 # dev.off()
 }
+# -----------------------------------------------------------------------------
+# Results:
+# "file: MMnonlinearFit.R"
+# "Sun Dec 18 07:08:43 2022"
+# "30"        "n sample size"
+# "4"         "true alpha"
+# "2"         "true beta"
+# "5"             "start value for alpha = Vmax"
+# "3"             "start value for beta = K"
+# "estimated alpha = " "3.72"  "+-"   "0.13"              
+# "estimated  beta = " "1.58"  "+-"   "0.22"              
+# -----------------------------------------------------------------------------
+# Remarks: 
+# The non-linear fitting routine nls() yields reasonable estimates (given the
+#   small sample size n=30 and the noise in the data), however, good start
+#   values (close to the true values) have to be provided.
+# The non-linear function that should be fitted to the data is specified in the
+#   argument list of nls(): nls(y ~ a*x/(x+b),start=list(a=astart,b=bstart));
+#   it is used as the predictor.
+# -----------------------------------------------------------------------------
+
