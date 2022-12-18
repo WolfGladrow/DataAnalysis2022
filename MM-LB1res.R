@@ -1,5 +1,6 @@
 print('file: MM-LB1res.R')
-# Michaelis-Menten: esimate parameters using Lineweaver-Burk transformation
+print(date())
+# Michaelis-Menten: estimate parameters using Lineweaver-Burk transformation
 # data: I
 x = c(0.40, 1.05, 1.62, 2.07, 2.32, 2.46, 2.55, 3.21, 3.87, 4.17, 4.64, 4.64, 
       4.86, 4.93, 5.10, 5.13,5.23, 5.78, 5.86, 5.87, 6.04, 6.05, 6.25, 6.70, 
@@ -34,3 +35,15 @@ if (sflag == 14) {
   abline(h=0,col='magenta',lty=4)
   # dev.off()
 }
+# -----------------------------------------------------------------------------
+# Results:
+# "file: MM-LB1res.R"
+# "Sun Dec 18 06:48:47 2022"
+# "30"            "n sample size"
+# "(3) Lineweaver-Burk transformation:"
+# "(3a) apply Lineweaver-Burk transformation:"
+# "0.25"          "gamma   true y-intercept"
+# "0.5"           "delta   true slope"
+# "cEst = " "0.14"    "+-"      "0.027"  
+# "dEst = " "0.959"   "+-"      "0.049" 
+# -----------------------------------------------------------------------------

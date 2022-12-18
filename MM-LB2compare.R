@@ -1,4 +1,5 @@
 print('file: MM-LB2compare.R')
+print(date())
 # Michaelis-Menten: compare non-linear fit with Lineweaver-Burk estimate
 # data: II
 x = c(0.31, 0.32, 0.32, 0.35, 0.36, 0.41, 0.45, 0.48, 0.50, 0.50, 0.52, 0.52,
@@ -90,3 +91,27 @@ if (sflag == 21) {
   text(xt,1.01,bquote(~hat(beta) == .(bNLr) %+-% .(ubNLr)),col='black',pos=4,cex=1.5)
   # dev.off()
 }
+# -----------------------------------------------------------------------------
+# Results:
+[1] "file: MM-LB2compare.R"
+[1] "Sun Dec 18 06:58:11 2022"
+[1] "30"            "n sample size"
+[1] "5"             "start value for alpha = Vmax"
+[1] "3"             "start value for beta = K"
+[1] "estimated alpha = " "4.35"   "+-"  "0.11"              
+[1] "estimated  beta = " "2.17"   "+-"  "0.1"               
+[1] "0.00087"   "p (Shapiro-Wilk test)"
+[1] "Reject H0 (on significance level = 0.05"
+[1] "0.25"      "gamma   true y-intercept"
+[1] "0.5"       "delta   true slope"
+[1] "cEst = " "0.216"   "+-"      "0.021"  
+[1] "dEst = " "0.516"   "+-"      "0.011"  
+[1] " ---------------------------------------------------"
+[1] "0.05174"     "p (Shapiro-Wilk test)"
+[1] "Do not reject H0 (on significance level = 0.05"
+[1] "4.62"        "estimate of alpha via LB"
+[1] "2.38"        "estimate of beta via LB"
+[1] "Estimate of alpha = " "4.62"     "+-"   "0.453"               
+[1] "Estimate of beta = "  "2.383"    "+-"   "0.24"               
+# -----------------------------------------------------------------------------
+
