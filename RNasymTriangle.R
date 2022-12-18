@@ -4,6 +4,15 @@ print('file: RNasymTriangle.R')
 library(triangle)
 set.seed(1953) 
 thetaMode = 0.9 # true mode
+nonsymtri = function(x,thetaMode) {
+  # nonsymmetric triangular PDF
+  # 0 < x, thetaMode < 1
+  # Dieter.Wolf-Gladrow@awi.de 6/2021
+  q = 2*x/thetaMode
+  L = length(x)
+  for(i in 1:L) if(x[i] > thetaMode) q[i] = 2*(1-x[i])/(1-thetaMode)
+  return(q)
+}
 sflag = 1
 if (sflag == 1) {
 M = 1e3 # number of Monte Carlo runs
