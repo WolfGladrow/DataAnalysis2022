@@ -1,4 +1,5 @@
 print('file: PermutationTestCorB.R')
+print(date())
 # permutation test for correlation: example 
 x = c(4.8,2.8,5.4,8.2,3.9,2.6,4.6,5.1,3.9,10.0,6.5,3.8,
       9.4,4.7,6.7,2.8,6.4,4.4,3.1,5.6,4.3,1.9,2.4,4.3,
@@ -30,3 +31,10 @@ if (sflag == 2) {
   text(-0.6,970,paste('p = ',as.character(round(pPermut,3))),col='black',pos=4,cex=1.5)
   # dev.off()
 }
+# -----------------------------------------------------------------------------
+# Results:
+# "file: PermutationTestCorB.R"
+# "Sun Dec 18 10:51:55 2022"
+# "-0.3955"  "r"      
+#  "0.0321"  "p-value (correlation test)"
+# -----------------------------------------------------------------------------
