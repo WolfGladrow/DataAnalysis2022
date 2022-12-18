@@ -191,7 +191,7 @@ if(a == 4) {
 # } # end a-loop
 # dev.off()
 
-png('Berger09TriangPostAll210616.png',width=16,height=16,units='cm',res=300)
+# png('Berger09TriangPostAll210616.png',width=16,height=16,units='cm',res=300)
 par(mfrow=c(2,2))  # allow for 2 x 2 panels in one plot
 for(a in 1:4) {
 if(a == 1) { # Berger09TriangPost30M210615
