@@ -45,7 +45,7 @@ ic2 = -b2est/b3est; print(c(round(ic2,3),'ic2'))
 # Ratio of error variances: lambda = (sigma_x)^2 / (sigma_y)^2
 # ------------------------------------------------------------------------------
 x = PO4c; y = NO3c
-# Lambda set by the data analyst (compare justification under Remarks):
+# Lambda set by the data analyst:
 lambda = 1/15^2; print(c('lambda = ',round(lambda,6)))
 Sxx=var(x); Syy = var(y); Sxy = var(x,y)
 # --------------------------------------------------------------------------------
@@ -86,10 +86,5 @@ if (sflag == 1) {
 print(date())
 # -----------------------------------------------------------------------------
 # Remarks:
-# - The choice of lambda = 1/15^2 might be justified by looking at the plot of 
-#   the data: (i) the spread of [PO4] at a fixed NO3 concentration (for example at
-#   zero) is about 1 (from 0 to 1); (ii) the spread of [NO3] at a fixed 
-#   PO4 concentration (for example at 1) is about 15 (from 0 to 15); 
-#   (iii) these spreads provide measures for the standard deviations.
-# - Generating the plot takes a few seconds.
+#  Generating the plot takes a few seconds.
 # -----------------------------------------------------------------------------
