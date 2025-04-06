@@ -93,10 +93,8 @@ Sxy = sum((x-xmean)*(y-ymean))
 (Var3I90 = beta3I90^2/((beta1I90+beta2I90)^2*(1+beta1I90^2)*
     (1+beta2I90^2))*((1+beta2I90^2)^2*Var1I90+
    2*(1+beta1I90^2)*(1+beta2I90^2)*Cov12I90+(1+beta1I90^2)^2*Var2I90))
-(Var4I90 = beta3I90^2/((beta1I90+beta2I90)^2*(1+beta1I90^2)*
-      (1+beta2I90^2))*((1+beta2I90^2)^2*Var1I90+
-    2*(1+beta1I90^2)*(1+beta2I90^2)*Cov12I90+
-      (1+beta1I90^2)^2*Var2I90))
+(Var4I90 = beta4I90^2/(4*beta1I90^2+(beta1I90*beta2I90-1)^2)*
+    (Var1I90/beta1I90^2+2*Cov12I90+beta1I90^2*Var2I90))
 (Var5I90 = (beta2I90/beta1I90*Var1I90+2*Cov12I90+
               beta1I90/beta2I90*Var2I90)/4)
 (sig1I90 = sqrt(Var1I90))
@@ -256,13 +254,13 @@ print(date())
 # [1] "5.62e-06"        "Var1I90 y on x"
 # [1] "8.14e-06"        "Var2I90 (via) x on y"
 # [1] "5.73e-06"        "Var3I90 bisector"
-# [1] "5.73e-06"        "Var4I90 orthogonal"
+# [1] "8.12e-06"        "Var4I90 orthogonal"
 # [1] "5.75e-06"        "Var5I90 geometric"
 # [1] "4.65e-06"        "Cov12I90"
 # [1] "0.00237"         "sig1I90 y on x"
 # [1] "0.00285"         "sig2I90 (via) x on y"
 # [1] "0.00239"         "sig3I90 bisection"
-# [1] "0.00239"         "sig4I90 orthogonal"
+# [1] "0.00285"         "sig4I90 orthogonal"
 # [1] "0.0024"          "sig5I90 geometric"
 # [1] "----------------------------------------------------------"
 # [1] " Isobe et al. (1990): intercepts & their uncertainties"
