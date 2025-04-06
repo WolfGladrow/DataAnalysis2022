@@ -1,4 +1,4 @@
-print('file: R_EIV_MCMC_2504.R')
+print('file: EIVMCMC2504.R')
 print(date())
 # history: R_Jitjareonchai06MCMC2503.R
 # purpose: Errors-In-Variables (EIV)
