@@ -8,7 +8,7 @@ x1 = c(-0.68644, -0.82379, -0.98416, -2.02230, -0.43507, -0.76655,
 # install.packages('latex2exp')
 library(latex2exp)
 # png('TransparentBoxplot220220.png',width=16,height=16,units='cm',res=300)
-x1[1] = 5 # create an 'outlier'
+n = length(x1); x1[n+1] = 5 # add an 'outlier'
 boxplot(x1,col='yellow',las=1,xlab=TeX('$x_1$'),cex.lab=1.5) 
 L = length(x1)
 set.seed(1953) # set seed for random number generators
