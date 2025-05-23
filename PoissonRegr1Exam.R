@@ -44,6 +44,3 @@ legend('topleft',legend=c('estimated','true'),col=c('blue','black'),lty=c(1,4),l
 #   y as response, except that glm (instead of lm) is called and the family 
 #   parameter is specified as poisson (note: lowercase).
 # -----------------------------------------------------------------------------
-
-
-# 
