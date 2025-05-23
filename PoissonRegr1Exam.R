@@ -17,6 +17,7 @@ b  = out2$coefficients[2]  # estimate of beta
 ub0 = out2$coefficients[3] # uncertainty of beta0 estimate
 ub  = out2$coefficients[4] # uncertainty of beta estimate
 muest = exp(b0+b*x)
+library(latex2exp)
 # png('PoissonRegArt160930.png',width=16,height=16,units='cm',res=300)
 plot(x,y,type='p',lwd=4,col='blue',xlab='x',ylab='y',las=1,cex=0.6,cex.lab=1.5)
 beta0=1.3; beta=1.2; xp=seq(-1,1,0.01); yp=exp(beta0+xp*beta)
