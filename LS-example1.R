@@ -18,7 +18,9 @@ b0 = out1$coefficients[1]; b = out1$coefficients[2]
 ub0 = out2$coefficients[3]; ub = out2$coefficients[4]
 res=out1$residuals
 resSTD = (res-mean(res))/sd(res)  # standardize residuals
-# ----------- plot: 
+print('----------------------------------------------------')
+print('----------- plot: ---------------')
+print('----------------------------------------------------')
 sflag = 2
 if (sflag == 1) { # plot data
   # png('SLFn30data160925.png',width=16,height=16,units='cm',res=300)
@@ -75,13 +77,27 @@ if (sflag == 6) { # estimate of density of standardized noise
        xlab='Noise',ylab='Estimated density',main='',las=1,xlim=c(-3,3))
   # dev.off()
 }
+print('----------------------------------------------------')
 print('Test for homo- versus heteroskedasticity:')
+print('----------------------------------------------------')
 # install.packages('car')
 library(car) # contains ncvTest() = Score Test for Non-Constant Error Variance
 pskedasticity = ncvTest(lm(y ~ x))$p; print(c(round(pskedasticity,4),'p(skedasticity)'))
 print('Null hypothesis H0: residuals are homoskedastic')
 if (pskedasticity >= 0.05) print('Do not reject H0 on significance level alpha=0.05')
 if (pskedasticity < 0.05)  print('Reject H0 on significance level alpha=0.05')
+print('----------------------------------------------------')
+print('--- How to calculate Multiple R-squared & Adjusted R-squared: ---')
+print('----------------------------------------------------')
+ymean = mean(y)
+yhat = b*x+b0 # estimated y-values
+SSest = sum((yhat-ymean)^2) # sum of squares for estimated yhat
+SSdata = sum((y-ymean)^2) # sum of squares for data
+Rsq = SSest/SSdata
+print(c(round(Rsq,4),'Rsq (pedestrian)'))
+m = 1 # number of independent variables (here: x -> m=1)
+Rsqa = 1-(n-1)/(n-m-1)*(1-Rsq)
+print(c(round(Rsqa,4),'adjusted Rsq (pedestrian)'))
 # -----------------------------------------------------------------------------
 # Results:
 # "file: LS-example1.R"
@@ -90,4 +106,24 @@ if (pskedasticity < 0.05)  print('Reject H0 on significance level alpha=0.05')
 # "0.5248"          "p(skedasticity)"
 # "Null hypothesis H0: residuals are homoskedastic"
 # "Do not reject H0 on significance level alpha=0.05"
+# -----------------------------------------------------------------------------
+# out2
+# 
+# Call:
+#   lm(formula = y ~ x)
+# 
+# Residuals:
+#   Min      1Q  Median      3Q     Max 
+# -2.3391 -0.2918  0.1538  0.5372  2.5289 
+# 
+# Coefficients:
+#               Estimate Std. Error t value Pr(>|t|)    
+# (Intercept)   8.1393     0.4953  16.433 6.52e-16 ***
+#   x          -1.2469     0.1534  -8.128 7.54e-09 ***
+#   ---
+#   Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+# 
+# Residual standard error: 1.003 on 28 degrees of freedom
+# Multiple R-squared:  0.7024,	Adjusted R-squared:  0.6917 
+# F-statistic: 66.07 on 1 and 28 DF,  p-value: 7.536e-09
 # -----------------------------------------------------------------------------
