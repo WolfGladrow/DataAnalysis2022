@@ -39,7 +39,7 @@ if (qflag == 3) {
 if (qflag == 2) {
   print('For qflag == 2 data are random numbers from')
   print('two normal distributions with (mu1=0,sigma=1)')
-  print('and (mu2=1.5,sigma=2), respectively.')
+  print('and (mu2=1.5,sigma2=sigma1), respectively.')
   mu1 = 0; sigma1 = 1 # true mean & standard deviation
   mu2 = 1.5; sigma2 = sigma1 # true mean & standard deviation
   n1 = 10; n2 = 9      # sample sizes
