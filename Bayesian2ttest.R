@@ -17,7 +17,7 @@ if (qflag == 3) {
   set.seed(1953)
   print('For qflag == 3 data are random numbers from')
   print('two normal distributions with (mu1=0,sigma=1)')
-  print('and (mu2=1.25,sigma=2), respectively (borderline case).')
+  print('and (mu2=1.25,sigma2=1), respectively (borderline case).')
   mu1 = 0; sigma1 = 1 # true mean & standard deviation
   mu2 = 1.25; sigma2 = sigma1 # true mean & standard deviation
   n1 = 10; n2 = 9      # sample sizes
